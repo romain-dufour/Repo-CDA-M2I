@@ -10,7 +10,6 @@ const addImmat = document.querySelector("#ajoutImmat")
 let inTime=0,outTime=0, timeDuration=0, price =0
 
 
-
 btnIn.addEventListener('click', () => {
     inTime = new Date();
     // console.log(inTime);
