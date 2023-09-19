@@ -1,0 +1,85 @@
+body, html{
+    margin:0
+}
+main{
+    overflow: hidden;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 6fr 4fr ;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+    "texte background";
+}
+
+h1{
+    color:orange;
+    /* display: block;
+    align-items: center;
+    align-content: center; */
+
+}
+p{
+    font-family: 'roboto','sans-serif';
+    text-align: justify;
+    text-indent: 4rem;
+    width: 60%;
+}
+.texte {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-area: texte ;
+/*   
+    width: 400px;
+    height: 300px; */
+}
+/* .background{
+    grid-area: background ;
+} */
+.total{
+    overflow: hidden;
+}
+.texte > button{
+    color: orange;
+    margin-top: 5vh;
+    font-size: 2rem;
+    padding: 1vh;
+    background-color: transparent;
+    border: 0.2rem solid orange;
+    border-radius: 9999999px ;
+ 
+}
+.triangle{
+    transform: rotate(20deg) scale(2);
+    filter: invert(48%) sepia(39%) saturate(2732%) hue-rotate(359deg) brightness(92%) contrast(93%);
+    position: absolute;
+    /* translate: 540px 550px; */
+    display: flex;
+
+}
+.square{
+    z-index: 1;
+    filter: invert(18%) sepia(100%) saturate(4132%) hue-rotate(230deg) brightness(95%) contrast(97%);
+    position: absolute;
+    transform: rotate(-15deg) scale(0.6);
+    /* translate: 800px 370px; */
+}
+.circle{
+    filter: invert(80%) sepia(24%) saturate(7115%) hue-rotate(59deg) brightness(94%) contrast(80%);
+    transform: scale(0.5);
+    /* translate: 860px 350px; */
+    position: absolute;
+}
+.background{
+    position: absolute;
+}
+.container{
+    position:absolute
+}
+.right-part{
+    position: relative;
+}

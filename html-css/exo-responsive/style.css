@@ -1,0 +1,44 @@
+p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: min(80%, 800px);
+    background-color: rgb(30, 30, 46);
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.bloc2 {
+    padding: 25px;
+}
+
+.image {
+    
+}
+
+@media (min-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        width: auto;
+        background-color: rgb(30, 30, 46);
+        border-radius: 20px;
+        padding: 20px 0 20px 20px;
+    }
+
+    .image {
+        border-radius: 25px 0 0 25px;
+
+    }
+
+}

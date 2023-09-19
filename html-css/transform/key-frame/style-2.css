@@ -1,0 +1,215 @@
+main{
+    height: 100vh;
+    width: 100vw;
+}
+p{
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    font-size: 1.5rem;
+
+}
+.drapeau{
+    margin: auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    background-color: blue;
+    position: relative;
+    
+}
+.etoile1{
+    position: relative;
+    width: 15px ;
+    height: 15px;
+    display: block;
+    filter: invert(80%) sepia(87%) saturate(474%) hue-rotate(8deg) brightness(96%) contrast(103%);
+    animation-name: etoile-rotation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    left: 60px;
+}
+.etoile2{
+    position: relative;
+    width: 15px ;
+    height: 15px;
+    display: block;
+    filter: invert(80%) sepia(87%) saturate(474%) hue-rotate(8deg) brightness(96%) contrast(103%);
+    animation-name: etoile-rotation2;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    left: 60px;
+}
+
+.square1{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+
+}
+.square2{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(30deg);
+}
+.square3{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(60deg);
+}
+.square4{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(90deg);
+}
+.square5{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(120deg);
+}
+.square6{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(150deg);
+}
+
+.square7{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(180deg);
+}
+.square8{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(210deg);
+}
+.square9{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(240deg);
+}
+.square10{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(270deg);
+}
+.square11{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(300deg);
+}
+.square12{
+    position: absolute;
+    width: 120px ;
+    height: 120px;
+    animation-name: etoile-rotation;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear;
+    transform: rotate(330deg);
+}
+
+
+.ue{
+    filter: invert(80%) sepia(87%) saturate(474%) hue-rotate(8deg) brightness(96%) contrast(103%);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    animation:ue-grossissement 5s linear infinite normal ,brillance 5s linear infinite normal;
+    position: absolute;
+}
+
+@keyframes ue-grossissement {
+    0 , 100%{scale: 1;
+        /* filter : brightness(1); */
+    }
+    
+    50%{
+        scale: 1.2;
+        /* filter: brightness(2); */
+    } 
+}
+@keyframes brillance {
+    from{
+        color: brown;
+        /* filter: brightness(1); */
+    }
+    to {color:yellow;}
+    
+}
+
+@keyframes etoile-rotation {
+    from {
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+    
+@keyframes etoile-rotation2 {
+    from {
+        rotate: 0deg;
+    }
+    to{
+        rotate: -360deg;
+    }
+}

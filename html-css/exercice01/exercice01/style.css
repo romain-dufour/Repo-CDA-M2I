@@ -1,0 +1,67 @@
+*{
+    font-family: font-family: 'Lumanosimo', cursive;
+
+}
+nav{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #7B68EE	;
+    text-align: center;
+}
+nav li{
+    display:inline;
+    padding: 20px;
+    text-decoration:none;
+}
+footer{
+    background-color: #0e0e11;
+    text-align: center;
+    color: white;
+}
+footer ul {
+    display: inline;
+}
+footer ul li a{
+    display:inline;
+    color: yellow;
+    margin: 2em;
+    border: solid blue;
+    border-radius: 50px;
+
+}
+
+img:hover{
+    opacity: 0.5;
+    transform: rotate(1080deg);
+    
+  transition: transform  3s ease-in-out 0.5s;
+}
+.tableau th{
+
+    font-size: 1.5rem;
+
+
+}
+.tableau td{
+    background-color: yellow;
+    border: solid blue
+}
+.tableau{
+    font-style:italic;
+    border: solid red;
+    margin: 10px;
+    padding: 10 20 30;
+
+}
+
+.contact{
+    background-color: rgb(43, 90, 43);
+}
+form{
+    background-color: #98aebd;
+}
+button:hover{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transform: rotate(360deg);
+    transition: transform .7s ease-in-out;
+}

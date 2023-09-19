@@ -1,0 +1,102 @@
+body, html{
+    margin: 0;
+}
+
+main {
+    
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "image_1 image_1 image_3"
+        "image_2 Welcome image_5"
+        "image_2 image_4 image_5";
+    gap: 10px;
+}
+.image-container{
+    overflow: hidden;
+}
+
+#Welcome {
+    grid-area: Welcome;
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#image_1 {
+    grid-area: image_1;
+    border-radius: 0 0 2rem 0;
+}
+
+#image_2 {
+    grid-area: image_2;
+    border-radius: 0 2rem 0 0;
+}
+
+#image_3 {
+    grid-area: image_3;
+    border-radius: 0 0 2rem 0;
+}
+
+#image_4 {
+    grid-area: image_4;
+    border-radius: 0  2rem 0 2rem;
+}
+
+#image_5 {
+    grid-area: image_5;
+    border-radius: 0 0 2rem 0
+}
+
+img:hover {
+    filter: blur(1px) grayscale(1);
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+@media screen and (max-width: 400px) {
+    main{
+        grid-template: repeat(6, 250px) / 1fr;
+    }
+    #Welcome {
+        grid-row: 1 / span 1;
+        border-radius: 0 0 2rem 0;
+    }
+    #image_1 {
+        grid-row: 1 / span 1;
+        border-radius: 0 0 2rem 0;
+    }
+    #image_2 {
+        grid-row: 1 / span 1;
+        border-radius: 0 0 2rem 0;
+    }
+    #image_3 {
+        grid-row: 1 / span 1;
+        border-radius: 0 0 2rem 0;
+    }
+    #image_4 {
+        grid-row: 1 / span 1;
+        border-radius: 0 0 2rem 0;
+    }
+    #image_5 {
+        grid-row: 1 / span 1;
+        border-radius: 0 0 2rem 0;
+    }
+
+}
+
+.image-container>span{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

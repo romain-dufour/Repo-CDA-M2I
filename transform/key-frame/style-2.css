@@ -1,0 +1,13 @@
+main{
+    height: 100vh;
+    width: 100vw;
+}
+p{
+    text-align: center;
+}
+.drapeau{
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    text-align: center;
+}

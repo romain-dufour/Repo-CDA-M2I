@@ -1,0 +1,21 @@
+.bloc1 {
+    position:relative;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+}
+.bloc2 {
+    position:relative;
+    left:150px;
+    height: 150px;
+    width: 150px;
+    background-color: green;
+}
+.bloc3 {
+    position:relative;
+
+    left:300px;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+}

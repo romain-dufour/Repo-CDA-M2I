@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pricing", {data:[{_img:{}}],fetch:{},mutations:[]});

@@ -1,0 +1,35 @@
+#ma-fleur {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ma-fleur > span {
+    position: absolute;
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+#ma-fleur > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(0.1rem) grayscale(1);
+    transition: all;
+    transition-duration: 1000ms;
+    /*
+        invert() pour mettre en négatif
+        hue-rotate() pour changer la teinte (valeur en degrés)
+        grayscale() pour mettre en noir et blanc
+        sepia() pour donner un effet sépia à nos images
+
+    */
+}
+
+#ma-fleur:hover > img {
+    filter: none;
+}

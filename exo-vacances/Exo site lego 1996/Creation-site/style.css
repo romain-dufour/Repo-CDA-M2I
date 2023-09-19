@@ -1,0 +1,141 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.fond-decran {
+    background-image: url(legoknop.gif);
+    background-repeat: repeat;
+    border: 0;
+    margin: 0;
+}
+
+.premiere-ligne {
+    width: 100vw;
+    border: 0;
+}
+
+.deuxieme-ligne {
+    width: 100vw;
+    border: 0;
+    padding: 0 80px 0 80px;
+}
+
+.troisieme-ligne {
+    width: 100%;
+    padding: 0 80px 0 80px;
+}
+
+.corps{
+    padding: 100px 80px 0 80px;
+    text-align: justify;
+}
+
+.footer {
+    width: 100%;
+    border: 0;
+}
+
+
+.cellule1 {
+    text-align: left;
+}
+
+.cellule2 {
+    text-align: center;
+}
+
+.cellule3 {
+    text-align: center;
+}
+
+.cellule4 {
+    text-align: center;
+}
+
+.cellule5 {
+    text-align: right;
+}
+
+.cellule6 {
+    text-align: center;
+}
+
+.cellule7 {
+    text-align: center;
+}
+
+.cellule8 {
+    text-align: center;
+}
+
+.cellule9 {
+    text-align: left;
+}
+
+.welcome {
+    text-align: center;
+    width: 100vw;
+    border: 0;
+}
+
+
+.cellule10 {
+    width: 14.2%;
+    text-align: left;
+}
+
+.cellule11 {
+    width: 14.2%;
+    text-align: center;
+}
+
+.cellule12 {
+    width: 14, 2%;
+    text-align: center;
+}
+
+.cellule13 {
+    width: 14, 2%;
+    text-align: center;
+}
+
+.cellule14 {
+    width: 14, 2%;
+    text-align: center;
+}
+
+.cellule15 {
+    width: 14, 2%;
+    text-align: center;
+}
+
+.cellule16 {
+    width: 14, 2%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.gauche {
+    width: 40%;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+.milieu {
+    width: 20%;
+    text-align: center;
+}
+
+.droite {
+    width: 40%;
+    text-align: right;
+}

@@ -1,0 +1,14 @@
+.tableau {
+    border-collapse: collapse;
+}
+.tableau thead td{
+    border: solid 1px black ;
+}
+.tableau td {
+    border: solid 1px;
+}
+
+.tableau>thead{
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;}

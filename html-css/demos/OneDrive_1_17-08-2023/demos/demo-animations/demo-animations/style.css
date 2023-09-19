@@ -1,0 +1,93 @@
+@keyframes rotation_full {
+    from {
+        background-color: red;
+        transform: rotate(0deg);
+    }
+
+    to {
+        background-color: green;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation_full_b {
+    0% {
+        background-color: red;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: red;
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes roll_to_right_a {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(600px);
+    }
+}
+
+@keyframes roll_to_right_b {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes roll_to_right {
+    from {
+        transform: translateX(0) rotate(0turn);
+    }
+    to {
+        transform: translateX(600px) rotate(1turn);
+    }
+}
+
+.red-square {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    animation-name: rotation_full;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+.red-square-b {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    animation: rotation_full_b 2s linear infinite;
+}
+
+.square-container {
+    height: 250px;
+    width: 250px;
+    animation: roll_to_right_a 5s ease-in-out 3 alternate;
+}
+
+.blue-square-c {
+    height: 250px;
+    width: 250px;
+    background-color: blue;
+    animation: roll_to_right_b 5s ease-in-out 3 alternate;
+}
+
+.blue-square-d {
+    height: 250px;
+    width: 250px;
+    background-color: blue;
+    animation: roll_to_right 5s ease-in-out 3 alternate;
+    transform-origin: center;
+}

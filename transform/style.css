@@ -1,0 +1,11 @@
+.red-square{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.square-container:hover>.red-square {
+    transform: scale(0.2);
+}

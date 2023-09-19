@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <H1>TP-POO - Liste de contacts</H1>
+    <p>Mise en application de la théorie</p>
+
+
+    <div class="row m-5">
+        <div class="row col-12 bg-dark text-light fs-6 ">
+            <div class="col-1 fs-6 ">
+                Titre
+            </div>
+            <div class="col-1">
+                Nom
+            </div>
+            <div class="col-2">
+                Prenom
+            </div>
+            <div class="col-2">
+                Date de Naissance
+            </div>
+            <div class="col-3">
+                Telephone
+            </div>
+            <div class="col-3">
+                Email
+            </div>
+        </div>
+        <div class="row col-12 bg-light border text-dark fs-6 result ">
+            <!-- <div class="col-1 fs-6">
+                
+            </div>
+            <div class="col-1">
+                Nom
+            </div>
+            <div class="col-2">
+                Prenom
+            </div>
+            <div class="col-2">
+                Date de Naissance
+            </div>
+            <div class="col-3">
+                Telephone
+            </div>
+            <div class="col-3">
+                Email
+            </div> -->
+        </div>
+
+
+        <form class="row border my-2 py-1">
+            <div class="col text-center ">Ajouter Contact</div>
+            <div >            
+                <input type="radio"> Mr
+                <input type="radio"> Mme
+            </div>
+
+            <div class="row">
+                <input type="text" placeholder="nom" class="col-6 ">
+                <input type="text" placeholder="prenom" class="col-6">
+            </div>
+            <div class="row">
+                <input type="date" name="date" id="date" class="col-4 ">
+                <input type="number" placeholder="Telephone" class="col-4 ">
+                <input type="email" name="email" id="email" placeholder="Email" class="col-4">
+            </div>
+            <div class="row">
+                <button class="btn bg-success col-12 text-light">Ajouter</button>
+
+            </div>
+        </form>
+    </div>
+<!-- 
+    <table>
+        <thead>
+            <td>Titre</td>
+            <td>Nom</td>
+            <td>Prénom</td>
+            <td>Date de Naissance</td>
+            <td>Telephone</td>
+            <td>Email</td>
+        </thead>
+        <tbody>
+            <tr></tr>
+        </tbody>
+    </table> -->
+    
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script type="module" src="modules/script.js"></script>
+</html>

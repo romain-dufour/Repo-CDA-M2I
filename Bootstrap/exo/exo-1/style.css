@@ -1,0 +1,16 @@
+.rouge{
+    background: red !important;
+}
+.vert{
+    background: green !important;
+}
+.bleu{
+    background: blue !important;
+}
+.gris{
+    background: gray !important;
+}
+    
+.color-none{
+    background-color: white !important;
+}

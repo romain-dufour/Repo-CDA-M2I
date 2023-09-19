@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark text-light" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand"><i class="bi bi-globe"></i>My Website</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#maNavBar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="maNavBar" class=" collapse navbar-collapse">
+                    <ul class="navbar-nav">
+
+
+                        <li class="nav-item"><a href="Accueil.html" class="nav-link active">Accueil</a></li>
+                        <div class="dropdown">
+                            <a href="" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">Mes
+                                réalisations</a>
+                            <ul class="dropdown-menu" data-bs-theme="light" id="largeur">
+                                <li>
+                                    <a href="portfolio.html" class="dropdown-item">thème dark</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio.html" class="dropdown-item">thème light</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio.html" class="dropdown-item">thème WTF</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                    <div class="nav-item ms-auto">
+                        <a href="Contact.html" class="nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <Main class="container-fluid p-0">
+        
+        <img src="Plante.jpg" alt="plante" class="position-absolute w-100 h-100 ">
+        <div class="position-relative p-2">
+
+            <h1 class="text-center text-light ">Nous contacter</h1>
+            <div class="row bg-light m-2 rounded ">
+
+                <div class="col-12 col-sm-6 d-grid text-center align-content-center">
+                    <H3 class="my-3">Prendre RDV avec nos experts</H3>
+                    <H5>Nous trouvons une solution à tous vos problèmes<H5>
+                </div>
+
+                <div class="col-12 col-sm-6 ">
+                    <div class="row ">
+                        <form>
+                            <div class="g-2 row">
+
+                                <div class="col-6">
+                                    <div>
+                                        <input class="form-control border-success border rounded" type="text"
+                                            placeholder="votre nom">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <input class="form-control border-success border rounded" type="text"
+                                            placeholder="votre prénom">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div>
+                                        <input class="form-control border-success border rounded" type="text"
+                                            placeholder="votre email">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <input class="form-control border-success border rounded" type="text"
+                                            placeholder="votre téléphone">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <input class="form-control border-success border rounded" type="text"
+                                            placeholder="votre entreprise">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div>
+                                        <select name="select" id="select"
+                                            class="form-select border-success border rounded">
+                                            <option value="votre région">Votre région</option>
+                                            <option value="Nord">Nord</option>
+                                            <option value="bretagne">bretagne</option>
+                                            <option value="normandie">normandie</option>
+                                            <option value="autre">autre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div>
+                                        <select name="select" id="select"
+                                            class="form-select border-success border rounded">
+                                            <option value="votre région">Votre région</option>
+                                            <option value="Nord">Nord</option>
+                                            <option value="bretagne">bretagne</option>
+                                            <option value="normandie">normandie</option>
+                                            <option value="autre">autre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div>
+                                        <textarea name="text-area" class=" col-12 border-success rounded"
+                                            style="resize: none;" id="text-area" cols="60" rows="10"
+                                            placeholder="Votre message (facultatif)"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="">
+                                        <input type="checkbox" name="commercial" id="commercial">
+                                        <label for="text" id="commercial">J'accepte de recevoir des communications
+                                            commerciales</label>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="">
+                                        <input type="checkbox" name="data" id="data">
+                                        <label for="text" id="data">J'accepte le traitement de mes données
+                                            personnelles</label>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div>
+                                        <button type="submit" class="rounded-4 bg-success text-light">Envoyer<i
+                                                class="p-1 bi bi-send"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            `
+                        </form>
+                    </div>
+
+                   
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </Main>
+</body>
+
+</html>

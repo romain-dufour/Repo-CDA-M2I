@@ -1,0 +1,79 @@
+main {
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.frame{
+    font-family: sans-serif;
+    width: 500px;
+    background-color: orangered;
+    text-align: center;
+
+}
+.positionnement{
+    display: inline;
+    justify-content: end;
+    align-items: end;
+}
+
+.button {
+    background-color: rgb(43, 37, 37);
+    color: white;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    
+    
+}
+
+h3 {
+    color: white;
+}
+
+.rejouer{
+    width: auto;
+    
+    background-color: black;
+    margin: 10px;
+    
+}
+.saisi{
+    width: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.button-input-container {
+    display: flex;
+    margin: 10px; /* Supprime les marges par défaut de la div container */
+    padding: 0; /* Supprime les marges internes par défaut de la div container */
+    justify-content: end;
+    align-items: center;
+}
+
+.nbrDeCoup{
+    color: white;
+    font-size: 10px;
+    padding-right: 10px;
+}
+.custom-input {
+    margin: 0; /* Supprime les marges par défaut du champ de saisie */
+    padding: 5px; /* Vous pouvez ajuster la marge intérieure selon vos besoins */
+    border-radius: 0px;
+    border: solid 1px gray;
+    width: 20px;
+    appearance: none
+}
+
+.custom-button {
+    margin: 0; /* Supprime les marges par défaut du bouton */
+    padding: 5px 10px; /* Vous pouvez ajuster la marge intérieure du bouton selon vos besoins */
+    background-color: #18191a;
+    color: #fff;
+    border: solid 1px gray;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.square-container {
+    height: 200px;
+    width: 200px;
+}
+
+.red-square {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.square-container:hover > .red-square {
+    transform: scale(0.2) rotate(-180deg) translate(200px, 50px);
+}
+
+button {
+    transition-duration: 500ms;
+}
+
+button:hover {
+    background-color: orange;
+    transform: scale(1.1);
+}

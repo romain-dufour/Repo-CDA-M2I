@@ -1,0 +1,107 @@
+.miroir {
+    width: 500px;
+    height: 500px;
+    background-color: aquamarine;
+    border: 25px solid black;
+    position: relative;
+}
+
+.main {
+    width: 100px;
+    height: 100px;
+    animation: nettoyage;
+    animation-duration:  10s;
+    animation-delay: s;
+    animation-timing-function:  linear ;
+    animation-iteration-count:  infinite;
+    animation-direction:  normal;
+    position: absolute;
+}
+.main2{
+    position:relative;
+    width: 100px;
+    height: 100px;
+}
+.buée{
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    animation: buéee;
+    animation-duration:  10s;
+    animation-delay: 1s;
+    animation-timing-function:  linear ;
+    animation-iteration-count:  infinite;
+    animation-direction:  normal;
+    position: absolute;
+
+}
+
+
+
+
+@keyframes nettoyage {
+    0% , 100%{
+        transform: translate(0px, 0px);
+    }
+    10% {
+        transform: translate(400px,0px);
+    }
+    20% {
+        transform: translate(400px,100px);
+    }
+    30% {
+        transform: translate(0px,100px);
+    }
+    40% {
+        transform: translate(0px,200px);
+    }
+    50% {
+        transform: translate(400px,200px);
+    }
+    60%{
+        transform: translate(400px,300px);
+    }
+    70%{
+        transform: translate(0px,300px);
+    }
+    80%{
+        transform: translate(0px,400px);
+    }
+    90%{
+        transform: translate(400px,400px);
+    }
+}
+
+@keyframes buéee {
+    0% , 100%{
+        transform: translate(0px, 0px);
+        .miroir:hover(background-color: ;;)
+    }
+    10% {
+        transform: translate(400px,0px);
+    }
+    20% {
+        transform: translate(400px,100px);
+    }
+    30% {
+        transform: translate(0px,100px);
+    }
+    40% {
+        transform: translate(0px,200px);
+    }
+    50% {
+        transform: translate(400px,200px);
+    }
+    60%{
+        transform: translate(400px,300px);
+    }
+    70%{
+        transform: translate(0px,300px);
+    }
+    80%{
+        transform: translate(0px,400px);
+    }
+    90%{
+        transform: translate(400px,400px);
+    }
+}

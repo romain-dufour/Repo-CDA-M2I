@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice I - Carousels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand"><i class="bi bi-globe"></i> eLibrary</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#eLibraryNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="eLibraryNavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a href="#" class="nav-link active">Accueil</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Eductifs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Romans</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Comics</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Magazines</a></li>
+                    </ul>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link text-light dropdown-toggle mb-2 mb-lg-0" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear"></i> Gestion
+                        </a>
+                        <ul class="dropdown-menu" data-bs-theme="light">
+                            <li><a class="dropdown-item" href="#">Ajouter un ouvrage</a></li>
+                            <li><a class="dropdown-item" href="#">Modifier un ouvrage</a></li>
+                            <li><a class="dropdown-item" href="#">Supprimer un ouvrage</a></li>
+                        </ul>
+                    </div>
+                    <form class="d-flex ms-2">
+                        <input type="text" class="form-control me-2 bg-light text-dark" placeholder="Auteur, Titre, ..."
+                            name="searchInput">
+                        <button class="btn btn-outline-light d-flex">
+                            <i class="bi bi-search me-2"></i>
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container py-3">
+        <h1 class="fw-light">- Mes Carousels -</h3>
+        <hr>
+        <div class="my-3 carousel slide" id="carouselA" data-bs-ride="carousel" style="height: 450px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselA" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselA" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselA" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselA" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselA" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item h-100 active">
+                    <img class="w-100 h-100 object-fit-cover" src="https://random.imagecdn.app/1000/500" alt="Random Picture A">
+                </div>
+                <div class="carousel-item h-100">
+                    <img class="w-100 h-100 object-fit-cover" src="https://random.imagecdn.app/1001/501" alt="Random Picture A">
+                </div>
+                <div class="carousel-item h-100">
+                    <img class="w-100 h-100 object-fit-cover" src="https://random.imagecdn.app/1002/502" alt="Random Picture A">
+                </div>
+                <div class="carousel-item h-100">
+                    <img class="w-100 h-100 object-fit-cover" src="https://random.imagecdn.app/1003/503" alt="Random Picture A">
+                </div>
+                <div class="carousel-item h-100">
+                    <img class="w-100 h-100 object-fit-cover" src="https://random.imagecdn.app/1004/504" alt="Random Picture A">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselA" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselA" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+
+        <div class="my-3 carousel slide" id="carouselB" data-bs-ride="carousel" style="height: 450px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item h-100 active">
+                    <div class="h-100 w-100" style="background-color: red;"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100" style="background-color: orange;"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100" style="background-color: yellow;"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100" style="background-color: green;"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100" style="background-color: blue;"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100" style="background-color: indigo;"></div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100" style="background-color: violet;"></div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselB" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselB" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+
+        <div class="my-3 carousel slide" id="carouselC" data-bs-ride="carousel" style="height: 350px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+            <div class="carousel-inner h-100">
+                <div class="carousel-item h-100 active">
+                    <div class="h-100 w-100 d-flex flex-column p-3 align-items-center" style="background-color: darksalmon; gap: 10px;">
+                        <div class="dice">
+                            <div class="dot d6-y-middle d6-x-middle"></div>
+                        </div>
+                        <h5>1</h5>
+                        <p>Avancez d'une case !</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 d-flex flex-column p-3 align-items-center" style="background-color: darksalmon; gap: 10px;">
+                        <div class="dice">
+                            <div class="dot d6-y-top d6-x-left"></div>
+                            <div class="dot d6-y-bottom d6-x-right"></div>
+                        </div>
+                        <h5>2</h5>
+                        <p>Avancez de deux cases !</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 d-flex flex-column p-3 align-items-center" style="background-color: darksalmon; gap: 10px;">
+                        <div class="dice">
+                            <div class="dot d6-y-top d6-x-left"></div>
+                            <div class="dot d6-y-bottom d6-x-right"></div>
+                            <div class="dot d6-y-middle d6-x-middle"></div>
+                        </div>
+                        <h5>3</h5>
+                        <p>Avancez de trois cases !</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 d-flex flex-column p-3 align-items-center" style="background-color: darksalmon; gap: 10px;">
+                        <div class="dice">
+                            <div class="dot d6-y-top d6-x-left"></div>
+                            <div class="dot d6-y-bottom d6-x-right"></div>
+                            <div class="dot d6-y-top d6-x-right"></div>
+                            <div class="dot d6-y-bottom d6-x-left"></div>
+                        </div>
+                        <h5>4</h5>
+                        <p>Avancez de quatre cases !</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 d-flex flex-column p-3 align-items-center" style="background-color: darksalmon; gap: 10px;">
+                        <div class="dice">
+                            <div class="dot d6-y-top d6-x-left"></div>
+                            <div class="dot d6-y-bottom d6-x-right"></div>
+                            <div class="dot d6-y-top d6-x-right"></div>
+                            <div class="dot d6-y-bottom d6-x-left"></div>
+                            <div class="dot d6-y-middle d6-x-middle"></div>
+                        </div>
+                        <h5>5</h5>
+                        <p>Avancez de cinq cases !</p>
+                    </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 d-flex flex-column p-3 align-items-center" style="background-color: darksalmon; gap: 10px;">
+                        <div class="dice">
+                            <div class="dot d6-y-top d6-x-left"></div>
+                            <div class="dot d6-y-bottom d6-x-right"></div>
+                            <div class="dot d6-y-top d6-x-right"></div>
+                            <div class="dot d6-y-bottom d6-x-left"></div>
+                            <div class="dot d6-y-middle d6-x-right"></div>
+                            <div class="dot d6-y-middle d6-x-left"></div>
+                        </div>
+                        <h5>6</h5>
+                        <p>Avancez de six cases !</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselC" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselC" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+
+        <div class="my-3 carousel slide" id="carouselD" data-bs-ride="carousel" style="height: 450px;">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item h-100 active">
+                    <div class="h-100 w-100 row g-2">
+                        <div class="col-6">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/505/505" alt="Random Image F">
+                        </div>
+                        <div class="col-6">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/506/506" alt="Random Image G">
+                        </div>
+                    </div>
+                    <div class="carousel-caption text-dark rounded d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.8);">
+                        <h5>Pub A</h5>
+                        <p>Description de la pub A</p>
+                      </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 row g-2">
+                        <div class="col-3">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/507/507" alt="Random Image H">
+                        </div>
+                        <div class="col-6">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/508/508" alt="Random Image I">
+                        </div>
+                        <div class="col-3">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/509/509" alt="Random Image J">
+                        </div>
+                    </div>
+                    <div class="carousel-caption text-dark rounded d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.8);">
+                        <h5>Pub B</h5>
+                        <p>Description de la pub B</p>
+                      </div>
+                </div>
+                <div class="carousel-item h-100">
+                    <div class="h-100 w-100 row g-2">
+                        <div class="col-5">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/510/510" alt="Random Image K">
+                        </div>
+                        <div class="col-2">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/511/511" alt="Random Image L">
+                        </div>
+                        <div class="col-5">
+                            <img class="h-100 w-100 object-fit-cover" src="https://random.imagecdn.app/512/512" alt="Random Image M">
+                        </div>
+                    </div>
+                    <div class="carousel-caption text-dark rounded d-none d-md-block" style="background-color: rgba(255, 255, 255, 0.8);">
+                        <h5>Pub C</h5>
+                        <p>Description de la pub C</p>
+                      </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselD" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselD" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+        </div>
+    </main>
+</body>
+
+</html>

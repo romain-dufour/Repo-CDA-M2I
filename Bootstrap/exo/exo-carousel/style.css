@@ -1,0 +1,144 @@
+.rouge{
+width: 500px;
+height: 250px;
+display: block;
+background-color: red;
+position: relative;
+!important
+}
+.orange{
+    width: 500px;
+height: 250px;
+display: block;
+background-color: orange;
+}
+.jaune{
+    width: 500px;
+    height: 250px;
+    display: block;
+    background-color: yellow;
+}
+.bleu{
+    width: 500px;
+    height: 250px;
+    display: block;
+    background-color: blue;
+}
+.violet{
+    width: 500px;
+    height: 250px;
+    display: block;
+    background-color: purple;
+}
+
+.fond-des{
+    width: 500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(204, 171, 171);
+    }
+
+.carre{
+background-color: rgb(179, 70, 70);
+width: 100px;
+height: 100px;
+border-radius:15px;
+display: grid;
+justify-self: center;
+align-self: center;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+}
+#point{
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+
+}
+
+
+
+.milieu{
+    
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.haut-gauche{
+
+    justify-self: end;
+    align-self: end;
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.haut-droite{
+
+    justify-self: start;
+    align-self: end;
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+.bas-droite{
+
+    justify-self: start;
+    align-self: start;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+.bas-gauche{
+
+    justify-self: end;
+    align-self: start;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.haut-milieu{
+
+    justify-self: center;
+    align-self: center;
+    grid-column-start: ;
+    grid-row-start: 1;
+}
+.haut-milieu{
+
+    justify-self: center;
+    align-self: end;
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.bas-milieu{
+
+    justify-self: center;
+    align-self: start;
+    grid-column-start:2 ;
+    grid-row-start: 3;
+}
+.texte{
+    display: flex;
+    justify-content: center;
+}
+.pub{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  
+}
+
+.fond-promo{
+    position: relative;
+}
+.promo{
+    color: black;
+    background-color: white;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 100px 50px 50px 50px;
+    
+    
+}

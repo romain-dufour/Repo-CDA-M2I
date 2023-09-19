@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Carousels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="container my-3">
+        <h1>Démo - Carousels</h1>
+        <hr>
+        <div id="carouselA" class="carousel slide my-3">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://random.imagecdn.app/500/250" class="w-100" alt="Random A">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://random.imagecdn.app/499/249" class="w-100" alt="Random B">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://random.imagecdn.app/501/251" class="w-100" alt="Random C">
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carouselA" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carouselA" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="carouselB" class="carousel slide my-3">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselB" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://random.imagecdn.app/500/250" class="w-100" alt="Random A">
+                </div>
+                <div class="carousel-item active">
+                    <img src="https://random.imagecdn.app/499/249" class="w-100" alt="Random B">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://random.imagecdn.app/501/251" class="w-100" alt="Random C">
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carouselB" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carouselB" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div id="carouselC" class="carousel slide my-3">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselC" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://random.imagecdn.app/500/250" class="w-100" alt="Random A">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Image A</h5>
+                        <p>Description of Image A</p>
+                      </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="https://random.imagecdn.app/499/249" class="w-100" alt="Random B">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Image B</h5>
+                        <p>Description of Image B</p>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://random.imagecdn.app/501/251" class="w-100" alt="Random C">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Image C</h5>
+                        <p>Description of Image C</p>
+                      </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carouselC" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carouselC" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quod dolore voluptas repellat unde, quaerat itaque amet veritatis totam pariatur quidem sed dolorem. Unde nam praesentium mollitia aliquid nihil id.
+            Cum nobis dolor eius veniam? Sint, error laborum ab, ut deleniti at debitis, ratione ducimus hic ipsam quam sunt voluptatem tempora voluptates commodi labore molestias molestiae voluptate. Quae, harum recusandae!
+            Aut eveniet, placeat itaque officia deserunt quis ex, aliquid sit quasi exercitationem vel similique quia autem sequi iusto expedita ipsam dolorem quod atque natus laborum velit error. Cum, nostrum deserunt?
+            Natus libero magni modi rem itaque eligendi molestiae reiciendis, perspiciatis iure, quas illo, obcaecati dolorem nam officiis atque asperiores deleniti sequi vel. Fugiat qui sint, nesciunt minus facere inventore iure.
+            Est aliquid repellat necessitatibus a dolorem et? Quidem dignissimos quod inventore earum animi illo, hic odio ratione quas magni dolor ab ipsum cumque ex, eligendi repudiandae eaque sed consectetur laboriosam!
+            Autem incidunt pariatur a qui, soluta eveniet minima sapiente doloribus veritatis voluptates ratione dolorem, quas sunt cum exercitationem iusto, excepturi eum. Nulla voluptates libero reiciendis ducimus impedit ad id atque.
+            Praesentium porro tenetur, qui vero sed veniam temporibus, minus quibusdam culpa labore incidunt ipsam distinctio fugiat velit eaque! Cupiditate amet inventore quae necessitatibus reprehenderit blanditiis esse dolores maxime pariatur. Molestias.
+            Adipisci voluptates vitae sed laudantium, saepe facere. Ex minus ipsum eveniet officia rerum assumenda quas ipsa, cumque inventore earum debitis molestiae dolorem aspernatur commodi amet quod aliquam impedit iusto sapiente.
+            Inventore voluptatem, blanditiis voluptas dolorem neque, modi sint accusantium a aliquam tempora totam odit culpa porro illum enim dicta possimus incidunt dolore officia. Dolorem debitis, nam ullam perferendis officiis inventore!
+            Velit delectus corrupti eligendi doloremque labore aspernatur sapiente nemo quod blanditiis, libero ipsum minima aliquid voluptate aperiam dolorum, saepe odit fugiat, ab tempore nihil quo optio voluptatem repudiandae. Ad, placeat.
+            Sed, repellendus fugit asperiores temporibus possimus vero, error quis inventore dolorem omnis eius. Temporibus repellat reprehenderit fugit, sint deleniti saepe ad, veritatis fuga aliquam et, magnam nostrum nihil ipsa nemo.
+            Eligendi impedit rem sint illo culpa iste reprehenderit facere dolorem dignissimos, nam ut nobis, obcaecati, quisquam ipsam unde quas illum! Voluptate sapiente molestiae, ut impedit repellat sint architecto fugit repellendus.
+            Consequatur ratione tenetur vel impedit recusandae sed culpa, doloribus adipisci nobis non, quo repellat voluptatem, veritatis eaque nam est consequuntur veniam tempora animi commodi magni possimus suscipit? Ducimus, et illum?
+            Quisquam itaque fugiat natus animi suscipit tenetur numquam adipisci. Facilis ullam non possimus reiciendis molestiae beatae quae sint obcaecati magni rem doloremque, nulla eius porro cupiditate harum dolor illum autem.
+            Dolore, eum voluptas. Dolor aperiam similique labore unde quas velit? Corrupti beatae quae ab harum maxime, nostrum dolore perspiciatis accusamus obcaecati quas quibusdam quos blanditiis nemo architecto ut maiores recusandae.
+            A similique enim, quisquam dolorum error non odio velit repellat suscipit natus dolorem laboriosam facere qui corporis consequatur inventore doloremque nihil incidunt porro nobis, adipisci, aliquid magni nostrum. Unde, temporibus?
+            Molestiae illum voluptatum accusamus perferendis explicabo sequi provident quod voluptatibus quaerat quia recusandae quos, magnam at corporis nam sapiente iusto quasi dolor id incidunt! Atque fugiat perspiciatis est odio tempore?
+            In eligendi impedit atque sed unde. Sunt alias quis quaerat. Laborum repellat fuga optio, sunt magni odit, assumenda, eveniet repellendus quae sequi nulla maiores tempore vero? Hic cupiditate minima voluptate.
+            Nobis, laboriosam, ex quam dolorum nesciunt fuga a alias quis quae esse hic fugit ullam sint facere ipsum aliquam incidunt dolor et illo architecto labore placeat veniam adipisci ab. Vel.
+            Esse placeat incidunt quia maiores sunt sapiente quae sint libero consequatur itaque magni accusantium porro laudantium voluptates rerum, ab odit hic doloremque voluptas voluptatum beatae. Aut laboriosam atque a amet.
+            Natus hic facere nulla quis nobis accusantium voluptas. Esse fugiat asperiores atque! Quisquam, dolores vel sit quaerat odio praesentium error sed dolore nemo illo veritatis facere doloribus optio unde tenetur.
+            Incidunt nemo error et optio possimus officiis, facilis molestiae nihil tenetur totam alias, sit eaque impedit amet omnis quia hic explicabo laborum aspernatur aliquam cupiditate consequuntur, quidem ipsum dolores. Pariatur?
+            Non, facilis repudiandae! Itaque vel quaerat dolore doloribus culpa odio illum quibusdam facere quidem, a facilis tempora animi atque asperiores tempore expedita ex rerum, placeat, cum impedit corporis voluptate nostrum!
+            Aut eligendi facilis eaque voluptate ullam nesciunt laudantium eius vel nisi unde cumque placeat culpa quidem eos tempora provident illo perferendis repellendus itaque, ex nihil beatae dolor repudiandae! Quidem, laudantium.
+            Culpa est dolor enim temporibus earum totam quaerat doloribus nulla ea assumenda perferendis neque dolorem fuga commodi eligendi a velit laborum sunt minima quisquam mollitia, praesentium delectus. Dolore, vel voluptatum.
+            Tenetur quidem facere molestias atque in sed culpa commodi ipsum neque, eos architecto sit quia fugiat aspernatur consequatur nihil ut quaerat aliquid reiciendis velit sapiente. Nam sit repellat suscipit nisi?
+            Eum nulla eaque reiciendis tempora deleniti error optio facilis velit quidem, architecto, illum corrupti fuga aut provident enim consequuntur sequi! Sapiente quia consequatur soluta expedita repellendus earum voluptatibus aspernatur. Amet.
+            Doloribus non assumenda dolores rerum nostrum facere in impedit atque rem perferendis? Cupiditate nihil et officia eveniet quaerat odio fugit delectus asperiores modi sint ipsum harum, consequuntur ducimus? Iusto, quas.
+            Atque, tempora ratione nam itaque impedit sed. Cum sed, dolorum modi fuga odio distinctio quod qui in numquam dicta quia consequuntur beatae facere cupiditate asperiores illo aspernatur placeat? Perspiciatis, earum.
+            Dolorem incidunt velit dignissimos veritatis impedit quos consectetur reprehenderit est dolores, facere vel repudiandae porro recusandae eaque ab, perspiciatis facilis, ullam sapiente dicta! Quaerat sed sit reprehenderit earum. Fugit, odio?
+            Esse aspernatur hic odio, consequuntur sed provident dolore ad fugiat, aperiam voluptas minima eveniet non eos doloremque mollitia perferendis asperiores animi similique libero, deleniti maxime repellat voluptatum quas. Maiores, soluta!
+            Impedit ab eaque porro saepe corporis sequi vel aut corrupti similique? At dolores eius quo iusto mollitia reprehenderit alias, optio aperiam sit porro ipsum rem ducimus consequuntur eum quidem temporibus!
+            Eius quam delectus iste est, reprehenderit excepturi nemo aut, officiis maxime non, inventore voluptates harum libero enim id? Harum deleniti quasi officia ab ducimus cum et! Ratione, nemo? Soluta, officiis?
+            Sit eos maiores, libero fuga quo minus voluptatibus modi mollitia consequuntur voluptas quisquam sequi placeat alias doloremque numquam porro cupiditate eum quas officiis nihil provident, veritatis sed. Doloremque, earum quam.
+            Optio totam numquam, animi deleniti natus illum veniam dolores enim laudantium fugit eligendi? Recusandae laborum excepturi necessitatibus! Expedita nam nisi labore voluptatibus temporibus aut fugiat aliquam magni optio. Suscipit, consectetur!
+            Nobis nemo iste sit neque voluptates dolores a suscipit, adipisci vel, sequi ipsam veniam dolor et porro cupiditate facilis molestias, distinctio natus laboriosam voluptatem. Ratione laboriosam magnam hic est perspiciatis.
+            Repellat eos, porro quis praesentium quibusdam illo ipsum. Doloribus fugiat ullam autem blanditiis optio sint, perferendis cumque veniam iure eum libero quia rem dignissimos. Similique harum voluptatem mollitia enim fugit!
+            Maiores, tempora! Ducimus, necessitatibus eaque omnis enim voluptatum, consectetur recusandae modi laboriosam repudiandae molestiae veritatis doloribus ullam quae asperiores! Vel obcaecati dicta odio eius. Eaque facere a similique nam minus!
+            Possimus tenetur quae inventore earum? Libero voluptates eaque officiis? Iure iste similique cum accusantium rerum nemo sit commodi officiis nulla, rem eaque tempora nesciunt neque. Laborum nisi nesciunt tenetur rem.
+            Voluptatem commodi esse illum ipsa, quasi animi dolores excepturi vel voluptatum facere beatae libero? Recusandae unde earum excepturi aliquam! Voluptate enim voluptatum inventore dicta deserunt cupiditate ea facere quidem nihil?
+            Fuga, laborum quas soluta eveniet nobis omnis voluptate consequatur libero laboriosam aliquid beatae sed saepe id excepturi, nihil deleniti, commodi veniam architecto quo nisi. Libero dolorem porro animi consectetur nemo?
+            Neque voluptatem harum libero temporibus. Expedita quasi enim ad doloribus iure facere molestiae, praesentium pariatur, rem magnam eligendi dolorem provident inventore, ratione blanditiis illo tenetur hic velit distinctio quo. Facere!
+            Dolorum, blanditiis nisi. Laudantium, expedita libero ullam impedit aperiam quisquam distinctio eum recusandae, nobis culpa omnis fugiat accusamus quo perferendis, molestias veniam sit eligendi iste animi. Obcaecati recusandae consequatur necessitatibus.
+            Veritatis fugiat nihil quod ipsum, numquam debitis. Animi autem perferendis sint explicabo libero illo voluptates id sit incidunt aut, sapiente ullam velit dolores voluptatem nam dolorem voluptatum, quidem magnam quae?
+            Vitae laborum odit facere obcaecati totam provident itaque veritatis beatae rem doloremque reprehenderit corrupti, rerum voluptate ad similique magni. Nemo adipisci laudantium libero sunt dolorum voluptas sapiente quae vitae cum!
+            Quas quod at similique iste debitis, laudantium ut vitae, nesciunt, consectetur eum quam veritatis sapiente illo cum odio autem pariatur nemo amet. Atque qui eius rerum iure iusto dolore. Maiores.
+            Autem vero eos quam quo saepe sapiente inventore a corrupti expedita dicta exercitationem soluta animi omnis iure, provident quis amet. A placeat fuga consequuntur, architecto cupiditate delectus ullam nostrum repellendus!
+            Id tenetur necessitatibus in amet error iste quasi, at corporis modi quaerat eveniet dolor expedita et tempora sint nulla laudantium eum repudiandae rerum doloribus, sed alias animi cum porro. Aliquid!
+            Quas, ipsum labore ex temporibus nesciunt voluptatibus consequuntur quos veniam, adipisci, sint voluptas quia illo! Vitae commodi earum modi necessitatibus expedita cumque temporibus, accusantium iste natus neque culpa, laboriosam molestiae.
+            Eveniet libero doloremque sed fugit hic voluptate nobis quidem necessitatibus quisquam, rerum, quibusdam, facere impedit illum quaerat ipsa illo ullam similique pariatur commodi consequatur ad possimus quasi! Distinctio, ipsa impedit.
+        </p>
+    </main>
+</body>
+</html>

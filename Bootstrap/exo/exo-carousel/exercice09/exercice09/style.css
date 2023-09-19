@@ -1,0 +1,25 @@
+.dice {
+    height: 180px;
+    width: 180px;
+    border-radius: 25px;
+    background-color: brown;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.dot {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.d6-y-top { grid-row: 1; }
+.d6-y-middle { grid-row: 2; }
+.d6-y-bottom { grid-row: 3; }
+
+.d6-x-left { grid-column: 1; }
+.d6-x-middle { grid-column: 2; }
+.d6-x-right { grid-column: 3; }

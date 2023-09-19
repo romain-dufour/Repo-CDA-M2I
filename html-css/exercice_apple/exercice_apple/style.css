@@ -1,0 +1,62 @@
+body{
+    display:flex;
+    height: 100%;
+    width: ;
+}
+
+/* .head{
+    display: block;
+    margin: 0px 0px 0px 0px;
+} */
+.sidebar{
+    display: block;
+    width: 30%vw;
+    height: 100%;
+    background-color: rgb(153, 0, 0) ;
+}
+.colonne{
+    padding-left: 0px;
+    border-top-width: solid;
+    width: 100% ;
+
+}
+.colonne-gauche {
+    width: 1fr;
+}
+.colonne-droite {
+    width: 1fr;
+}
+
+.sidebar > UL{
+    list-style-type: none;
+    height: 100%;
+}
+.class-container{
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "welcome welcome"
+    "cyberdrive emate"
+    "cyberdrive  mars"
+    "whatshot whatshot" ;
+}
+#header{
+    grid-area: header;
+}
+#welcome{
+    grid-area:welcome;
+}
+#emate{
+    grid-area: emate;
+}
+#mars{
+    grid-area:mars;
+}
+#whatshot{
+    grid-area: whatshot;
+}
+

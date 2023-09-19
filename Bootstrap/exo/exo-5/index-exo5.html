@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <main class="container">
+        <div class="my-3 row">
+            <div class="col-6 offset-3 bg-dark text-light rounded p-4">
+                <div>
+
+                    <h1>-Connexion-</h1>
+                    <hr>
+                    <form>
+
+                        <label for="email">Adresse mail:</label>
+                        <div class="input-group flex-nowrap my-3">
+                            <input type="text" class="form-control w-50" placeholder="adresse" aria-label="Username">
+                            <span class="input-group-text">@</span>
+                            <input type="text" class="form-control w-25" placeholder="domaine" aria-label="Server">
+
+                            <select class="form-select" name="domaine">
+                                <option value=".com">.com</option>
+                                <option value=".fr">.fr</option>
+                                <option value=".net">.net</option>
+                            </select>
+
+                        </div>
+
+                        <label for="text" id="password">Password:</label>
+                        <div class="input-group my-3">
+                           
+                            <span class="input-group-text"><i class="bi bi-chat-dots-fill"></i></span>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+
+
+                        </div>
+
+                        <div class="text-end">
+                            <label for="text" id="remember">Se souvenir de moi?</label>
+                            <input type="checkbox" name="remember" id="remember">
+                        </div>
+                        <hr>
+
+
+                </div>
+                <button class="btn btn-dark text-light border-light  d-block ms-auto"><i
+                        class="bi bi-send-fill"></i></i>
+                    Envoyer</button>
+            </div>
+
+            </form>
+    </main>
+
+</body>
+
+</html>
