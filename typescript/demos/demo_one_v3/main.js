@@ -71,7 +71,7 @@ tab2[1] = "toto";
 tab2.push("24");
 // Tuples
 // On peut aussi via le typescript creer des tuples, , des Array de taille fixe
-// On de vra du coup avoir le bon nombre d'éléments dans la variable et le bon typage dans le bon ordre
+// On devra du coup avoir le bon nombre d'éléments dans la variable et le bon typage dans le bon ordre
 let myPerson;
 myPerson = ["Albert", "Dupont", 45];
 console.table(myPerson);
@@ -101,3 +101,9 @@ let monObjetC = {
 };
 monObjetC.age; // trouve la propriete
 // de préférence utilisation de l'inference
+let monObjet = {
+    firstnam: "Dupont"
+};
+console.log("monObjet objet : " + typeof monObjet);
+monObjet = [];
+console.log("monObjet Array : " + typeof monObjet);

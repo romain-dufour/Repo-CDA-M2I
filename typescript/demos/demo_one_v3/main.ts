@@ -151,3 +151,11 @@ let monObjetC: {
 
 monObjetC.age // trouve la propriete
 // de préférence utilisation de l'inference
+
+
+let monObjet: object = {
+    firstnam : "Dupont" }
+
+console.log("monObjet objet : " + typeof monObjet)
+monObjet=[]
+console.log("monObjet Array : " + typeof monObjet);
