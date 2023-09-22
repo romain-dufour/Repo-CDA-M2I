@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="row bg-dark text-light g-2">
+        <h1>- Liste de Notes -</h1>
+        <div class="col-4 ">
+            <div>
+                <div>
+                    <h3>Ajouter un Elève</h3>
+                </div>
+                <div> <label for="nom" id="nomEleve">Nom :</label>
+                    <input type="text" id="nomEleve">
+                </div>
+                <div> <label for="prenom" id="prenomEleve">Prénom :</label>
+                    <input type="text" id="prenomEleve" </div>
+                </div>
+                <div>
+                    <button type="button" class="addEleve">Ajouter</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 ">
+            <div>
+                <div>
+                    <h3>Ajouter une Matière</h3>
+                </div>
+                <div> <label for="intituleMatiere" id="intituleMatiere">Intitulé :</label>
+                    <input type="text" id="intituleMatiere">
+                </div>
+
+                <div>
+                    <button type="button" class="ajouterMatiere">Ajouter</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 ">
+            <div>
+                <div>
+                    <h3>Ajouter une Note</h3>
+                </div>
+                <div> <label for="selectEleve" id="selectEleve">Elève :</label>
+                    <select name="selectEleve" id="selectEleve"></select>
+                </div>
+                <div> <label for="ajouterNote" id="ajouterNote">Note :</label>
+                    <input type="text" id="ajouterNote" </div>
+                </div>
+                <div> <label for="selectMatiere" id="selectMatiere">Matière :</label>
+                    <select name="selectMatiere" id="selectMatiere"></select>
+                </div>
+                <div>
+                    <button type="button" class="ajouterNote">Ajouter</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <h1>Sélection</h1>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <div> <label for="selectListeEleve" id="selectListeEleve">Elève :</label>
+                    <select name="selectListeEleve" id="selectListeEleve" ></select>
+                </div>
+            </div>
+            <div class="col-6">
+                <div> <label for="selectListeMatiere" id="selectListeMatiere">Matière :</label>
+                    <select name="selectListeMatiere" id="selectListeMatiere"></select>
+                </div>
+            </div>
+            <div>
+                <p id="moyGen"></p>
+            </div>
+        </div>
+        <h1>Notes</h1>
+
+        <hr>
+
+
+<table class="table table-dark">
+
+    <thead class="">
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Matiere</th>
+            <th>Note</th>
+        </tr>
+    </thead>
+
+</table>
+
+</body>
+<script type="module" src="./module/main.js"></script>
+
+</html>
