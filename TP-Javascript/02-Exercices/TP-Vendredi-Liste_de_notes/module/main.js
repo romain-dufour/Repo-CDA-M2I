@@ -26,6 +26,21 @@ console.log(eleve3);
 console.log(eleve1.nom);
 
 let listEleve = [];
+listEleve.push(eleve1)
+listEleve.push(eleve2)
+listEleve.push(eleve3)
+
+console.table(listEleve);
+
+ajoutEleve.addEventListener("click", () => {
+    console.log(nomEleve.value);
+    console.log(prenomEleve.value);
+    let newEleve = new Eleve (nomEleve.value, prenomEleve.value)
+    console.log(newEleve);
+    listEleve.push(newEleve)
+    console.table(listEleve);
+})
+
 
 function ajoutListeEleve(){
 
