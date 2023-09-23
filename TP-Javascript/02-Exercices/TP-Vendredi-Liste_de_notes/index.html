@@ -22,7 +22,7 @@
                     <input type="text" id="nomEleve">
                 </div>
                 <div> <label for="prenom">Prénom :</label>
-                    <input type="text" id="prenomEleve" </div>
+                    <input type="text" id="prenomEleve" onFocus="">
                 </div>
                 <div>
                     <button type="button" class="btnAjoutEleve">Ajouter</button>
@@ -35,7 +35,7 @@
                     <h3>Ajouter une Matière</h3>
                 </div>
                 <div> <label for="intituleMatiere">Intitulé :</label>
-                    <input type="text" id="intituleMatiere">
+                    <input type="text" id="intituleMatiere" placeholder="ajout matiere">
                 </div>
 
                 <div>
@@ -48,14 +48,18 @@
                 <div>
                     <h3>Ajouter une Note</h3>
                 </div>
-                <div> <label for="selectEleve" >Elève :</label>
-                    <select name="selectEleve" id="selectEleve"></select>
+                <div> <label for="selectEleve">Elève :</label>
+                    <select name="selectEleve" id="selectEleve" class="selectEleve">
+                        <option value="choix élève">choix élève</option>
+                    </select>
                 </div>
                 <div> <label for="ajouterNote">Note :</label>
                     <input type="text" id="ajouterNote" </div>
                 </div>
                 <div> <label for="selectMatiere">Matière :</label>
-                    <select name="selectMatiere" id="selectMatiere"></select>
+                    <select name="selectMatiere" id="selectMatiere" class="selectMatiere">
+                        <option value="choix matière">choix matière</option>
+                    </select>
                 </div>
                 <div>
                     <button type="button" class="btnAjouterNote">Ajouter</button>
@@ -70,12 +74,16 @@
         <div class="row">
             <div class="col-6">
                 <div> <label for="selectListeEleve">Elève :</label>
-                    <select name="selectListeEleve" id="selectListeEleve" ></select>
+                    <select name="selectListeEleve" id="selectListeEleve" class="selectListeEleve">
+                        <option value="choix élève">choix élève</option>
+                    </select>
                 </div>
             </div>
             <div class="col-6">
                 <div> <label for="selectListeMatiere">Matière :</label>
-                    <select name="selectListeMatiere" id="selectListeMatiere"></select>
+                    <select name="selectListeMatiere" id="selectListeMatiere" class="selectListeMatiere">
+                        <option value="choix matière">choix matière</option>
+                    </select>
                 </div>
             </div>
             <div>
@@ -87,18 +95,26 @@
         <hr>
 
 
-<table class="table table-dark">
+        <table class="table table-dark">
 
-    <thead class="">
-        <tr>
-            <th>Nom</th>
-            <th>Prenom</th>
-            <th>Matiere</th>
-            <th>Note</th>
-        </tr>
-    </thead>
+            <thead class="">
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Matiere</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody class="text-light tableau">
+                <!-- <tr >
+            <td id="ajoutTableNom""></td>
+            <td id="ajoutTablePrenom"></td>
+            <td id="ajoutTableMatiere"></td>
+            <td id="ajoutTableNote"></td>
+        </tr> -->
+            </tbody>
 
-</table>
+        </table>
 
 </body>
 <script type="module" src="./module/main.js"></script>
