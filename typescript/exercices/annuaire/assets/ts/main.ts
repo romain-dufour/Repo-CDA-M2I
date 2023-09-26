@@ -53,7 +53,7 @@ function createContact(firstname: string, lastname: string, dateOfBirth: Date, e
         
         let fullname = person.fullname
         let id = person.createId
-        contact.innerHTML += `<button type="button" class= "btn btn-outline-light w-100" id="${id}" onclick="myFunctionEdit">${fullname}
+        contact.innerHTML += `<button type="button" class= "w-100 my-2 btn btn-outline-light w-100" id="${id}" onclick="myFunctionEdit">${fullname}
      </button>
       `
        });
