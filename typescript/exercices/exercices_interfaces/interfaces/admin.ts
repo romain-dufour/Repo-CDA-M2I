@@ -4,4 +4,4 @@ interface Admin {
     role: string;
 }
 
-export { Admin }
+export {Admin}
