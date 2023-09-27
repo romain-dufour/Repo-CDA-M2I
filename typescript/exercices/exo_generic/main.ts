@@ -4,3 +4,4 @@ const hangarNumber = new Pile<number>()
 
 hangarNumber.empiler(45)
 console.table(hangarNumber.elements);
+
