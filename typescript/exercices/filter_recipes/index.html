@@ -18,81 +18,36 @@
 
 <body>
     <div class="myModal" id="addContactModal">
-        <div class="myModal-content">
-            <div class="d-flex justify-content-between">
-                <h1>Add a Contact</h1>
-                <i class="bi bi-x" id="addContactClose" style="font-size: 2rem;"></i>
-            </div>
-            <hr>
-            <form id="formAddContact">
-                <div class="mb-3">
-                    <label for="add-firstname" class="form-label">Firstname:</label>
-                    <input type="text" id="add-firstname" name="add-firstname" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="add-lastname" class="form-label">Lastname:</label>
-                    <input type="text" id="add-lastname" name="add-lastname" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="add-dateOfBirth" class="form-label">Date Of Birth:</label>
-                    <input type="date" id="add-dateOfBirth" name="add-dateOfBirth" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="add-email" class="form-label">Email:</label>
-                    <input type="email" id="add-email" name="add-email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="add-phoneNumber" class="form-label">Phone number:</label>
-                    <input type="text" id="add-phoneNumber" name="add-phoneNumber" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="add-avatarURL" class="form-label">Avatar URL:</label>
-                    <input type="text" id="add-avatarURL" name="add-avatarURL" class="form-control" required>
-                </div>
-                <div class="text-end">
-                    <button class="btn btn-secondary"><i class="bi bi-send"></i> Send</button>
-                </div>
-            </form>
-        </div>
 
         <!-- ------------------------------ -->
     </div>
-    <div class="myModal" id="editContactModal">
+    <div class="myModal" id="myModalContainer">
         <div class="myModal-content">
-            <div class="d-flex justify-content-between">
-                <h1>Add a Contact</h1>
-                <i class="bi bi-x" id="editContactClose" style="font-size: 2rem;"></i>
+            <div class="d-flex justify-content-between"></div>
+            <div class="row g-2" id="myModal">
+                <div class="col-4">
+                    <div>Preparation Time</div>
+                    <div id="modalPrepTime"></div>
+                    <div>Cooking Time</div>
+                    <div id="modalCookTime"></div>
+                    <div>Servings</div>
+                    <div id="modalServings"></div>
+                    <div>Ingredients</div>
+                    <ul>
+                        <li>coucou</li>
+                    </ul>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-10" id="modalRecipeName">yo</div>
+                        <div class="col-2"><i class="bi bi-x" id="editContactClose" style="font-size: 2rem;"></i></div>
+                    </div>
+                    <hr>
+                    <ulcon>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
-            <hr>
-            <form id="formEditContact">
-                <div class="mb-3">
-                    <label for="edit-firstname" class="form-label">Firstname:</label>
-                    <input type="text" id="edit-firstname" name="edit-firstname" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="edit-lastname" class="form-label">Lastname:</label>
-                    <input type="text" id="edit-lastname" name="edit-lastname" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="edit-dateOfBirth" class="form-label">Date Of Birth:</label>
-                    <input type="date" id="edit-dateOfBirth" name="edit-dateOfBirth" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="edit-email" class="form-label">Email:</label>
-                    <input type="email" id="edit-email" name="edit-email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="edit-phoneNumber" class="form-label">Phone number:</label>
-                    <input type="text" id="edit-phoneNumber" name="edit-phoneNumber" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="edit-avatarURL" class="form-label">Avatar URL:</label>
-                    <input type="text" id="edit-avatarURL" name="edit-avatarURL" class="form-control" required>
-                </div>
-                <div class="text-end">
-                    <button class="btn btn-warning"><i class="bi bi-pencil-square"></i> Edit</button>
-                </div>
-            </form>
         </div>
     </div>
 
@@ -105,13 +60,13 @@
                     <h3>Filters</h3>
                     <hr>
                     <div class="d-flex flex-column contact" id="FiltersContainer">
-                        <p>Preparation time:</p><span id="preparationTime"></span>
+                        <p>Preparation time :</p><span id="preparationTimeFilter"></span>
                         <input type="range" id="preparation_time">
-                        <p>Preparation time:</p><span id="cookingTime"></span>
+                        <p>Cooking time :</p><span id="cookingTime"></span>
                         <input type="range" id="cooking_time">
-                        <p>Name</p><span id="recipeName"></span>
+                        <p>Name :</p><span id="recipeNameFilter"></span>
                         <input type="text" class="rounded" id="recipe_name">
-                        <p>Ingredients:</p><span id="recipeName"></span>
+                        <p>Ingredients :</p><span id="IngredientNameFilter"></span>
                         <select name="ingredients" id="ingredientsList" multiple size="8" class="rounded">
 
                         </select>
@@ -124,10 +79,9 @@
                 <div class="bg-dark rounded p-3 text-light">
                     <h3>Recipes</h3>
                     <hr>
-                    <div class="row">
-
+                    <!-- <div class="row">
                         <button id="btnFilter" class="btn btn-outline-light  w-100">
-                            <div class="fw-bold fs-4" id="recipeName">Tomato Basil Pasta</div>
+                            <div class="fw-bold fs-4" id="recipeName"></div>
                             <hr>
                             <div class="row">
                                 <div class="col-6"><i class="bi bi-hourglass-split"></i>
@@ -136,6 +90,8 @@
                                     <span id="cookTime"></span></div>
                             </div>
                         </button>
+                    </div> -->
+                    <div class="row g-2" id="recipeContainer">
                     </div>
                 </div>
             </div>
