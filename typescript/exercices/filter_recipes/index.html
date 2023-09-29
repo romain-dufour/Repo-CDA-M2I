@@ -31,7 +31,7 @@
                     <div id="modalServings"></div>
                     <div>Ingredients</div>
                     <ul id="modalIngredients">
-                        <li>coucou</li>
+
                     </ul>
                 </div>
                 <div class="col-8">
@@ -55,20 +55,44 @@
                 <div class="bg-dark rounded p-3 text-light">
                     <h3>Filters</h3>
                     <hr>
-                    <div class="d-flex flex-column contact" id="FiltersContainer">
-                        <p>Preparation time :</p><span id="preparationTimeFilter"></span>
-                        <input type="range" id="preparation_time">
-                        <p>Cooking time :</p><span id="cookingTime"></span>
-                        <input type="range" id="cooking_time">
-                        <p>Name :</p><span id="recipeNameFilter"></span>
-                        <input type="text" class="rounded" id="recipe_name">
-                        <p>Ingredients :</p><span id="IngredientNameFilter"></span>
-                        <select name="ingredients" id="ingredientsList" multiple size="8" class="rounded">
-
-                        </select>
-                    </div>
-                    <hr>
+                    <form>
+                        <div class="d-flex flex-column contact row " id="FiltersContainer">
+               
+                            <div class="row">
+                                <div class="col-6">Preparation time :</div>
+                                <div class="col-6" id="preparationTimeFilter">ddd</div>
+                                <input type="range" min="0" max="15" step="1" id="preparation_time">
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-6">Cooking time :</div>
+                                <div class="col-6" id="preparationTimeFilter">ddd</div>
+                                <input type="range" min="0" max="30" step="1" id="cooking_time">
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-6">Name :</div>
+                                <div class="col-6" id="recipeNameFilter"></div>
+                                <input type="text" class="rounded" id="recipe_name">
+                            </div>
+    
+                            <div class="row">
+                                <div>Ingredients :</div>
+                                <select name="ingredients" id="ingredientsList" multiple size="8" class="rounded">
+                                    <div id="ingredientsNameFilter"></div>
+                                </select>
+    
+                            </div>
+                            <!-- <p>Ingredients :</p><span id="IngredientNameFilter"></span>
+                            <select name="ingredients" id="ingredientsList" multiple size="8" class="rounded">
+    
+                            </select> -->
+                        </div>
+                        <hr>
                     <button id="btnFilter" class="btn btn-outline-light  w-100">FILTER</button>
+                    </form>
+                    
+                    
                 </div>
             </div>
             <div class="col-8">

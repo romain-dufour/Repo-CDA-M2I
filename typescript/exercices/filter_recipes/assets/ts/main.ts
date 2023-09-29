@@ -10,6 +10,8 @@ const btnRecipe = document.querySelector("#btnRecipe") as HTMLButtonElement
 const myModalContainer = document.querySelector("#myModalContainer") as HTMLElement
 const editContactClose = document.querySelector("#editContactClose") as HTMLButtonElement
 
+
+//id de la modal
 const modalPrepTime = document.querySelector("#modalPrepTime") as HTMLElement
 const modalCookTime = document.querySelector("#modalCookTime") as HTMLElement
 const modalServings = document.querySelector("#modalServings") as HTMLElement
@@ -18,6 +20,11 @@ const modalIngredientsName = document.querySelector("#modalIngredientsName") as 
 const modalIngredientsAmount = document.querySelector("#modalIngredientsAmount") as HTMLElement
 const modalRecipeName = document.querySelector("#modalRecipeName") as HTMLElement
 const modalRecipeInstructions = document.querySelector("#modalRecipeInstructions") as HTMLElement
+
+//id du filter
+const preparation_time = document.querySelector("#preparation_time") as HTMLInputElement
+const cooking_time = document.querySelector("#cooking_time") as HTMLInputElement
+
 
 
 interface Recipe {
@@ -31,6 +38,8 @@ interface Recipe {
     amount: string;
   }[];
   instructions: string[];
+  prepTimeNombre : number
+  prepCookNombre : number
 }
 
 const recipesList: Recipe[] = [];
@@ -40,11 +49,11 @@ for (const el in recipes) {
   recipesList.push(recipes[el])
 
 }
-console.table(recipesList);
+// console.table(recipesList);
 
 
 
-// creation 
+// creation liste de recette et modal
 function displayRecipes(){
   for (let key in recipesList) {
 
@@ -74,8 +83,8 @@ function displayRecipes(){
 }
 
 
-
 displayRecipes()
+
 //fonction creation modal
 function createModal(a : number) {
   const newModal = document.createElement("div")
@@ -103,74 +112,64 @@ editContactClose.addEventListener('click', (e) => {
 })
 }
 
-modalPrepTime.innerHTML = recipesList[i].prepTime ;
-modalCookTime.innerHTML = recipesList[i].cookTime ;
-modalServings.innerHTML = recipesList[i].servings + " servings";
-modalRecipeName.innerHTML = recipesList[i].name;
-
-
-// modalRecipeInstructions.innerHTML = recipesList[i].ingredients[].name
-
-
-
-
-  // addModal(newbouton)
-
-
-
-// function createButton (i:number){
-//   const newbutton = document.createElement("button")
-//   newbutton.className = "btn btn-outline-light  w-100"
-//   newbutton.innerHTML +=
-//     `
-// <div class="fw-bold fs-4" id="recipeName">${recipesList[i].name}</div>
-// <hr>
-// <div class="row">
-//     <div class="col-6"><i class="bi bi-hourglass-split"></i>
-//         <span id="prepTime">${recipesList[i].prepTime}</span></div>
-//     <div class="col-6"><i class="bi bi-fire"></i>
-//         <span id="cookTime">${recipesList[i].cookTime}</span></div>
-// </div>
-// `
-// }
-
-// function modalOpen(arg : HTMLElement) {
-//   arg.addEventListener('click', (e) => {
-//     myModalContainer.style.display = "block"
-//   })
-
-// }
-// function modalClose(arg : HTMLElement) {
-
-//   editContactClose.addEventListener('click', (e) => {
-//     myModalContainer.style.display = "none"
-//   })
-// }
-
-// insérer les recettes dans la modal
-
-// function addModal(i){
 // modalPrepTime.innerHTML = recipesList[i].prepTime ;
-// modalCookTime.innerHTML = recipesList[arg].cookTime ;
-// modalServings.innerHTML = recipesList[arg].servings + " servings";
-// modalRecipeName.innerHTML = recipesList[arg].name;
+// modalCookTime.innerHTML = recipesList[i].cookTime ;
+// modalServings.innerHTML = recipesList[i].servings + " servings";
+// modalRecipeName.innerHTML = recipesList[i].name;
 
-// modalRecipeInstructions.innerHTML = recipesList[arg].ingredients[arg].name
+// --------- FILTER --------------
+
+
+// a partir du tableau recipesList => faire un filter a chaque range et renvoyer le nouveau tableau sur le filtre suivant
+// renvoyer le dernier tableau qui servira pour l'affichage
+
+
+const recipesList2: Recipe[] = [];
+
+for (const el in recipes) {
+
+  recipesList2.push(recipes[el])
+
+}
 
 
 
-// const ingredientsList = recipesList[arg].ingredients.forEach(ingredient => {
-//   const newli = document.createElement("li")
-//   newli.innerHTML = `
-//   ${ingredient.name} (${ingredient.amount})
-//   `
+// transformer le temps de cuisson et de preparation en nombre pour pouvoir filtrer le tableau avec le max range
+for (let key in recipesList2) {
+  let tempsPrep :string = recipesList2[key].prepTime
+  let tempsPrepNumérique : string = tempsPrep.replace(/\D/g, '');  
+  let nombrePrep : number = parseInt(tempsPrepNumérique)
 
+  let tempsCook :string = recipesList2[key].cookTime
+  let tempsCookNumérique : string = tempsCook.replace(/\D/g, '');  
+  let nombreCook : number = parseInt(tempsCookNumérique)
+
+  recipesList2[key].prepTimeNombre=nombrePrep
+  recipesList2[key].prepCookNombre=nombreCook
 
   
+}
+// console.table(recipesList2);
 
-// modalIngredients.innerHTML += ingredientsList + "1"
 
+// filtre prep time -> creer variable égale au max du range puis filtrer 
+// recuperer la valeur du rangevalue
 
+let prepRangeValue : string = preparation_time.value
+let prepRangeValueNumber : number = parseInt(prepRangeValue)
+
+let cookRangeValue : string = cooking_time.value
+let cookRangeValueNumber : number = parseInt(cookRangeValue)
+
+// for(let key in recipesList2){
+//   const preplist :[key] = recipesList2[key].prepTimeNombre
 
 // }
+// const preplist :[] = recipesList2[].prepTimeNombre
 
+// const recipesListPrepTimeFilter:[]= recipesList2.prepTimeNombre[].filter((PrepRangeValueNumber)=>recipesList2[key])
+
+const recipesListPrepTimeFilter= recipesList2.filter((arg)=> arg.prepTimeNombre < prepRangeValueNumber)
+
+console.log(prepRangeValue);
+console.table(recipesListPrepTimeFilter)
