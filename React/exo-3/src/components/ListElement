@@ -1,0 +1,29 @@
+import { useState } from 'react'
+
+const listElement = () => {
+    const [liste, setListe] = useState([])
+
+
+
+const addElementToList = () => {
+    setListe([...listElement, "titi"])
+}
+
+return (
+    <>
+    <button onclick = (addElementToList) > Add an Element < /button>
+        < hr />
+        <ul>
+        {
+            listElement.map = ((element, index) => (
+
+                <li key= { index } > { element } > /li>
+            ))}
+        < /ul>
+        < />
+
+    )
+    }
+
+
+export default listElement
