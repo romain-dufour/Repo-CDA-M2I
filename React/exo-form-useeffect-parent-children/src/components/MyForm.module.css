@@ -1,0 +1,33 @@
+.app{
+width: 100vw;
+height: 100vh;}
+
+.form {
+    margin: 5vh auto;
+    width: 400px;
+    height: 250px;
+    position: relative;
+    display: grid;
+    text-align: center;
+    background-color: rgb(200, 198, 198);
+}
+
+.table{
+    width: 400px;
+}
+
+.table, thead ,th, td{
+    margin:auto;
+    border-collapse: collapse;
+    border: 3px solid rgb(240, 24, 240);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.table>thead {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    text-transform: capitalize;
+}

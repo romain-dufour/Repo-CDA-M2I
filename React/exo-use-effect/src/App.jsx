@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="App">
       <>
-      <ExoUseEffect mysteryValue={12}/>
+      <ExoUseEffect mysteryValue={15}/>
       </>
     </div>
   );

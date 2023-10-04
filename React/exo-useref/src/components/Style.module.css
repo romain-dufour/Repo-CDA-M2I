@@ -1,0 +1,22 @@
+.form{
+    width: 400 px;
+    height: 400px;
+    display :grid;
+}
+
+.label{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.input{
+    border-radius: 20%;
+    border-color: red;
+}
+
+.bouton{
+    background-color: greenyellow;
+    font-weight: bolder;
+    margin-top: 15px;
+
+}
