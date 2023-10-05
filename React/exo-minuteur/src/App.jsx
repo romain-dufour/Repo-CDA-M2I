@@ -1,5 +1,5 @@
 
-import TimerForm from './components/TimerForm'
+// import TimerForm from './components/TimerForm'
 import Timer from './components/Timer'
 
 function App() {
@@ -7,9 +7,7 @@ function App() {
 
   return (
     <>
-      <div>
         <Timer/>
-      </div>
     </>
   )
 }

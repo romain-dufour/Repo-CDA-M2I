@@ -1,8 +1,8 @@
 import useState from 'react';
 import useEffect  from 'react';
-import MySound from "../assets/sounds/cigale.mp3"
+// import MySound from "../assets/sounds/cigale.mp3"
 
-function Timer() {
+const Timer = () => {
     const [nomMinuteur, setNomMinuteur] = useState('Mon Minuteur');
     const [duree, setDuree] = useState(60); // Temps en secondes
     const [tempsRestant, setTempsRestant] = useState(duree);
@@ -16,10 +16,6 @@ let interval;
       interval = setInterval(() => {
         setTempsRestant(tempsRestant - 1);
       }, 1000);
-    }
-
-    if (tempsRestant == 0){
-        playMySound()
     }
 
     return () => {
@@ -40,10 +36,10 @@ let interval;
     setTempsRestant(duree);
   };
 
-  const playMySound = () => {
-    const newSound = new Audio(MySound)
-    newSound.play()
-  }
+  // const playMySound = () => {
+  //   const newSound = new Audio(MySound)
+  //   newSound.play()
+  // }
 
   return (
     <div>

@@ -9,29 +9,25 @@ function TimerForm(props) {
 
 
     return (
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <div>
-                            <label htmlFor="Nom">Nom</label>
-                            <input type="text" />
-                        </div>
-                        <div>
-                            <label htmlFor="Nom">Temps</label>
-                            <input type="text" />
-                        </div>
-                        <button >Play</button>
-                    </td>
-                    <td>
-                        <input type="time" />
-                    </td>
-                </tr>
-
-            </table>
-
-
-        </div>
+<div>
+      <h1>{nomMinuteur}</h1>
+      <p>Temps restant : {tempsRestant} secondes</p>
+      <input
+        type="text"
+        placeholder="Nom du minuteur"
+        value={nomMinuteur}
+        onChange={(e) => setNomMinuteur(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Durée en secondes"
+        value={duree}
+        onChange={(e) => setDuree(parseInt(e.target.value))}
+      />
+      <button onClick={demarrerMinuteur}>Play</button>
+      <button onClick={arreterMinuteur}>Pause</button>
+      <button onClick={reinitialiserMinuteur}>Réinitialiser</button>
+    </div>
     )
 }
 
