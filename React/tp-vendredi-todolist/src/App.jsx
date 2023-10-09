@@ -13,9 +13,10 @@ const deleteTaskHandler =(task) => {
   return (
     <MonContext.Provider value={{tasks, setTasks}}>
       <Formulaire />
-      {tasks.map(task=> <TasksDisplay  key={task.id} id={task.id} onDeleteTask = {deleteTaskHandler} />
-    )}
-
+      {tasks.map(task=> (
+      <TasksDisplay  key={task.id} id={task.id} onDeleteTask = {deleteTaskHandler} />
+     
+    ))}
     </MonContext.Provider>
   )
 }

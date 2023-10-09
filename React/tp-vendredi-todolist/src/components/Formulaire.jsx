@@ -11,7 +11,7 @@ const Formulaire = () => {
 
     const submitHandler =(event)=>{
         event.preventDefault()
-
+        console.log("form")
         const name = taskNameInputRef.current.value
         const deadline = taskDeadLineInputRef.current.value
 
@@ -33,7 +33,7 @@ const Formulaire = () => {
                 <input type="Date" ref={taskDeadLineInputRef} required />
             </div>
             <div>
-                <button type="button">Add task</button>
+                <button>Add task</button>
             </div>
 
         </form>
