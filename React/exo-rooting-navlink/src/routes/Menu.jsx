@@ -1,17 +1,32 @@
-import { NavLink , Outlet} from "react-router-dom"
+import { NavLink, Outlet } from "react-router-dom"
 
-function Menu()  {
-    return(
-        <div>
-        <header>
-        <h1>eWebsite</h1>
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/MyProjects">My Projects</NavLink>
-                <NavLink to="/About">About</NavLink>
-                <NavLink to="/Contact">Contact Me</NavLink>
-        </header>
-        <Outlet/>
-        </div>
-    )}
+function Menu() {
+
+    const
+        handleNavLinkClasses= ({ isActive, isPending } ) => {
+                return isPending ? "pending-class" : isActive ? "active-class" : ""}
+
+                return (
+                    <div>
+                        <header className="row">
+                            <h1 className=" text-danger">eWebsite</h1>
+                            <div className="">
+                            <NavLink to="/" className={handleNavLinkClasses}>Home</NavLink>
+                            </div>
+                            <div>
+                            <NavLink to="/MyProjects" className="nav-link">My Projects</NavLink>
+                            </div>
+                            <div>
+                            <NavLink to="/About" className={handleNavLinkClasses}>About</NavLink>
+                            </div>
+                            <div>
+                            <NavLink to="/Contact" className={handleNavLinkClasses}>Contact Me</NavLink>
+
+                            </div>
+                        </header>
+                        <Outlet />
+                    </div>
+                )
+            }
 
     export default Menu

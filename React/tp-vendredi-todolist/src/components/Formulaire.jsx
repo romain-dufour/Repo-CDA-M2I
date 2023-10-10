@@ -19,6 +19,9 @@ const Formulaire = () => {
 
         setTasks((prevTasks) =>[...prevTasks, newTask])
 
+        taskNameInputRef.current.value = ""
+        taskDeadLineInputRef.current.value=""
+
     }
 
     return (

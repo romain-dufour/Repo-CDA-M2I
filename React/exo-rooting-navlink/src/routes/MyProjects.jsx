@@ -3,7 +3,7 @@
 function MyProject()  {
     return(
         <div>
-        <h4>Project 1</h4>
+        <h4 className="text-success">Project 1</h4>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem, commodi numquam possimus ratione reiciendis eveniet perspiciatis, quia tempora sunt dignissimos velit tenetur illo incidunt architecto? Quo accusantium ut laboriosam fugit.
         Temporibus, reprehenderit? Sint odio voluptatibus possimus sit! Doloribus modi autem omnis explicabo illo vero porro pariatur qui nesciunt quasi exercitationem quo ipsa, obcaecati aspernatur saepe facere non sequi quisquam aut?
         Illum minima aspernatur assumenda tenetur sapiente? Accusamus aut molestiae maiores dolores laudantium deserunt mollitia expedita modi architecto impedit molestias suscipit quos voluptate tempora sapiente eos sunt eligendi error, laborum provident.

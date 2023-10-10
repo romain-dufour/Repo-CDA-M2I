@@ -3,10 +3,11 @@ class Task {
     static taskCount = 0
     _id
 
+    _isDone = false
+
     constructor(_name,_deadline){
         this._id = ++Task.taskCount
-        this._name=_name
-        this._deadline=_deadline
+        this._isDone = this._isDone
 
     }
 
