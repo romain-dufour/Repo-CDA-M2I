@@ -14,7 +14,7 @@ function Contacts()  {
     }
 
     const {person}=useContext(MonContext)
-
+    console.log(person.id);
     return(
         <>
 <div>
@@ -22,14 +22,12 @@ function Contacts()  {
 <button onClick={addButton}>Ajouter Contact</button>
 </div>
 <hr />
-<div>
-    <p>La liste de contacts est vide</p>
-    <div>
-        {person.map(p => 
-            <PersonInfos key={p.id} personId={p.id}/>
-            )}
-    </div>
-</div>
+
+    {person.length === 0 ? <div><p>La liste de contacts est vide</p></div> :
+    person.map(p => 
+        <PersonInfos key={p.id} personId={p.id}/>
+        )}
+    
         </>
     )
 }
