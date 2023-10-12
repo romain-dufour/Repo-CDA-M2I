@@ -1,0 +1,32 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "nomProduit": "Pomme",
+      "description": "des pommes",
+      "image": "https://media.istockphoto.com/id/1418882799/fr/photo/pommes-fra%C3%AEches-dans-un-panier.webp?s=1024x1024&w=is&k=20&c=0Gc6XXJQS8RN-mErLsRMgWXLC2KJh_yLBrF8pZ17yk0=",
+      "prix": "1"
+    },
+    {
+      "id": 2,
+      "nomProduit": "Poire",
+      "description": "des poires",
+      "image": "https://media.istockphoto.com/id/172416586/fr/photo/poire.jpg?s=1024x1024&w=is&k=20&c=Wwt0uwO9zOcf8CaIfVfswG3sMAIINL96q4bBxFbwdNQ=",
+      "prix": "2"
+    },
+    {
+      "id": 3,
+      "nomProduit": "Fraise",
+      "description": "des fraises",
+      "image": "https://media.istockphoto.com/id/471674664/fr/photo/deux-fraises-isol%C3%A9-sur-fond-blanc.jpg?s=1024x1024&w=is&k=20&c=e3_n3SNh-IbGIlpTVi48WJJUh85XDaKVFBtmkBbBk5M=",
+      "prix": "3"
+    },
+    {
+      "nomProduit": "Framboise",
+      "description": "des framboises",
+      "image": "https://media.istockphoto.com/id/648967314/fr/photo/framboise-avec-feuilles-isol%C3%A9-sur-fond-blanc.jpg?s=1024x1024&w=is&k=20&c=wERC34zVA-LykocI4mnqxOAQZNzqPL50_iA42b2SkFY=",
+      "prix": "4",
+      "id": 4
+    }
+  ]
+}
