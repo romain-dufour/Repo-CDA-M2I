@@ -3,6 +3,17 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import { Link } from 'react-router-dom'
 
 function Menu() {
+
+
+    const setStorage = () => {
+        const adminLogin = {
+            identite: "Admin",
+            mdp: "1234",
+        }
+
+        localStorage.setItem( "login", JSON.stringify(adminLogin))
+    }
+
     return (
         <>
 
@@ -14,8 +25,11 @@ function Menu() {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            {/* <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#" onClick={setStorage}><Link to="/ajout-produit">Administration</Link></a>
+                            </li> */}
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Administration</a>
+                                <a className="nav-link active" aria-current="page" href="#" onClick={setStorage}><Link to="/FormIdentite">Administration</Link></a>
                             </li>
                             <li className="nav-item ">
                                 <a className="nav-link active " aria-current="page" href="#" ><Link to="/panier">Panier</Link></a>

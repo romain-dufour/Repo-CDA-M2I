@@ -7,9 +7,11 @@ import Menu from "../components/Navbar"
 
 function DetailProduit() {
     const { id } = useParams()
-    const [produit, setProduit] = useState([])
+    const [produit, setProduit] = useState({})
     const navigate = useNavigate()
     const btnpanier = useRef()
+    const inputQuantity = useRef()
+
 
     useEffect(() => {
         axios.get(`http://localhost:5000/produits/${id}`)
@@ -17,22 +19,34 @@ function DetailProduit() {
                 setProduit(response.data)
             })
     }, [id])
-    const inputQuantity = useRef()
 
     const addPanier = () => {
-        const panier = JSON.parse(localStorage.getItem("panier"))
+        const panier = JSON.parse(localStorage.getItem("panier")) || [];
 
-        if(panier==[]){
-            localStorage.setItem("panier",JSON.stringify({nomProduit:produit.nomProduit,prix: produit.prix, qte :inputQuantity.current.value}))
+        const newProduit = {
+            nomProduit: produit.nomProduit,
+      prix: produit.prix,
+      qte: inputQuantity.current.value,
         }
-        else{
-            localStorage.setItem(panier,{nomProduit:produit.nomProduit,prix: produit.prix, qte :inputQuantity.current.value})
-        }
+
+        panier.push(newProduit)
+
+        localStorage.setItem("panier", JSON.stringify(panier));
+
+        // if(panier===[]){
+        //     localStorage.setItem("panier",JSON.stringify({nomProduit:produit.nomProduit,prix: produit.prix, qte :inputQuantity.current.value}))
+        // }
+        // else{
+        //     localStorage.setItem({panier},{nomProduit:produit.nomProduit,prix: produit.prix, qte :inputQuantity.current.value})
+        // }
         btnpanier.current.className = "btn btn-success text-center m-1 d-block"
     }
 
     const gotoPanier = () => {
         navigate("/panier")
+    }
+    const continueAchats = () => {
+        navigate("/")
     }
 
     return (
@@ -48,11 +62,18 @@ function DetailProduit() {
                 </ul>
                 <br />
                 <label for="quantity">Quantité désirée :</label>
-                <input className="mx-4 my-4" type="number" id="quantity" ref={inputQuantity} name="quantity" size={4} min="1" max="100" />
+                <input className="mx-4 my-4" type="number" id="quantity" ref={inputQuantity} name="quantity" size={4} min="1" max="100" required/>
                 <br />
                 <div>
+                    <div className=" p-2">
                     <button className="btn btn-dark text-center" onClick={addPanier}>Ajouter au panier</button>
+                    </div>
+                    <div className=" p-2">
                     <button className="d-none" ref={btnpanier} onClick={gotoPanier}>Aller au panier</button>
+                    </div>
+                    <div className=" p-2">
+                        <button className="btn btn-secondary text-center" onClick={continueAchats}>Continuer vos achats</button>
+                    </div>
                 </div>
             </div>
         </div>

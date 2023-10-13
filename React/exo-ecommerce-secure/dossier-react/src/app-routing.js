@@ -3,6 +3,8 @@ import Home from "./routes/Home";
 import DetailProduit from "./routes/DetailProduit";
 import Panier from "./routes/Panier";
 import FormAjout from "./routes/FormAjout";
+import FormIdentite from "./components/FormIdentite";
+import ProtectedRoute from "./Services/ProtectedRoute";
 
 
 
@@ -20,8 +22,12 @@ const router = createBrowserRouter([
         element : <Panier />
     },
     {
+        path : "/formIdentite",
+        element : <FormIdentite />
+    },
+    {
         path : "/ajout-produit",
-        element : <FormAjout />
+        element : <ProtectedRoute><FormAjout /></ProtectedRoute>
     }
 ])
 

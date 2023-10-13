@@ -1,5 +1,5 @@
-import { useRef } from "react"
-import { useNavigate, useSearchParams } from "react-router-dom"
+import { useRef ,useSearchParams} from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 function FormAjout() {
@@ -23,6 +23,7 @@ function FormAjout() {
             image : inputImageProduit.current.value,
             prix : inputPrixproduit.current.value,
         })
+        localStorage.clear("login")
         navigate("/")
 
     }
