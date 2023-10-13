@@ -1,4 +1,4 @@
-import { useRef ,useSearchParams} from "react"
+import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
@@ -8,8 +8,8 @@ function FormAjout() {
     const inputDescriptionproduit = useRef()
     const inputPrixproduit = useRef()
     const inputImageProduit = useRef()
-    const[params] = useSearchParams()
-    const id = params.get("id")
+    // const[params] = useSearchParams()
+    // const id = params.get("id")
     const navigate = useNavigate()
 
 
@@ -23,7 +23,7 @@ function FormAjout() {
             image : inputImageProduit.current.value,
             prix : inputPrixproduit.current.value,
         })
-        localStorage.clear("login")
+        localStorage.removeItem("login")       
         navigate("/")
 
     }

@@ -2,16 +2,37 @@ import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 
 
-
-const FormIdentite = () => {
-
+const FormIdentite = ({ onAuthenticate }) => {
     const password = useRef()
     const identifiant = useRef()
     const navigate = useNavigate()
 
     const submitFormHandler = (e) => {
         e.preventDefault()
-    }
+
+        const storedLogin = JSON.parse(localStorage.getItem("login"));
+
+        if (storedLogin) {
+            const enteredIdentifiant = identifiant.current.value;
+            const enteredPassword = password.current.value;
+
+            // Vérifier si l'identifiant et le mot de passe correspondent à ceux du local storage
+            if (
+                enteredIdentifiant === storedLogin.identite && enteredPassword === storedLogin.mdp
+            ) {
+                // Authentification réussie, envoyer l'identifiant et le mot de passe
+                onAuthenticate(enteredIdentifiant, enteredPassword);
+                console.log("coucou");
+                navigate("/ajout-produit"); 
+                // Rediriger ici après une authentification réussie
+            } else {
+                alert("Identifiant ou mot de passe incorrect");
+            }
+        } else {
+            alert("Identifiants non trouvés dans le local storage");
+        }
+    };
+    
     const clickNavigate = () =>{
         navigate("/ajout-produit")
     }
