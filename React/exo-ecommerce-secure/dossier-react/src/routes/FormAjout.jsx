@@ -28,6 +28,9 @@ function FormAjout() {
 
     }
 
+    const clickNavigate = () => {
+        navigate("/")
+    }
     return (
         <>
 
@@ -53,6 +56,8 @@ function FormAjout() {
                 </div>
 
                 <button type="submit" className="btn btn-success mx-4">Ajouter</button>
+                <button type="submit" className="btn btn-secondary mx-4" onClick={clickNavigate}>Quitter</button>
+
 
             </form>
 

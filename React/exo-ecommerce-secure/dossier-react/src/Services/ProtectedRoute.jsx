@@ -1,31 +1,24 @@
-// import { useNavigate } from "react-router-dom"
-// import React, { useState } from "react";
-
-
-// function ProtectedRoute (props) {
-//     const navigate = useNavigate()
-
-// if(true){
-//     return(
-//         // <>{props.children}</>
-//         navigate("/ajout-produit")
-//     )
-// }
-
-// }
-// export default ProtectedRoute
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FormIdentite from "../components/FormIdentite";
+
+const loginStorage = JSON.parse(localStorage.getItem("login")) || {};
+
+console.log(loginStorage);
+
+const votre_identifiant = JSON.stringify(loginStorage.identite);
+const votre_mot_de_passe = JSON.stringify(loginStorage.mdp);
+
+console.log(votre_mot_de_passe);
+
+console.log(votre_identifiant);
 
 const ProtectedRoute = (props) => {
     const navigate = useNavigate();
     const [authenticated, setAuthenticated] = useState(false);
 
     const checkAuthentication = (identifiant, password) => {
-        // Vérifiez ici l'identifiant et le mot de passe, et définissez authenticated à true si l'authentification réussit.
-        if (identifiant === "votre_identifiant" && password === "votre_mot_de_passe") {
+        if (identifiant=== votre_identifiant && password === votre_mot_de_passe) {
             setAuthenticated(true);
         }
     };
@@ -35,7 +28,6 @@ const ProtectedRoute = (props) => {
     }
 
     if (!authenticated) {
-        // L'utilisateur n'est pas authentifié, affichez le formulaire d'authentification
         return (
             <>
                 <p className="text-danger">Vous n'avez pas l'autorisation d'accéder à cette page</p>
