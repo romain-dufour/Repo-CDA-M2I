@@ -4,21 +4,17 @@ import FormIdentite from "../components/FormIdentite";
 
 const loginStorage = JSON.parse(localStorage.getItem("login")) || {};
 
-console.log(loginStorage);
-
 const votre_identifiant = JSON.stringify(loginStorage.identite);
 const votre_mot_de_passe = JSON.stringify(loginStorage.mdp);
 
-console.log(votre_mot_de_passe);
-
-console.log(votre_identifiant);
 
 const ProtectedRoute = (props) => {
     const navigate = useNavigate();
     const [authenticated, setAuthenticated] = useState(false);
 
     const checkAuthentication = (identifiant, password) => {
-        if (identifiant=== votre_identifiant && password === votre_mot_de_passe) {
+        if (identifiant=== 'Admin' && password === "123") {
+            const role = admin
             setAuthenticated(true);
         }
     };

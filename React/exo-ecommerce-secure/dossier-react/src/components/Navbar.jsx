@@ -3,20 +3,11 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css';
 import { Link } from 'react-router-dom';
 
 function Menu() {
-    // const setStorage = () => {
-    //     const adminLogin = {
-    //         identite: "a",
-    //         mdp: "a",
-    //     }
 
-    //     localStorage.setItem("login", JSON.stringify(adminLogin))
-    // }
+  const setStorage = () => {
 
-
-//   const setStorage = () => {
-//       console.log("j'appuie sur le bouton")
-//       localStorage.setItem("role","Admin")
-//   }
+      localStorage.setItem("role","Admin")
+  }
     const linkStyle = {
         color: 'white',  
         textDecoration: 'none', 
