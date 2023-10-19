@@ -96,7 +96,10 @@ const albumsSlice = createSlice({
             state.albums.push(action.payload)
         })
         builder.addCase(editAlbums.fulfilled, (state, action) => {
-            state.albums.push(action.payload)
+            let foundAlbum = state.albums.find(album => album.id === action.payload.id)
+            if (foundAlbum) {
+                state.albums = [...state.albums.filter(r => r.id !== action.payload.id), action.payload]
+            }
         })
         builder.addCase(deleteAlbums.fulfilled, (state, action) => {
             state.albums.push(action.payload)
