@@ -20,14 +20,14 @@ const RecipesForm = (props) => {
             id: Date.now(),
             title: titleref.current.value,
             instructions: instructionsref.current.value,
-            cookTime: cookTimeref.current.value,
-            prepTime: prepTimeref.current.value,
+            cookTime: +cookTimeref.current.value,
+            prepTime: +prepTimeref.current.value,
             ingredients: ingredientsref.current.value
 
         }
 
-        if(user) {
-            try {
+        if(user.idToken) {
+            try { 
                 const response = await fetch(`${BASE_DB_URL}/recipesList?auth=${user.idToken}`,{
                     method: "POST",
                     headers: {

@@ -27,9 +27,9 @@ const recipesSlice = createSlice({
             state.recipes = state.recipes.filter(recipe => recipe.id !== action.payload)
         },
         updateRecipe : (state, action) => {
-            const index = state.recipes.findIndex(recipe => recipe.id === action.payload.id)
-            if (index != -1) {
-                state.recipes[index] = action.payload
+            const foundRecipe = state.recipes.findIndex(recipe => recipe.id === action.payload.id)
+            if (foundRecipe) {
+                state.recipes= [...state.recipes.filter(r =>r.id !== action.payload.id), action.payload]
             }
         }
     }
