@@ -1,11 +1,16 @@
 import { useSelector, useDispatch } from "react-redux"
 import { setSelectedAlbum, setFormMode } from "./albumsSlice"
+import {Rating} from 'react-simple-star-rating'
+import { useState } from "react"
+
+
 
 
 const AlbumsDisplay = (props) => {
     const album = props.album
     const dispatch = useDispatch()
     const user = useSelector(state => state.auth.user)
+    const [rating, setRating] = useState(album.score)
 
     const editAlbumHandler = () => {
         dispatch(setSelectedAlbum(album))
@@ -16,6 +21,14 @@ const AlbumsDisplay = (props) => {
         dispatch(setSelectedAlbum(album))
         dispatch(setFormMode("delete"))
     }
+    const handleRating = (rate) => {
+        console.log(rate);
+        setRating(rate)
+
+    }
+//     const handleRating = () => {
+// dispatch(setSelectedAlbum(album))
+//     }
         return (
             <div className="mt-2 border border-secondary p-3 rounded text-center">
                 <div className="d-flex align-items-center">
@@ -37,7 +50,9 @@ const AlbumsDisplay = (props) => {
                     <hr />
                     <div className="d-flex align-items-center">
                         <p>Score: </p>
-                        <span className="ms-auto"><p><i class="bi bi-star-fill"></i>{album.score}</p></span>
+                            <div className="ms-auto ">
+                                <Rating className=" " size="20" initialValue={album.score}  readonly={true}></Rating>
+                            </div>
                     </div>
                     <hr />
                     <div className="d-flex align-items-center">

@@ -56,6 +56,7 @@ export const editAlbums = createAsyncThunk(
 export const deleteAlbums = createAsyncThunk(
     "AlbumsList/deleteAlbums",
     async (newAlbum) => {
+        const token = localStorage.getItem("token")
         const response = await fetch(`${BASE_DB_URL}/albums/${newAlbum.id}.json?auth=${token}`, {
             method: "DELETE"
         })
@@ -102,7 +103,10 @@ const albumsSlice = createSlice({
             }
         })
         builder.addCase(deleteAlbums.fulfilled, (state, action) => {
-            state.albums.push(action.payload)
+            let foundAlbum = state.albums.find(album => album.id === action.payload.id)
+            if (foundAlbum) {
+                state.albums = [...state.albums.filter(r => r.id !== action.payload.id), action.payload]
+            }
         })
     }
 })

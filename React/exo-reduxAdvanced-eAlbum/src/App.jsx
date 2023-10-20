@@ -38,7 +38,14 @@ function App() {
               {user && <button className='btn btn-success' onClick={() => dispatch(setFormMode("add"))}>Add</button>}
               <div className='d-flex align-items-center'>
                 <label htmlFor='filterSelect' className='form-label col-auto me-2'>Filtered by: </label>
-                <select id='filterSelect' className='form-select col' placeholder='Select a filter'></select>
+                <select id='filterSelect' className='form-select col' placeholder='Select a filter'>
+                  <option value="" defaultChecked>Select a filter</option>
+                  <option value="artist">Artist</option>
+                  <option value="score">Score</option>
+                  <option value="releaseDate">Date de sortie</option>
+                  <option value="price">Price</option>
+
+                </select>
               </div>
             </div>
             <hr />

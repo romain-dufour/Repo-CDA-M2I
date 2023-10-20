@@ -1,17 +1,24 @@
 import { useDispatch, useSelector } from "react-redux"
 import { editAlbums, setFormMode } from "./albumsSlice"
-import { useRef } from "react"
+import { useRef , useState} from "react"
+import { Rating } from 'react-simple-star-rating'
+
 
 const EditAlbumForm = () => {
     const selectedAlbum = useSelector(state => state.albums.selectedAlbum)
+    const [rating, setRating] = useState(selectedAlbum.score)
     const dispatch = useDispatch()
     const titleRef = useRef()
     const dateRef = useRef()
     const artistRef = useRef()
-    const scoreRef = useRef()
+    // const scoreRef = useRef()
     const urlRef = useRef()
     const priceRef = useRef()
 
+    const handleRating = (rate) => {
+        console.log(rate);
+        setRating(rate)
+    }
 
     const SubmitFormHandler = (event) => {
         event.preventDefault()
@@ -21,7 +28,7 @@ const EditAlbumForm = () => {
             title: titleRef.current.value,
             releaseDate: dateRef.current.value,
             artist: artistRef.current.value,
-            score: scoreRef.current.value,
+            score: rating,
             coverURL: urlRef.current.value,
             price: priceRef.current.value
         }
@@ -29,7 +36,7 @@ const EditAlbumForm = () => {
         dispatch(editAlbums(newAlbum))
         dispatch(setFormMode(""))
     }
-
+  
     return(
         <>
             <h1>Edit Album</h1>
@@ -47,9 +54,10 @@ const EditAlbumForm = () => {
                     <label htmlFor="artist" className="form-label">Artist:</label>
                     <input type="text" className="form-control" required ref={artistRef} defaultValue={selectedAlbum.artist} />
                 </div>
+
                 <div className="mb-3">
                     <label htmlFor="score" className="form-label">Score:</label>
-                    <input type="number" className="form-control" min={0} max={5} required ref={scoreRef} defaultValue={selectedAlbum.score}/>
+                    <Rating onClick={handleRating} size={20}  initialValue={selectedAlbum.score} required/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="coverURL" className="form-label">URL of the cover:</label>

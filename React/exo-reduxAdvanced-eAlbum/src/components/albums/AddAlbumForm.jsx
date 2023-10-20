@@ -1,10 +1,12 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useDispatch } from "react-redux"
-import { postAlbums } from "./albumsSlice"
+import { postAlbums, setFormMode } from "./albumsSlice"
+import { Rating } from 'react-simple-star-rating'
 
 
 
 const AddAlbumForm = () => {
+    const [rating, setRating] = useState(100)
     const dispatch = useDispatch()
     const titleRef = useRef()
     const dateRef = useRef()
@@ -13,19 +15,29 @@ const AddAlbumForm = () => {
     const urlRef = useRef()
     const priceRef = useRef()
 
+    const handleRating = (rate) => {
+        console.log(rate);
+        setRating(rate)
+
+    }
+
     const SubmitFormHandler = (event) => {
         event.preventDefault()
+
+
 
         const newAlbum = {
             title: titleRef.current.value,
             releaseDate: dateRef.current.value,
             artist: artistRef.current.value,
-            score: scoreRef.current.value,
+            score: rating,
             coverURL: urlRef.current.value,
-            price: priceRef.current.value
-        }
+            price: priceRef.current.value,
 
+        }
         dispatch(postAlbums(newAlbum))
+        dispatch(setFormMode(""))
+
     }
     return (
         <>
@@ -46,7 +58,7 @@ const AddAlbumForm = () => {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="score" className="form-label">Score:</label>
-                    <input type="number" className="form-control" min={0} max={5} required ref={scoreRef} />
+                    <Rating onClick={handleRating} ref={scoreRef} required/>
                 </div>
                 <div className="mb-3">
                     <label htmlFor="coverURL" className="form-label">URL of the cover:</label>
