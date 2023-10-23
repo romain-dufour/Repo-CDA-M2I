@@ -14,6 +14,7 @@ function App() {
   const user = useSelector(state => state.auth.user)
   const formMode = useSelector(state => state.albums.formMode)
   const albums = useSelector(state => state.albums.albums)
+  const artist =   
 
   useEffect(() => {
     dispatch(fetchAlbums())
