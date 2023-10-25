@@ -71,9 +71,15 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 
-JSON server : npm install -g json-server
-se placer dans la racine du projet pour lancer le local host :
-json -server --watch nomDeLaBase.json --port N°dePort (en general 5000)
+Il faut installer server j-son de façon globale : npm install -g json-server
+
+Après création d'un fichier json, on démarre le serveur web avec : json-server --watch nomDeLaBase.json --port N°dePort (en general 5000)
+
+    GET /personnes
+    POST /personnes
+    PUT /personnes/:id
+    DELETE /personnes/:id
+
 
 Axios : npm i axios
 
@@ -81,6 +87,12 @@ UseState : pour récupérer le changement d'état d'une variable et la mettre a 
 UseEffect : modification de l'effet en fonction d'un changement de state
 UseRef : pour créer un équivalent de getElementById et modifier le DOM
 useContext : pour modifier unb composant qui n'est pas un parent direct
+
+REACT ROUTING
+
+Pour utiliser le routing dans REACT, il nous faut des packages supplémentaire: ---- npm install react-router-dom ----
+
+et ne pas oublier l'import CreateBrowserRouter : const router = createBrowserRouter ([ { path: "/", element: }, { path: "/about", element: }, ... )].
 
 ----------- REDUX ------------
 
@@ -92,7 +104,11 @@ Dans les composants => utiliser le UseSelector pour aller chercher les states
 
 
 ----------- NODEJS ------------
-pour creer un dossier : npm node init -y
+Initialiser projet node.js = npm init (de manière automatique npm init -yes)
+Installer package s'il le faut: npm install
+Si code en JS (et non commonJs), ajouter "type":"module" dans package.json
+Lancer le projet : node .<nomDuFichierDeSortie>.js
+
 
 affichage dans la console : node nomDuFichier.js
 
