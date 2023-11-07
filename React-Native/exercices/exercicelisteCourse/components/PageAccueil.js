@@ -23,7 +23,10 @@ export default function PageAccueil() {
     }
     function deleteArticle(id) {
         console.log(id);
-       setArticles(articlesCurrent =>[...articlesCurrent.filter(article =>article.id != id)]) 
+        setArticles((articlesCurrent) => {
+            return (
+                articlesCurrent.filter(article => article.id != id))
+        })
     }
 
 
@@ -34,7 +37,7 @@ export default function PageAccueil() {
             <View style={styles.articleList}>
                 <FlatList data={articles} renderItem={(itemData) => {
                     return (
-                        <Pressable onPress={() => {deleteArticle(itemData.item.id)}}>
+                        <Pressable onPress={() => { deleteArticle(itemData.item.id) }}>
                             <View>
                                 <Text style={styles.article}>{itemData.item.text} </Text>
                             </View>
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
         padding: 10,
         fontSize: 15,
         fontWeight: 'bold',
-        textAlign:'center',
+        textAlign: 'center',
     }
 
 
