@@ -22,7 +22,7 @@ export default function ModalAddItem(props) {
                     }} />
                 <TextInput onChangeText={RecupInput} value={textInput} style={styles.inputText} />
                 <View style={styles.buttonStyle} >
-                    <Button title="AJOUTER ARTICLE" onPress={props.addArticle} style={styles.buttonAdd} />
+                    <Button title="AJOUTER ARTICLE" onPress={() => props.addArticle(textInput)} style={styles.buttonAdd} />
                     <Button title="CANCEL" color="red" onPress={props.closeModal} />
                 </View>
 

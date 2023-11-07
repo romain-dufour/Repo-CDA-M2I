@@ -13,27 +13,21 @@ export default function PageAccueil() {
     function OpenModal() {
         setModalVisible(true)
     }
-    function addArticle() {
-        setTab(...tab[setTextInput])
-        tab.push(props.setTextInput())
+    function addArticle(param) {
+        setTab(tab=>[...tab,param.textInput])
+        console.log(param.textInput)
         setModalVisible(false)
     }
 
 
 
-    // const tab = [
-    //     { text: "toto", id: 1 },
-    //     { text: "tata", id: 2 },
-    //     { text: "tutu", id: 3 },
-
-    // ]
 
     return (
         <View style={styles.container}>
             <Button title="Ajouter un article" onPress={OpenModal} style={styles.button} />
-            <ModalAddItem visible={modalVisible} closeModal={closeModal}></ModalAddItem>
+            <ModalAddItem visible={modalVisible} closeModal={closeModal} addArticle={addArticle}></ModalAddItem>
             <View style={styles.articleList}>
-                <FlatList data={addArticle.tab} renderItem={(itemData) => {
+                <FlatList data={tab} renderItem={(itemData) => {
                     return (
                         <View>
                             <Text style={styles.article}>{itemData.item.text} {itemData.item.id}</Text>
