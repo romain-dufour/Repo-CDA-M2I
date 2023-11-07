@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, FlatList, Text, Modal, View, StyleSheet } from "react-native";
+import { Button, FlatList, Text, Modal, View, StyleSheet, Pressable } from "react-native";
 import ModalAddItem from "./ModalAddItem";
 
 
@@ -15,14 +15,16 @@ export default function PageAccueil() {
     }
     function addArticle(article) {
         setArticles(articlesCurrent => [
-            ...articlesCurrent, 
-            { text: article, id: Math.random().toString()}
+            ...articlesCurrent,
+            { text: article, id: Math.random().toString() }
         ])
         console.log(articles)
         setModalVisible(false)
     }
-
-
+    function deleteArticle(id) {
+        console.log(id);
+       setArticles(articlesCurrent =>[...articlesCurrent.filter(article =>article.id != id)]) 
+    }
 
 
     return (
@@ -32,9 +34,12 @@ export default function PageAccueil() {
             <View style={styles.articleList}>
                 <FlatList data={articles} renderItem={(itemData) => {
                     return (
-                        <View>
-                            <Text style={styles.article}>{itemData.item.text} </Text>
-                        </View>
+                        <Pressable onPress={() => {deleteArticle(itemData.item.id)}}>
+                            <View>
+                                <Text style={styles.article}>{itemData.item.text} </Text>
+                            </View>
+                        </Pressable>
+
                     )
                 }} keyExtractor={(item, index) => {
                     return index
@@ -63,7 +68,8 @@ const styles = StyleSheet.create({
         textAlignVertical: 'center',
         padding: 10,
         fontSize: 15,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        textAlign:'center',
     }
 
 
