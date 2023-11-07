@@ -6,7 +6,7 @@ export default function ModalAddItem(props) {
     const [textInput, setTextInput] = useState('');
 
     function RecupInput(enterText) {
-        setTextInput()
+        setTextInput(enterText)
         console.log(enterText);
     }
 
@@ -21,11 +21,14 @@ export default function ModalAddItem(props) {
                         uri: 'https://t3.ftcdn.net/jpg/00/21/44/52/360_F_21445202_f3a1iPfB4W84ONMXn0ARZi38fqWNKF9q.jpg'
                     }} />
                 <TextInput onChangeText={RecupInput} value={textInput} style={styles.inputText} />
-                <View style={styles.buttonStyle} >
-                    <Button title="AJOUTER ARTICLE" onPress={() => props.addArticle(textInput)} style={styles.buttonAdd} />
-                    <Button title="CANCEL" color="red" onPress={props.closeModal} />
+                <View style={styles.buttonContainer} >
+                    <View style={styles.buttonStyle}>
+                        <Button title="AJOUTER ARTICLE" onPress={() => props.addArticle(textInput)} style={styles.buttonAdd} />
+                    </View>
+                    <View style={styles.buttonStyle}>
+                        <Button title="CANCEL" color="red" onPress={props.closeModal} />
+                    </View>
                 </View>
-
             </View>
         </Modal>
     )
@@ -41,16 +44,23 @@ const styles = StyleSheet.create({
         height: 40,
         width: 200,
         borderRadius: 10,
-        margin: 12,
+        margin: 5,
         borderWidth: 1,
         padding: 10,
     },
-    buttonStyle: {
+        
+    buttonContainer: {
         flexDirection: 'row',
         height: 40,
-        width: 200,
+  
+    },
+    buttonStyle: {
+        justifyContent: 'space-around',
+        height: 40,
+        margin: 15,
+        
     },
     buttonAdd: {
-        padding: 20,
+
     },
 })

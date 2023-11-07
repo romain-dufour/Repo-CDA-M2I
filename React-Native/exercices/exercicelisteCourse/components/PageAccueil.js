@@ -5,7 +5,7 @@ import ModalAddItem from "./ModalAddItem";
 
 export default function PageAccueil() {
     const [modalVisible, setModalVisible] = useState(false)
-    const [tab, setTab] = useState([])
+    const [articles, setArticles] = useState([])
 
     function closeModal() {
         setModalVisible(false)
@@ -13,9 +13,12 @@ export default function PageAccueil() {
     function OpenModal() {
         setModalVisible(true)
     }
-    function addArticle(param) {
-        setTab(tab=>[...tab,param.textInput])
-        console.log(param.textInput)
+    function addArticle(article) {
+        setArticles(articlesCurrent => [
+            ...articlesCurrent, 
+            { text: article, id: Math.random().toString()}
+        ])
+        console.log(articles)
         setModalVisible(false)
     }
 
@@ -27,14 +30,15 @@ export default function PageAccueil() {
             <Button title="Ajouter un article" onPress={OpenModal} style={styles.button} />
             <ModalAddItem visible={modalVisible} closeModal={closeModal} addArticle={addArticle}></ModalAddItem>
             <View style={styles.articleList}>
-                <FlatList data={tab} renderItem={(itemData) => {
+                <FlatList data={articles} renderItem={(itemData) => {
                     return (
                         <View>
-                            <Text style={styles.article}>{itemData.item.text} {itemData.item.id}</Text>
+                            <Text style={styles.article}>{itemData.item.text} </Text>
                         </View>
                     )
                 }} keyExtractor={(item, index) => {
                     return index
+                    //item.id marche aussi 
                 }}
                 />
             </View>
@@ -49,18 +53,18 @@ const styles = StyleSheet.create({
         margin: 20,
     },
     articleList: {
-        padding:10
+        padding: 10
     },
-    article:{
-    backgroundColor: "#9b59b6",
-    marginTop:15,
-    borderRadius:10,
-    height:40,
-    textAlignVertical:'center',
-    padding:10,
-    fontSize:15,
-    fontWeight:'bold'
-}
+    article: {
+        backgroundColor: "#9b59b6",
+        marginTop: 15,
+        borderRadius: 10,
+        height: 40,
+        textAlignVertical: 'center',
+        padding: 10,
+        fontSize: 15,
+        fontWeight: 'bold'
+    }
 
-    
+
 })
