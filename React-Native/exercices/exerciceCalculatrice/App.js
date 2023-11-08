@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ButtonCalc from './components/ButtonCalc'
 
 export default function App() {
-  const [calcul, setCalcul] = useState([''])
+  const [calcul, setCalcul] = useState([])
   const [valeur,setValeur]=useState()
 //récupérer au clique la valeur de chaque bouton et insérer dans le textInput
 
@@ -12,9 +12,12 @@ export default function App() {
 
     } else if (enteredCalcul == 'Del'){   
         let calcultemp=calcul
-        
-        setCalcul(calcultemp.pop())
-        console.log(calcul);
+       // console.log(calcultemp);
+        let longueur = calcultemp.length
+       // console.log(calcultemp.length)
+        calcultemp = calcultemp.slice(0,longueur-1)
+        //console.log(calcultemp);
+        setCalcul(calcultemp)
     } else if (enteredCalcul == 'AC'){
         setCalcul('')
     }
@@ -24,9 +27,6 @@ export default function App() {
 
 
 }
-
-
-
 
     return (
         <SafeAreaView style={styles.container}>
@@ -131,10 +131,12 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     textInput: {
-        height: 200,
+        height: 300,
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
-        backgroundColor:"#3498db"
+        backgroundColor:"#3498db",
+        borderRadius:25,
+        margin:5
 
     },
     texte: {
