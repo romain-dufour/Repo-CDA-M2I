@@ -15,25 +15,28 @@ export default function ButtonCalc(props) {
 const styles = StyleSheet.create({
 
   numberItem: {
-    width: 60,
-    height: 60,
+    width: 80,
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: "white",
-    borderRadius: 30,
+    borderRadius: 40,
   },
   operatorItem: {
     backgroundColor: "grey",
-    borderRadius: 5,
-    width: 60,
-    height: 60,
+    borderRadius: 15,
+    width: 80,
+    height: 80,
     alignItems: 'center',
     justifyContent: 'center',
   },
   numberText: {
     color: "black",
+    fontSize:30
   },
   operatorText: {
-    color: 'white'
+    color: 'white',
+    fontSize:30
+
   }
 })

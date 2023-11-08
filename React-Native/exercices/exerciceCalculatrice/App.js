@@ -3,13 +3,18 @@ import React, { useState } from 'react'
 import ButtonCalc from './components/ButtonCalc'
 
 export default function App() {
-  const [calcul, setCalcul] = useState([])
-  const [valeur,setValeur]=useState()
+  const [calcul, setCalcul] = useState("0")
 //récupérer au clique la valeur de chaque bouton et insérer dans le textInput
 
  function calculate(enteredCalcul) {
     if (enteredCalcul== '='){
-
+        const result = eval(calcul)
+        //console.log(result)
+        //console.log(calcul);
+        console.log(eval(calcul));
+       // let resultat = eval(2+2)
+        //console.log(resultat);
+        setCalcul(result.toString())
     } else if (enteredCalcul == 'Del'){   
         let calcultemp=calcul
        // console.log(calcultemp);
@@ -93,7 +98,7 @@ export default function App() {
                         <ButtonCalc item={{ text: "/", id: 15 }} calculate={() => calculate("/")} ></ButtonCalc>
                     </View >
                     <View style={styles.vertical}>
-                        <ButtonCalc item={{ text: "X", id: 16 }} calculate={() => calculate("x")}></ButtonCalc>
+                        <ButtonCalc item={{ text: "x", id: 16 }} calculate={() => calculate("*")}></ButtonCalc>
                     </View>
                     <View style={styles.vertical}>
                         <ButtonCalc item={{ text: "-", id: 17 }} calculate={() => calculate("-")}></ButtonCalc>
@@ -118,7 +123,7 @@ const styles = StyleSheet.create({
         backgroundColor: "black",
     },
     touches: {
-        height: 500,
+        height: 550,
         flexDirection: "row",
         alignItems: 'center',
         justifyContent: 'space-around',
@@ -127,11 +132,12 @@ const styles = StyleSheet.create({
     },
     calculator: {
         color: "white",
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: "bold",
     },
     textInput: {
-        height: 300,
+        flex:1,
+        height: 250,
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
         backgroundColor:"#3498db",
@@ -141,11 +147,11 @@ const styles = StyleSheet.create({
     },
     texte: {
         color: "black",
-        fontSize: 40,
+        fontSize: 60,
 
     },
     vertical: {
-        marginBottom: 30,
+        marginBottom: 20,
     }
 
 
