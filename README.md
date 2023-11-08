@@ -112,3 +112,9 @@ Lancer le projet : node .<nomDuFichierDeSortie>.js
 
 affichage dans la console : node nomDuFichier.js
 
+
+----------- REACT NATIVE ------------
+npx react-native@latest init nonFichier
+cd vers le fichier
+
+changer App.tsx en App.js

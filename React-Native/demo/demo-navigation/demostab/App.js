@@ -18,7 +18,7 @@ const Tab = createBottomTabNavigator()
 
   return (
 <NavigationContainer>
-  <Tab.Navigator>
+  <Tab.Navigator screenOptions={{tabBarIconStyle:{display : "none"},tabBarLabelPosition:"beside-icon"}}>
     <Tab.Screen name='Home' component={Home} />
     <Tab.Screen name='Contact' component={Contact} />
     <Tab.Screen name='About' component={About} />
