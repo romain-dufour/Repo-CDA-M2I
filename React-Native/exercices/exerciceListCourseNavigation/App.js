@@ -15,8 +15,8 @@ export default function App() {
         <NavigationContainer>
             <Tab.Navigator screenOptions={{ tabBarIconStyle: { display: "none" }, tabBarLabelPosition: "beside-icon" }}>
                 <Tab.Screen name='Home' component={Home} />
-                <Tab.Screen name='FormAddArticle' component={FormAddArticle} />
-                <Tab.Screen name='DetailsArticle' component={DetailsArticle} />
+                <Tab.Screen name='FormAddArticle' component={FormAddArticle} options={{headerShown: false}} />
+                <Tab.Screen name='DetailsArticle' component={DetailsArticle} options={{headerShown: false}}/>
 
             </Tab.Navigator>
         </NavigationContainer>

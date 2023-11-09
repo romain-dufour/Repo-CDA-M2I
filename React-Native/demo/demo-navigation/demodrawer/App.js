@@ -11,6 +11,7 @@ import PageB from './screen/PageB'
 // npm install react-native-screens react-native-safe-area-context
 // npm i @react-navigation/drawer
 // npm i react-native-gesture-handler
+// npm i react-natime-reanimated
 
 const Drawer = createDrawerNavigator()
 
