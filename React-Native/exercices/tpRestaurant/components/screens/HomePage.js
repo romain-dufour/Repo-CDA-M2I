@@ -1,36 +1,34 @@
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { CATEGORIES } from '../projet/data/data'
+import { CATEGORIES, MEALS } from '../projet/data/data'
 import CustomMealType from '../CustomMealType'
-import FoodList from '../FoodList'
 
-export default function HomePage(navigation, route) {
+export default function HomePage({ navigation ,route}) {
   const dataList = CATEGORIES
+  const meal = MEALS
   console.log("data", dataList)
 
   return (
-    <View>
-      <Text>App</Text>
+    <View style={styles.container}>      
       <FlatList data={dataList}
         renderItem={
-
-          ({ item }) => <FoodList item={item} />}
+          ({item}) => 
+          <Pressable onPress={() => navigation.navigate("MealsOverView",{categoryId : itemData.item.id})} >
+          <View>
+              <Text>{item.title}</Text>
+          </View>
+      </Pressable>
+        }
         keyExtractor={item => item.id.toString()}
       />
     </View>
   );
 }
 
-    //     (itemData) => {
-    //     return (
-    //       <FoodList item={item}></FoodList>
-    //     )
-    //   }
-    //   } keyExtractor={(item, index) => {
-    //     return index
-    //   }
-    // }
-
-
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "column",
+    width: 180,
+    
+  }
+})
