@@ -9,18 +9,18 @@ import AboutTheMeal from './components/screens/AboutTheMeal'
 
 
 export default function App() {
-const Stack = createNativeStackNavigator()
+    const Stack = createNativeStackNavigator()
 
     return (
-        <Provider store={store}>
-            <NavigationContainer>
-                <Stack.Navigator>
-                    <Stack.Screen name='HomePage' component={HomePage}></Stack.Screen>
-                    <Stack.Screen name='MealsOverView' component={MealsOverView} ></Stack.Screen>
-                    <Stack.Screen name='AboutTheMeal' component={AboutTheMeal}></Stack.Screen>
-                </Stack.Navigator>
-    </NavigationContainer>
-        </Provider>
+
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name='HomePage' component={HomePage} options={{title : "All categories"}}></Stack.Screen>
+                <Stack.Screen name='MealsOverView' component={MealsOverView} ></Stack.Screen>
+                <Stack.Screen name='AboutTheMeal' component={AboutTheMeal}></Stack.Screen>
+            </Stack.Navigator>
+        </NavigationContainer>
+    
 
 
     )

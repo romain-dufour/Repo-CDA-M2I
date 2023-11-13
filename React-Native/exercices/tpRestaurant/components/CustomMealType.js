@@ -3,7 +3,7 @@ import React from 'react'
 
 
 export default function CustomMealType(props) {
-  function
+  
   return (
 <Pressable >
     <View>
