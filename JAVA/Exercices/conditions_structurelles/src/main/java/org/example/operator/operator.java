@@ -15,6 +15,7 @@ public class operator {
             nombre = s.nextInt();
         }
         System.out.println("Merci");
+        s.close();
     }
 
     public static void exercice5_2() {
@@ -32,6 +33,8 @@ public class operator {
             nombre = s.nextInt();
         }
         System.out.println("Merci");
+        s.close();
+
     }
 
     public static void exercice5_3() {
@@ -45,6 +48,8 @@ public class operator {
             System.out.println((i));
             i = ++i;
         }
+        s.close();
+
     }
 
     public static void exercice5_4() {
@@ -55,6 +60,8 @@ public class operator {
         for (int i = 1; i < 11; i++) {
             System.out.println((nombre + i));
         }
+        s.close();
+
     }
 
     public static void exercice5_5() {
@@ -69,7 +76,9 @@ public class operator {
             System.out.println(nombre + " x " + j + " = " + (nombre*j));
         j++;
         }
-        }
+        s.close();
+
+    }
 
     public static void exercice5_6() {
         int nombre = 0;
@@ -84,6 +93,8 @@ public class operator {
 
         }
         System.out.println(somme);
+        s.close();
+
     }
 
     public static void exercice5_7() {
@@ -98,7 +109,9 @@ public class operator {
         }
             i++;
     }
-        System.out.println("Le nombre le plus grand est :" + bigger);}
+        System.out.println("Le nombre le plus grand est :" + bigger);
+        s.close();
+    }
 
     public static void exercice5_7_2() {
         int i = 0;
@@ -116,21 +129,27 @@ public class operator {
             i++;
         }
         System.out.println("Le nombre le plus grand est :" + bigger + "\nC'etait le nombre numéro " + position);
+        s.close();
+
     }
 
 
     public static void exercice5_8() {
         int nombre = 0;
         int i = 1;
-        int factorielle = 1;
+        long factorielle = 1L;
         System.out.println("Merci de saisir un nombre:");
         nombre = s.nextInt();
 
+        if(nombre == 0){
+            i=0;
+        }
         while (i != nombre){
             factorielle = factorielle*(i+1);
             i++;
         }
         System.out.println(factorielle);
+        s.close();
 
     }
 
@@ -155,6 +174,8 @@ public class operator {
 
         }
         System.out.println("Le nombre le plus grand est :" + bigger + "\nC'etait le nombre numéro " + i);
+        s.close();
+
     }
 
     public static void exercice5_10() {
@@ -192,6 +213,7 @@ public class operator {
         }
         System.out.println("Le prix total est de : " + somme + " €" + "\nLa somme donnée est de : " + sommePayee +
                 "\n la remise de la monnaie est de " + billet10 + "x 10€, " + billet5 + "x 5€, " + piece1 + "x 1€");
+        s.close();
 
     }
 
@@ -199,12 +221,13 @@ public class operator {
 
         int N = 0;
         int somme = 0;
-        while(somme <100){
+        while (somme < 100) {
             N++;
             somme = somme + N;
 
         }
         System.out.println(N);
+        s.close();
 
     }
 

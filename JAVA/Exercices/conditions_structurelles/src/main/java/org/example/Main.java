@@ -10,14 +10,14 @@ public class Main {
 //        operator.exercice5_2();
 //        operator.exercice5_3();
 //        operator.exercice5_4();
-//        operator.exercice5_5();
+        operator.exercice5_5();
 //        operator.exercice5_6();
 //        operator.exercice5_7();
 //        operator.exercice5_7_2();
 //        operator.exercice5_8();
 //        operator.exercice5_9();
 //        operator.exercice5_10();
-        operator.exercice5_11();
+ //       operator.exercice5_11();
 
 
     }
