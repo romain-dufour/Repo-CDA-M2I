@@ -7,11 +7,9 @@ import org.example.operator.operator;
 public class Main {
     public static void main(String[] args) {
 
-        operator.calculateSquareNumber();
-//        operator.firstName();
-//        operator.calculatePriceTTC();
-//        operator.isPositifOrNegatif();
-//        operator.calculateIsNegatifOrPositif();
-//        operator.alphabeticOrder();
-        }
+      //  operator.exercice3_4();
+//        operator.exercice3_5();
+        //  operator.exercice3_6();
+        operator.exercice3_7();
     }
+}
