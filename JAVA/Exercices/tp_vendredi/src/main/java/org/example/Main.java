@@ -17,7 +17,7 @@ public class Main {
       //  ExercicesTableaux.exercice5_1();
        // ExercicesTableaux.exercice5_2();
       //  ExercicesTableaux.exercice5_3();
-        ExercicesTableaux.exercice5_4();
+    //    ExercicesTableaux.exercice5_4();
         ExercicesTableaux.exercice5_5();
         ExercicesTableaux.exercice5_6();
         ExercicesTableaux.exercice5_7();

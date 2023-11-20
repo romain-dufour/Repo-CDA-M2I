@@ -256,14 +256,34 @@ public class ExercicesTableaux {
     }
 
     public static void exercice5_5() {
+        System.out.print("Entrez la taille du tableau : ");
+        int tabLength = scanner.nextInt();
 
+        int [] tab = new int[tabLength];
+        int [] tabInverse = new int[tabLength];
 
+        for (int i = 0; i < tabLength; i++) {
+            System.out.println("Élément " + (i + 1) + " : ");
+            tab[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < tabLength; i++) {
+            tabInverse[i] = tab[tabLength-i-1];
+            System.out.println(tabInverse[i]);
+        }
         scanner.close();
-
     }
 
     public static void exercice5_6() {
+        System.out.print("Entrez la taille du tableau : ");
+        int tabLength = scanner.nextInt();
 
+        int [] tab = new int[tabLength];
+        int [] sortTab = new int[tabLength];
+
+        for (int i = 0; i < tabLength; i++) {
+            System.out.println("Élément " + (i + 1) + " : ");
+            tab[i] = scanner.nextInt();
+        }
 
         scanner.close();
 
