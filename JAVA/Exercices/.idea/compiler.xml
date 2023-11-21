@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ExoString" />
         <module name="exerciceMatrice" />
+        <module name="ExoFonctions" />
       </profile>
     </annotationProcessing>
   </component>

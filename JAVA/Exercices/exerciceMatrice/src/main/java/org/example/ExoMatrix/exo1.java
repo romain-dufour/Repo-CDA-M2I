@@ -8,7 +8,7 @@ public class exo1 {
 
     public static void matrice1() {
 
-        int max = 0;
+        int max = tableauExo1[0][0];
         for (int i = 0; i < tableauExo1.length; i++) {
             for (int j = 0; j < tableauExo1[i].length; j++) {
                 if (tableauExo1[i][j] > max) {
@@ -34,10 +34,9 @@ public class exo1 {
 
             for (int i = 0; i < tableau.length ; i++) {
                 for (int j = 0; j < tableau[i].length; j++) {
-                    tableau[i][j] = cpt;
-                    cpt++;
+                    tableau[i][j] = cpt++;
                     somme += tableau[i][j];
-//                    produit = produit +  * cpt;
+                    produit *= tableau[i][j];
                     moyenne = somme / (cpt);
                 }}
 
@@ -52,33 +51,43 @@ public class exo1 {
         String nomVendeur = "";
         String nomMarque = "";
 
-        System.out.println("Combien avez vous de vendeur ?");
-        int nbrVendeurs = scanner.nextInt();
-        System.out.println("Combien de marque ?");
-        int nbrMarques = scanner.nextInt();
+//        System.out.println("Combien avez vous de vendeur ?");
+//        int nbrVendeurs = scanner.nextInt();
+//        System.out.println("Combien de marque ?");
+//        int nbrMarques = scanner.nextInt();
 
-        String[][] bddVente = new String[nbrMarques][nbrVendeurs];
+        String[][] bddVente = new String[4][4];
 
-        for (int i = 0; i < 1 ; i++) {
-            for (int j = 0; j < bddVente[i].length; j++) {
+        for (int i = 1; i <= bddVente.length ; i++) {
+           // for (int j = 0; j < bddVente[i].length; j++) {
                 System.out.println("nom du vendeur");
-                nomVendeur= scanner.next();
-            }
-        }
-        for (int i = 1; i < bddVente.length ; i++) {
-            for (int j = 0; j <= 1; j++) {
+                bddVente[0][i]= scanner.next();
+         //   }
+            for (int j = 1; j <= bddVente[i].length; j++) {
                 System.out.println("nom de la marque");
-                nomMarque= scanner.next();
+                bddVente[j][0]= scanner.next();
             }
-        }
+        };
+
+
+
+//        for (int i = 0; i < bddVente.length; i++) {
+//            for (int j = 0; j < bddVente[i].length ; j++) {
+//                nomMarque=bddVente[0][j];
+//                nomVendeur=bddVente[i][0];
+//                System.out.print("Combien de véhicule de la marque " + nomMarque + " le vendeur " +nomVendeur +  " a t il vendu ?");
+//                String nbrVehicule = scanner.next();
+//                bddVente[i][j] = nbrVehicule;
+//            }
+//        }
+
         for (int i = 0; i < bddVente.length; i++) {
-            for (int j = 0; j < bddVente[i].length ; j++) {
-                nomMarque=bddVente[0][j];
-                nomVendeur=bddVente[i][0];
-                System.out.print("Combien de véhicule de la marque " + nomMarque + " le vendeur " +nomVendeur +  " a t il vendu ?");
-                String nbrVehicule = scanner.next();
-                bddVente[i][j] = nbrVehicule;
+            for (int j = 0; j < bddVente[i].length; j++) {
+                System.out.print("[" + bddVente[i][j] + "]");
             }
+            System.out.println();
         }
+
+
     }
 }
