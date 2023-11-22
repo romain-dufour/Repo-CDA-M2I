@@ -8,6 +8,7 @@ public class Main {
 
        // function.exo1();
        // function.exo2();
-        function.exo3();
+       // function.exo3();
+        function.exo4();
     }
 }

@@ -80,30 +80,39 @@ public class function {
     }
 
 
-    public static String filterWordsByLength(int minLength, String[] mots){
+    public static String [] filterWordsByLength(int minLength, String[] mots){
 
-        for (int i = 0; i < mots.length; i++) {
-            if (mots[i].length()>minLength){
-                
+
+        int index = 0;
+        for (String mot : mots) {
+            if (mot.length() < minLength){
+                index++;
             }
         }
-
-        return
-                mots[]
-
-
-
+        String[] tableauFiltre = new String[index];
+        int i = 0;
+        for (String mot : mots){
+            if (mot.length() < minLength) {
+                tableauFiltre[i] = mot;
+                i++;
+            }
+        }
+        return tableauFiltre;
     }
+
     public static void exo4() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("rentrez des nombres entier, séparez les par un espace");
+        System.out.print("rentrez des nombres entier, séparez les par un espace : ");
         String texte = scanner.nextLine();
         String[] mots = texte.split(" ");
-        System.out.print("rentrez une longueur maximale de mot");
+        System.out.print("rentrez une longueur maximale de mot : ");
         int minLength = scanner.nextInt();
 
-        filterWordsByLength(minLength,mots);
+        String [] result = filterWordsByLength(minLength,mots);
 
+        for (int i = 0; i < result.length; i++) {
+            System.out.print(result[i] + " - ");
+        }
 
     }
 
