@@ -4,6 +4,8 @@ import org.example.array.Array;
 import org.example.array.ArrayMatrix;
 import org.example.function.demoFunction;
 import org.example.operator.operator;
+import org.example.poo.Product;
+import org.example.poo.statics.User;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.string.ChaineCharactere;
 import org.example.structure.Structure;
@@ -30,6 +32,20 @@ public class Main {
  //       ChaineCharactere.getFormatString();
       //  ArrayMatrix.getMatrix();
         //ArrayMatrix.getMatrix2();
-        demoFunction.getFunction();
+       // demoFunction.getFunction();
+
+        Product p = new Product();
+        p.setId(10);
+        p.setName("Iphone");
+        System.out.println(p);
+        Product p2 = new Product(10,"Table");
+        System.out.println(p2);
+        System.out.println(p2.getName());
+        p2.setId(15);
+        System.out.println(p2);
+        p2.quiSuisJe();
+        Product.getBonjour();
+
+
     }
 }

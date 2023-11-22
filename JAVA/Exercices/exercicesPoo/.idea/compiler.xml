@@ -6,10 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ExoString" />
-        <module name="exerciceMatrice" />
         <module name="exercicesPoo" />
-        <module name="ExoFonctions" />
       </profile>
     </annotationProcessing>
   </component>

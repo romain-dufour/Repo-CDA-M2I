@@ -66,7 +66,7 @@ public class function {
     }
 
     public static int nbreDeMot (String texteSaisie){
-        String[] stringNumbers = texteSaisie.split(" ");
+        String[] stringNumbers = texteSaisie.trim().split(" ");
 
         return stringNumbers.length;
     }
@@ -81,18 +81,16 @@ public class function {
 
 
     public static String [] filterWordsByLength(int minLength, String[] mots){
-
-
         int index = 0;
         for (String mot : mots) {
-            if (mot.length() < minLength){
+            if (mot.length() >= minLength){
                 index++;
             }
         }
         String[] tableauFiltre = new String[index];
         int i = 0;
         for (String mot : mots){
-            if (mot.length() < minLength) {
+            if (mot.length() >= minLength) {
                 tableauFiltre[i] = mot;
                 i++;
             }
@@ -116,7 +114,23 @@ public class function {
 
     }
 
-    public static void exo5() {
+
+//    exercice boucle recursive
+    public static void exoRecursivite() {
+        int nombre = 8;
+        long resultat = fonctionFactorielle(nombre);
+        System.out.println("La factorielle de " + nombre + " est : " + resultat);
+
+    }
+
+    public static int fonctionFactorielle(int n) {
+        if ( n == 0){
+            return 1;
+        }
+        else {
+            return n * fonctionFactorielle( n -1);
+        }
+
 
     }
 }
