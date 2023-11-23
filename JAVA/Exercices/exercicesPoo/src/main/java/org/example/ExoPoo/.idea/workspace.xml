@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2223b6ee-89e5-48b3-9e5c-9a7421290529" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CompteBanquaire/CompteEpargne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CompteBanquaire/ComptePayant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CompteBanquaire/CompteSimple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MessageType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Priority.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TpClasseChaise/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TpHeritage/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/ElectricCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/Engine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/MotorCycle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/PetrolCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/SuperCar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/dataStructure/Vehicule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/enums/Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../demo/src/main/java/org/example/poo/enums/Priority.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TpClasseChaise/Chaise.java" beforeDir="false" afterPath="$PROJECT_DIR$/../TpClasseChaise/Chaise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TpHeritage2/Appartement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TpHeritage2/House.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TpHeritage2/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/classes/org/example/TpClasseChaise/Chaise.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../target/classes/org/example/TpClasseChaise/Chaise.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2YZwftbzxrdLFH2QVgea0LEmk5i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/Exercices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2223b6ee-89e5-48b3-9e5c-9a7421290529" name="Changes" comment="" />
+      <created>1700746515986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700746515986</updated>
+      <workItem from="1700746516984" duration="613000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

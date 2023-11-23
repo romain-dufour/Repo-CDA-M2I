@@ -1,12 +1,12 @@
 package org.example;
 
-import org.example.TpClasseChaise.Chaise;
-//import org.example.TpHeritage.Person;
-import org.example.TpHeritage.Student;
-import org.example.TpHeritage.Teacher;
-import org.example.TpHeritage2.Appartement;
-import org.example.TpHeritage2.House;
-import org.example.TpHeritage2.Person;
+//import org.example.TpClasseChaise.Chaise;
+////import org.example.TpHeritage.Person;
+//import org.example.TpHeritage.Student;
+//import org.example.TpHeritage.Teacher;
+////import org.example.TpHeritage2.;
+//import org.example.TpHeritage2.House;
+//import org.example.TpHeritage2.Person;
 
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -34,9 +34,6 @@ public class Main {
 //       teacher.Explain();
 
 
-        House Appartement = null;
-        Person thomas = new Person("Thomas", Appartement);
-        thomas.Display();
 
 
     }
