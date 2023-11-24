@@ -6,31 +6,46 @@ public class BookService {
 
         int index = 0;
 
+        Book[] filteredBooks = new Book[0];
         for (Book book : books) {
-            for(Author auteur1:  book.getAuthors()){
+            for (Author auteur1 : book.getAuthors()) {
 
-                if (auteur1.getId() == author.getId()){
+                if (auteur1.getId() == author.getId()) {
                     index++;
                 }
             }
-            Book[] filterBooks = new Book[index];
+            filteredBooks = new Book[index];
             int index2 = 0;
-            for (Author auteur1:  book.getAuthors()) {
-                if (auteur1.getId() == author.getId()){
-                    filterBooks[index2]=
-                    ;
+            for (Author auteur1 : book.getAuthors()) {
+                if (auteur1.getId() == author.getId()) {
+                    filteredBooks[index2++] = book;
                 }
-
             }
-            
         }
-        return null;
+        return filteredBooks;
     };
 
     public Book[] filterBooksByPublisher(Publisher publisher, Book[] books) {
+        int index = 0;
 
+        Book[] filteredBooks = new Book[0];
+        for (Book book : books) {
+            for (Publisher publisher1: book.getPublisher()) {
 
-        return null;
+                if (publisher1.getId() == publisher.getId()) {
+                    index++;
+                }
+            }
+            filteredBooks = new Book[index];
+            int index2 = 0;
+            for (Author publisher1 : book.getPublisher()) {
+                if (publisher1.getId() == publisher.getId()) {
+                    filteredBooks[index2++] = book;
+                }
+            }
+        }
+        return filteredBooks;
+
 
     };
 
