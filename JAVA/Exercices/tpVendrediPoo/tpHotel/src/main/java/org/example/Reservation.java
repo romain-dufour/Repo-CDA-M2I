@@ -8,22 +8,13 @@ public class Reservation {
     private Client client;
     private int chambreId;
 
-    public Reservation(int id, boolean statut, Client client, int chambreId) {
-        this.id = id;
-        this.statut = statut;
+    public Reservation( Client client, int chambreId) {
+        this.id = ++count;
         this.client = client;
         this.chambreId = chambreId;
     }
 
 
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public Client getClient() {
         return client;

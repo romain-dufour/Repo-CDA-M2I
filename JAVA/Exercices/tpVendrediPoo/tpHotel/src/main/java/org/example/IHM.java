@@ -46,16 +46,16 @@ public class IHM {
                     break;
                 case 3:
                     // Afficher les réservations d'un client
-                System.out.print("Entrez le téléphone du client : ");
-                scanner.nextLine();  // Clear the buffer
-                telephoneClient = scanner.nextLine();
-                int clientIdByPhone = hotel.trouverClientParTelephone(telephoneClient);
-                if (clientIdByPhone != -1) {
-                    hotel.afficherReservationsClient(clientIdByPhone);
-                } else {
-                    System.out.println("Aucun client trouvé avec ce téléphone !");
-                }
-                break;
+                    System.out.print("Entrez le téléphone du client : ");
+                    scanner.nextLine();  // Clear the buffer
+                    telephoneClient = scanner.nextLine();
+                    int clientIdByPhone = hotel.trouverClientParTelephone(telephoneClient);
+                    if (clientIdByPhone != -1) {
+                        hotel.afficherReservationsClient(clientIdByPhone);
+                    } else {
+                        System.out.println("Aucun client trouvé avec ce téléphone !");
+                    }
+                    break;
 
 
 
@@ -65,14 +65,18 @@ public class IHM {
                     int idClientReservation = scanner.nextInt();
                     System.out.print("ID de la chambre : ");
                     int idChambre = scanner.nextInt();
-                   // hotel.ajouterReservation(idClientReservation, idChambre);
+                    hotel.ajouterReservation(idClientReservation,idChambre);
                     break;
-                case 5:
-                    // Annuler une réservation
-                    System.out.print("ID de la réservation à annuler : ");
-                    int idReservation = scanner.nextInt();
-                    hotel.annulerReservation(idReservation);
-                    break;
+
+
+//                case 5:
+//                    // Annuler une réservation
+//                    System.out.print("ID de la réservation à annuler : ");
+//                    int idReservation = scanner.nextInt();
+//                    hotel.annulerReservation(idReservation);
+//                    break;
+
+
                 case 6:
                     // Afficher la liste des réservations
                     hotel.afficherListeReservations();
