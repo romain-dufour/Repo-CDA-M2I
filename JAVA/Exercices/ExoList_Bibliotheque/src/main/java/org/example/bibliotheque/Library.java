@@ -3,15 +3,16 @@ package org.example.bibliotheque;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Library {
 
- private ArrayList<Book> books = new ArrayList<Book>();
- private ArrayList<Loan> loans = new ArrayList<Loan>();
+ private List<Book> books ;
+ private List<Loan> loans; ;
 
     public Library(ArrayList<Book> books, ArrayList<Loan> loans) {
-        this.books = books;
-        this.loans = loans;
+        this.books = new ArrayList<Book>();
+        this.loans =  new ArrayList<Loan>();
     }
 
 
@@ -19,21 +20,25 @@ public class Library {
         books.add(book);
     }
 
-    public  void  deleteBook(int bookId){
+    public  boolean  deleteBook(int bookId){
+        Book book = findBookById(bookId);
+        if(book != null){
+            return books.remove(book);
 
-        for (Book book: books
-             ) {
-            if (book.getId() == bookId){
-                books.remove(bookId);
-            }
+        };
 
-        }
-
-        books.remove(bookId);
-    }
+//        for (Book book: books
+//             ) {
+//            if (book.getId() == bookId){
+//                books.remove(bookId);
+//            }
+//        }
+//        books.remove(bookId);
+        return false;
+    };
 
     public ArrayList<Book> findBookByTitle (String title){
-        ArrayList<Book> filteredBookByTitle = new ArrayList<Book>();
+        ArrayList<Book> filteredBookByTitle = new ArrayList<>();
 
         for (Book book : books) {
             if (book.getTitle().equals(title)){
@@ -43,7 +48,7 @@ public class Library {
         return filteredBookByTitle;
     }
     public ArrayList<Book> findBookByAuthor (String author){
-        ArrayList<Book> filteredBookByAuthor = new ArrayList<Book>();
+        ArrayList<Book> filteredBookByAuthor = new ArrayList<>();
         for (Book book : books) {
             if (book.getAuthor().equals(author)){
                 filteredBookByAuthor.add(book);
@@ -53,10 +58,13 @@ public class Library {
     }
 
     private Book findBookById(int bookId) {
-        Book findedBook = new Book();
+        //si id n'existe pas retourner un null qui sert de false dans ce cas
+        Book findedBook = null;
         for (Book book : books) {
             if (book.getId() == bookId) {
              findedBook = book;
+             break;
+             //rajouter un break pour arreter la boucle vu que l'id est unique
             }
         }
         return  findedBook;
@@ -96,7 +104,7 @@ public class Library {
 //            System.out.println("Livre non trouvé avec l'identifiant : " + bookId);
             return false;
         }
-        if (bookIsLoaned(book)){
+        if (bookIsLoaned(bookId)){
             return false;
 //            System.out.println("Le livre est déja emprunté");
         } else {

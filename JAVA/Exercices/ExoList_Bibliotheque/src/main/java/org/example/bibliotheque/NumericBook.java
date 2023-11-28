@@ -29,9 +29,11 @@ public class NumericBook extends Book{
 
     @Override
     public String toString() {
-        return "NumericBook{" +
-                "format='" + format + '\'' +
-                ", size=" + size +
-                '}';
+        return
+                super.toString() +
+                        "NumericBook{" +
+                        "format='" + format + '\'' +
+                        ", size=" + size +
+                        '}';
     }
 }
