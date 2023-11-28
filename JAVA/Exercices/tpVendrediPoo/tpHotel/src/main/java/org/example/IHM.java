@@ -10,7 +10,6 @@ public class IHM {
     public static void main(String[] args) {
 
 
-
         Scanner scanner = new Scanner((System.in));
 
         System.out.print("Entrez le nom de l'hôtel : ");

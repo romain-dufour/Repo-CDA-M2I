@@ -69,17 +69,17 @@ public class Hotel {
     }
 
 
-    public void annulerReservation(int reservationId) {
-        for (int i = 0; i < reservationCount; i++) {
-            if (reservations[i] != null && reservations[i].getId() == reservationId) {
-                int clientId = reservations[i].getClient().getId();
-                reservations[i] = null;
-                System.out.println("Réservation annulée avec succès pour le client " + clientId + " !");
-                return;
-            }
-        }
-        System.out.println("Réservation non trouvée !");
-    }
+//    public void annulerReservation(int reservationId) {
+//        for (int i = 0; i < reservationCount; i++) {
+//            if (reservations[i] != null && reservations[i].getId() == reservationId) {
+//                int clientId = reservations[i].getClient().getId();
+//                reservations[i] = null;
+//                System.out.println("Réservation annulée avec succès pour le client " + clientId + " !");
+//                return;
+//            }
+//        }
+//        System.out.println("Réservation non trouvée !");
+//    }
 
 
 //    public void annulerReservation(int reservationId) {
