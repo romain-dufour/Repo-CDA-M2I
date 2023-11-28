@@ -19,15 +19,24 @@ public class Library {
         books.add(book);
     }
 
-    public  void  deleteBook(Book book){
-        books.remove(book.getId());
+    public  void  deleteBook(int bookId){
+
+        for (Book book: books
+             ) {
+            if (book.getId() == bookId){
+                books.remove(bookId);
+            }
+
+        }
+
+        books.remove(bookId);
     }
 
     public ArrayList<Book> findBookByTitle (String title){
         ArrayList<Book> filteredBookByTitle = new ArrayList<Book>();
 
         for (Book book : books) {
-            if (book.getTitle() == title){
+            if (book.getTitle().equals(title)){
                 filteredBookByTitle.add(book);
             }
         }
@@ -36,7 +45,7 @@ public class Library {
     public ArrayList<Book> findBookByAuthor (String author){
         ArrayList<Book> filteredBookByAuthor = new ArrayList<Book>();
         for (Book book : books) {
-            if (book.getAuthor() == author){
+            if (book.getAuthor().equals(author)){
                 filteredBookByAuthor.add(book);
             }
         }
@@ -79,21 +88,24 @@ public class Library {
 
         return null;
     };
-    public void loanBook (int bookId, Person person){
+    public boolean loanBook (int bookId, Person person){
 
         Book book = findBookById(bookId);
 
         if(book == null){
-            System.out.println("Livre non trouvé avec l'identifiant : " + bookId);
-            return;
+//            System.out.println("Livre non trouvé avec l'identifiant : " + bookId);
+            return false;
         }
         if (bookIsLoaned(book)){
-            System.out.println("Le livre est déja emprunté");
+            return false;
+//            System.out.println("Le livre est déja emprunté");
         } else {
             LocalDate startDate = LocalDate.now();
             loans.add(new Loan(startDate,book,person));
 
-            System.out.println("Emprunt enregistré");
+            return true;
+//            System.out.println("Emprunt enregistré");
+
         }
 
     }
