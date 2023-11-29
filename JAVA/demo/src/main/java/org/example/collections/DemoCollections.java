@@ -56,7 +56,7 @@ public class DemoCollections {
         sortedMap.put("C++", 20);
         System.out.println("SortedMap : " + sortedMap);
 
-        // Methode pour sotedMap
+        // Methode pour sortedMap
 
         System.out.println("1. Clés de sortedMap : "+ sortedMap.keySet());
         System.out.println("2. Valeurs de sortedMap : "+ sortedMap.values());
