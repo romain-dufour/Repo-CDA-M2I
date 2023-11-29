@@ -1,36 +1,27 @@
 package org.example.Classes;
 
 public class Line {
-    private UnitArticle article;
+    private Article article;
     private int purchaseQuantity;
 
-    public Line(UnitArticle article, int purchaseQuantity) {
+    public Line(Article article, int purchaseQuantity) {
         this.article = article;
         this.purchaseQuantity = purchaseQuantity;
     }
 
 
 public double totalPrice(){
-        double totalPrice = article.getUnitPrice() * purchaseQuantity;
+        double totalPrice = article.getUnitPrice() + purchaseQuantity;
 
         return  totalPrice;
 }
-
 
     public Article getArticle() {
         return article;
     }
 
-    public void setArticle(UnitArticle article) {
-        this.article = article;
-    }
-
     public int getPurchaseQuantity() {
         return purchaseQuantity;
-    }
-
-    public void setPurchaseQuantity(int purchaseQuantity) {
-        this.purchaseQuantity = purchaseQuantity;
     }
 
     @Override

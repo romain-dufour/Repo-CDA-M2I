@@ -18,7 +18,7 @@ public class Main {
 
         System.out.println(maRamette1);
 
-        Batch lotstylo = new Batch("l1", monStylo2, 55,10);
+        Batch lotstylo = new Batch("l1", "s1", 55,10);
 
         System.out.println();
         System.out.println("Affiche un stylo : ");
@@ -34,8 +34,8 @@ public class Main {
 
         //todo
         // modifier la classe Line pour pouvoir rechercher les articles par la reference
-        invoice.addLine(maRamette2,3);
-        invoice.addLine(monStylo3,15);
+        invoice.addLine("s2",3);
+        invoice.addLine("r2",15);
 
         System.out.println();
         System.out.println("Affiche une facture de 2 lignes : ");

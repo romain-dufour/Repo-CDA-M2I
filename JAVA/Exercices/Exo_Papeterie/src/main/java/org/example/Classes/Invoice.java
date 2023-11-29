@@ -38,7 +38,7 @@ public class Invoice {
 
         for (int i = 0; i < lines.length; i++){
             if(lines[i] == null){
-                lines[i] = new Line(article,quantity);
+                lines[i] = new Line(articleReference,quantity);
                 break;
             }
         }

@@ -8,9 +8,9 @@ public class Batch extends Article{
     private float discount;
 
 
-    public Batch(String id, Article article, Integer quantity, float discount) {
+    public Batch(String id, String referenceArticle, Integer quantity, float discount) {
         super(id);
-        this.article = article;
+        this.article = Article.getArticle(referenceArticle);
         this.quantity = quantity;
         this.discount = discount;
     }

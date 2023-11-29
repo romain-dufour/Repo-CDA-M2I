@@ -1,6 +1,6 @@
 package org.example.Classes;
 
-public class UnitArticle extends Article{
+public abstract class UnitArticle extends Article{
 
     private String name;
     private double unitPrice;

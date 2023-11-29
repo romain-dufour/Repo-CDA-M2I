@@ -2,15 +2,15 @@ package org.example.Classes;
 
 import java.util.HashMap;
 
-public class Article {
+public abstract class Article {
 
 //    private static Integer counter = 0;
-String id;
+    private String id;
     static HashMap<String, Article> hashMap = new HashMap<>();
 
     public Article(String id) {
         this.id = id;
-        hashMap.put(this.id,this);
+        hashMap.put(id,this);
     }
 
     public String getId() {
@@ -18,9 +18,10 @@ String id;
     }
 
     public static Article getArticle(String id){
-        Article value = hashMap.get(id);
-        return value;
+//        Article value = hashMap.get(id);
+        return hashMap.get(id);
     };
+
 
 
     @Override
