@@ -21,10 +21,9 @@ public class Main {
                     Integer intEntier = Integer.parseInt(entier);
                     somme += intEntier;
                 } catch (RuntimeException e){
-                    System.out.println("probleme ce n'est pas un entier");
+                    System.out.println(entier + " n'est pas un entier");
                 }}
-            
-        System.out.println("La longueur du tableau est : " + tableauEntiers.size());
+
         System.out.println("la somme est de : " + somme );
 
     }
