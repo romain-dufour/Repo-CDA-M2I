@@ -1,6 +1,9 @@
 package org.example;
 
+import org.example.exceptions.SecondException;
+
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -10,20 +13,19 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> tableauEntiers = new ArrayList<>();
 
-        System.out.println("Entrez un tableau d'entiers, separés par un espace");
-        String [] listeEntiers = scanner.nextLine().split(" ");
-        for (String entier: listeEntiers ) {
-        Integer intEntier = Integer.parseInt(entier);
-        tableauEntiers.add(intEntier);
-        }
-
-        for (int i = 0; i < tableauEntiers.size(); i++) {
-           Integer somme =  Addition.c
-
-
-        }
+            Integer somme = 0;
+            System.out.println("Entrez un tableau d'entiers, separés par un espace");
+            String [] listeEntiers = scanner.nextLine().split(" ");
+            for (String entier: listeEntiers ) {
+                try {
+                    Integer intEntier = Integer.parseInt(entier);
+                    somme += intEntier;
+                } catch (RuntimeException e){
+                    System.out.println("probleme ce n'est pas un entier");
+                }}
+            
         System.out.println("La longueur du tableau est : " + tableauEntiers.size());
-
+        System.out.println("la somme est de : " + somme );
 
     }
 }
