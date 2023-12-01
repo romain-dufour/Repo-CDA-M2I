@@ -8,4 +8,5 @@ public class Maison {
         this.nom = nom;
         this.nbrePiece= nbrePiece;
     }
+
 }

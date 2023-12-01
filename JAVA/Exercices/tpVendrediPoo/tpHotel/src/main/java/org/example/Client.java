@@ -1,19 +1,25 @@
 package org.example;
 
-public class Client {
+public class Client{
     private static int count = 0;
     private int id;
     private String nom;
     private String prenom;
     private String telephone;
 
-
-    public Client(int id, String nom, String prenom, String telephone) {
-        this.id = id;
+    public Client( String nom, String prenom, String telephone) {
+        this.id = ++count;
         this.nom = nom;
         this.prenom = prenom;
         this.telephone = telephone;
     }
+
+
+
+    //    public Client(int clientCount, String nom, String prenom, String telephone) {
+//        super();
+//    }
+
 
     public int getId() {
         return id;
@@ -47,16 +53,16 @@ public class Client {
         this.nom = nom;
     }
 
-    public void annulerReservation(int reservationId) {
-        for (int i = 0; i < reservations.length; i++) {
-            if (reservations[i] != null && reservations[i].getId() == reservationId) {
-                reservations[i] = null;
-                System.out.println("Réservation annulée avec succès !");
-                return;
-            }
-        }
-        System.out.println("Réservation non trouvée !");
-    }
+//    public void annulerReservation(int reservationId) {
+//        for (int i = 0; i < reservations.length; i++) {
+//            if (reservations[i] != null && reservations[i].getId() == reservationId) {
+//                reservations[i] = null;
+//                System.out.println("Réservation annulée avec succès !");
+//                return;
+//            }
+//        }
+//        System.out.println("Réservation non trouvée !");
+//    }
     public void ajouterReservation(int id){
 
 

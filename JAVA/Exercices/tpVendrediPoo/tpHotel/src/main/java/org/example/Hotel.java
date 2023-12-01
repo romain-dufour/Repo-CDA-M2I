@@ -21,14 +21,14 @@ public class Hotel {
         System.out.println("\nMenu :");
         System.out.println("1- Ajouter un client");
         System.out.println("2- Afficher la liste des clients");
-        System.out.println("3- Afficher les réservations d'un client par téléphone");
+        System.out.println("3- Afficher les réservations d'un client");
         System.out.println("4- Ajouter une réservation");
         System.out.println("5- Annuler une réservation");
         System.out.println("6- Afficher la liste des réservations");
         System.out.println("0- Quitter");
     }
     public void ajouterClient(String nom, String prenom, String telephone) {
-        clients[clientCount++] = new Client(clientCount, nom, prenom, telephone);
+        clients[clientCount++] = new Client( nom, prenom, telephone);
         System.out.println("Client ajouté avec succès !");
     }
 
@@ -58,26 +58,41 @@ public class Hotel {
         }
     }
 
- //   public void ajouterReservation(int clientId, int chambreId) {
-  //      if (clientExists(clientId) && chambreId >= 1 && chambreId <= nombreChambres) {
-    //        reservations[reservationCount++] = new Reservation(reservationCount, clients[getClientIndex(clientId)], chambreId);
-      //      System.out.println("Réservation ajoutée avec succès !");
-        //} else {
-         //   System.out.println("Client non trouvé ou chambre non valide !");
-        //}
-    //}
+    public void ajouterReservation(int clientId, int chambreId) {
 
-    public void annulerReservation(int reservationId) {
-        for (int i = 0; i < reservationCount; i++) {
-            if (reservations[i] != null && reservations[i].getId() == reservationId) {
-                reservations[i].getClient().annulerReservation(reservationId);
-                reservations[i] = null;
-                System.out.println("Réservation annulée avec succès !");
-                return;
-            }
+        if (clientExists(clientId) && chambreId >= 1 && chambreId <= nombreChambres) {
+            reservations[reservationCount++] = new Reservation( clients[getClientIndex(clientId)], chambreId);
+            System.out.println("Réservation ajoutée avec succès !");
+        } else {
+            System.out.println("Client non trouvé ou chambre non valide !");
         }
-        System.out.println("Réservation non trouvée !");
     }
+
+
+//    public void annulerReservation(int reservationId) {
+//        for (int i = 0; i < reservationCount; i++) {
+//            if (reservations[i] != null && reservations[i].getId() == reservationId) {
+//                int clientId = reservations[i].getClient().getId();
+//                reservations[i] = null;
+//                System.out.println("Réservation annulée avec succès pour le client " + clientId + " !");
+//                return;
+//            }
+//        }
+//        System.out.println("Réservation non trouvée !");
+//    }
+
+
+//    public void annulerReservation(int reservationId) {
+//        for (int i = 0; i < reservationCount; i++) {
+//            if (reservations[i] != null && reservations[i].getId() == reservationId) {
+//                reservations[i].getClient().annulerReservation(reservationId);
+//                reservations[i] = null;
+//                System.out.println("Réservation annulée avec succès !");
+//                return;
+//            }
+//        }
+//        System.out.println("Réservation non trouvée !");
+//    }
 
     public void afficherListeReservations() {
         System.out.println("Liste des réservations :");
@@ -91,6 +106,7 @@ public class Hotel {
     private boolean clientExists(int clientId) {
         for (int i = 0; i < clientCount; i++) {
             if (clients[i].getId() == clientId) {
+
                 return true;
             }
         }
@@ -106,14 +122,14 @@ public class Hotel {
         return -1;
     }
 
-    private int getReservationIndex(int reservationId) {
-        for (int i = 0; i < reservationCount; i++) {
-            if (reservations[i] != null && reservations[i].getId() == reservationId) {
-                return i;
-            }
-        }
-        return -1;
-    }
+//    private int getReservationIndex(int reservationId) {
+//        for (int i = 0; i < reservationCount; i++) {
+//            if (reservations[i] != null && reservations[i].getId() == reservationId) {
+//                return i;
+//            }
+//        }
+//        return -1;
+//    }
 
 
 

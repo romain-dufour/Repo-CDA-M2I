@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff8cb2c1-0d78-4d57-bac8-b7db6f25af24" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicesPoo/src/main/java/org/example/ManagementBook/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicesPoo/src/main/java/org/example/ManagementBook/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../exercicesPoo/src/main/java/org/example/ManagementBook/Publisher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicesPoo/src/main/java/org/example/ManagementBook/Publisher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercicesPoo/src/main/java/org/example/ExoPoo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercicesPoo/src/main/java/org/example/ExoPoo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tpHotel/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tpHotel/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +15,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2YcBMw3kb8YKOmIcA6IS0tKkDR6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,7 +29,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/romain/Desktop/Repo-CDA-M2I/JAVA/Exercices/tpVendrediPoo",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/Exercices/tpVendrediPoo/tpHotel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -41,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700814942779</updated>
       <workItem from="1700814943862" duration="19000" />
+      <workItem from="1701071071013" duration="159000" />
     </task>
     <servers />
   </component>
