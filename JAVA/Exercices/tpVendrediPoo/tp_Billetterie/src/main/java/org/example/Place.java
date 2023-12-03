@@ -10,7 +10,7 @@ public class Place {
     private String name;
     @Getter
     @Setter
-    private String adress;
+    private String address;
     @Getter
     @Setter
     private Integer capacity;

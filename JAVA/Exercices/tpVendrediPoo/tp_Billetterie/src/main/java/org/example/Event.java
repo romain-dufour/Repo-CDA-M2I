@@ -30,8 +30,15 @@ public class Event {
     @Getter
     private int soldTicketQuantity;
 
+    public Event(String name, LocalDate localDate, LocalTime localTime, Place place, double price) {
+        this.name = name;
+        this.localDate = localDate;
+        this.localTime = localTime;
+        this.place = place;
+        this.price = price;
+    }
 
-    public boolean isTicketAvailable(Event event,int quantity){
+    public boolean isTicketAvailable(Event event, int quantity){
 if ((event.place.getCapacity() - (event.soldTicketQuantity + quantity)) >= 0){
         return true;
 }
