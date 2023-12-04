@@ -5,14 +5,7 @@ import java.util.Date;
 public class Product {
     private String name;
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", categorie='" + categorie + '\'' +
-                '}';
-    }
+
 
     private double price;
     private String categorie;
@@ -45,5 +38,14 @@ public class Product {
 
     public void setCategorie(String categorie) {
         this.categorie = categorie;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", categorie='" + categorie + '\'' +
+                '}';
     }
 }
