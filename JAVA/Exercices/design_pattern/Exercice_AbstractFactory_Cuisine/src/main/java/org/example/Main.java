@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.entity.Restaurant;
+import org.example.factory.impl.ItalianCuisineFactory;
+import org.example.factory.impl.JapaneseCuisineFactory;
+import org.example.factory.impl.MexicanCuisineFactory;
+
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
@@ -14,4 +19,6 @@ public class Main {
         Restaurant mexicanRestaurant = new Restaurant(new MexicanCuisineFactory());
         mexicanRestaurant.preparePlat("haricot rouge", "marmite", "Chili con carne");
     }
+
+
 }
