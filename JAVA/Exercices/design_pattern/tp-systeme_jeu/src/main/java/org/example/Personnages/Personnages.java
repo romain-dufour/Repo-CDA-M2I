@@ -5,28 +5,25 @@ import org.example.Personnages.entity.Attribut_Physique;
 import org.example.Personnages.entity.Competence_Magique;
 import org.example.Personnages.factory.PersonnagesFactory;
 
-public class Personnages {
-
+public abstract class Personnages {
+    private String name;
     private Armement armement ;
     private Attribut_Physique attributPhysique;
     private Competence_Magique competenceMagique;
 
-    private PersonnagesFactory personnagesFactory;
 
-    public Personnages(PersonnagesFactory personnagesFactory){
-        setPersonnagesFactory(personnagesFactory);
+    protected Personnages(PersonnagesFactory personnagesFactory){
+        armement = personnagesFactory.definirArmement();
+        attributPhysique = personnagesFactory.definirAttribut();
+        competenceMagique = personnagesFactory.definirCompetenceMagique();
     }
-
-    public void setPersonnagesFactory(PersonnagesFactory personnagesFactory){
-        this.personnagesFactory = personnagesFactory;
-        armement = this.personnagesFactory.definirArmement();
-        attributPhysique= this.personnagesFactory.definirAttribut();
-        competenceMagique = this.personnagesFactory.definirCompetenceMagique();
-    }
-
-    public void createPersonnage(){
-        armement.createArmement();
-        attributPhysique.createAttributPhysique();
-        competenceMagique.createCompetenceMagique();
+    @Override
+    public String toString() {
+        return "Personnages{" +
+                "name='" + name + '\'' +
+                ", armement=" + armement +
+                ", attributPhysique=" + attributPhysique +
+                ", competenceMagique=" + competenceMagique +
+                '}';
     }
 }

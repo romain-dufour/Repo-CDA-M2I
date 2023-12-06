@@ -4,7 +4,7 @@ import org.example.Batiments.entity.Taille;
 
 public class CaserneTaille extends Taille {
     @Override
-    protected void createSize() {
+    public void createSize() {
 
     }
 }

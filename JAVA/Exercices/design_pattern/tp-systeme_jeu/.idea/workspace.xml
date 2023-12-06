@@ -5,30 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b6705751-f46f-4bd2-b8de-4e5b46af39af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/ItalianUtensil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/JapaneseUstensil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/MexicanUstensil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../demo_design_pattern/src/main/java/org/example/demo_builder/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../demo_design_pattern/src/main/java/org/example/demo_singleton/Storage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/CookingUstensil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/CookingUstensil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/CuisineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/factory/CuisineFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/ItalianCuisineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/factory/impl/ItalianCuisineFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/ItalianDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/ItalianDish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/ItalianIngredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/ItalianIngredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/ItalianUtensil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/JapaneseCuisineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/factory/impl/JapaneseCuisineFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/JapaneseDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/JapaneseDish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/JapaneseIngredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/JapaneseIngredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/JapaneseUstensil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/MexicanCuisineFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/factory/impl/MexicanCuisineFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/MexicanDish.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/MexicanDish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/MexicanIngredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/impl/MexicanIngredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/MexicanUstensil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercice_AbstractFactory_Cuisine/src/main/java/org/example/entity/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../demo_design_pattern/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo_design_pattern/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/Batiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/Batiment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/Fonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/Fonctionnalite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/Style.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/Taille.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/Taille.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/CaserneFonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/CaserneFonctionnalite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/CaserneStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/CaserneStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/CaserneTaille.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/CaserneTaille.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ChateauFonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ChateauFonctionnalite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ChateauStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ChateauStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ChateauTaille.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ChateauTaille.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ForgesFonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ForgesFonctionnalite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ForgesStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ForgesStyle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ForgesTaille.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Batiments/entity/impl/ForgesTaille.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/Personnages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/Personnages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/Armement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/Armement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/Attribut_Physique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/Attribut_Physique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/Competence_Magique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/Competence_Magique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/ArcherArmement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/ArcherArmement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/ArcherAttributPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/ArcherAttributPhysique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/ArcherCompetenceMagique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/ArcherCompetenceMagique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/GuerrierArmement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/GuerrierArmement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/GuerrierAttributPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/GuerrierAttributPhysique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/GuerrierCompetenceMagique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/GuerrierCompetenceMagique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/MageArmement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/MageArmement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/MageAttributPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/MageAttributPhysique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/MageCompetenceMagique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Personnages/entity/impl/MageCompetenceMagique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo_design_pattern/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo_design_pattern/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +50,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2Z818BtcqSaniTC19anFI8uYul1" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -62,6 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/Exercices/design_pattern/tp-systeme_jeu",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +90,8 @@
       <option name="presentableId" value="Default" />
       <updated>1701788730886</updated>
       <workItem from="1701788731925" duration="4273000" />
+      <workItem from="1701848256006" duration="17133000" />
+      <workItem from="1701874549215" duration="2116000" />
     </task>
     <servers />
   </component>
@@ -95,7 +103,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>28</line>
+          <line>60</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -4,7 +4,7 @@ import org.example.Personnages.entity.Competence_Magique;
 
 public class GuerrierCompetenceMagique extends Competence_Magique {
     @Override
-    protected void createCompetenceMagique() {
+    public void createCompetenceMagique() {
 
     }
 }

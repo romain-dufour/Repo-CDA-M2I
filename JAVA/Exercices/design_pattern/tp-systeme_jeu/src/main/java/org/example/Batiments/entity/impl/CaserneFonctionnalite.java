@@ -4,7 +4,7 @@ import org.example.Batiments.entity.Fonctionnalite;
 
 public class CaserneFonctionnalite extends Fonctionnalite {
     @Override
-    protected void createFonctionnalite() {
-
+    public void createFonctionnalite() {
     }
+
 }

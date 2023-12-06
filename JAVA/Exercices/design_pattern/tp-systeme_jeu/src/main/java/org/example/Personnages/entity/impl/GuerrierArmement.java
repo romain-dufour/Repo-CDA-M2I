@@ -4,7 +4,7 @@ import org.example.Personnages.entity.Armement;
 
 public class GuerrierArmement extends Armement {
     @Override
-    protected void createArmement() {
+    public void createArmement() {
 
     }
 }

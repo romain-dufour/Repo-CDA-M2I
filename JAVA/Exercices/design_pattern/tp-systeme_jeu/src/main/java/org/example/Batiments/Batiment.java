@@ -7,32 +7,27 @@ import org.example.Batiments.factory.BatimentsFactory;
 
 import java.util.Locale;
 
-public class Batiment {
+public abstract class Batiment {
+
+    private String name;
     private Fonctionnalite fonctionnalite;
     private Style style;
     private Taille taille;
 
-    private BatimentsFactory batimentsFactory;
+    protected Batiment(BatimentsFactory batimentsFactory) {
+        fonctionnalite = batimentsFactory.definirFonctionnalite();
+        style = batimentsFactory.definirStyle();
+        taille = batimentsFactory.definirTaille();
 
-    public Batiment(BatimentsFactory batimentsFactory) {
-        setBatimentFactory(batimentsFactory);
     }
 
-    private Batiment(Builder builder){
-        this f
-    }
-
-
-    public void setBatimentFactory(BatimentsFactory batimentsFactory){
-        this.batimentsFactory = batimentsFactory;
-        fonctionnalite = this.batimentsFactory.definirFonctionnalite();
-        style = this.batimentsFactory.definirStyle();
-        taille = this.batimentsFactory.definirTaille();
-    }
-
-    public void createBatiment(){
-        fonctionnalite.createFonctionnalite();
-        style.createStyle();
-        taille.createSize();
+    @Override
+    public String toString() {
+        return "Batiment{" +
+                "name='" + name + '\'' +
+                ", fonctionnalite=" + fonctionnalite +
+                ", style=" + style +
+                ", taille=" + taille +
+                '}';
     }
 }

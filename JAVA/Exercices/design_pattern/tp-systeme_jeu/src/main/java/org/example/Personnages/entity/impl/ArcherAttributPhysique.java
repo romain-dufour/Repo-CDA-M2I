@@ -4,7 +4,7 @@ import org.example.Personnages.entity.Attribut_Physique;
 
 public class ArcherAttributPhysique extends Attribut_Physique {
     @Override
-    protected void createAttributPhysique() {
+    public void createAttributPhysique() {
 
     }
 }
