@@ -6,34 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3cea30b7-dfde-462c-9239-0f26edb2e112" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/Batiment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/Batiment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/Fonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/Fonctionnalite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/Style.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/Taille.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/Taille.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/CaserneFonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/CaserneFonctionnalite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/CaserneStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/CaserneStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/CaserneTaille.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/CaserneTaille.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ChateauFonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ChateauFonctionnalite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ChateauStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ChateauStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ChateauTaille.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ChateauTaille.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ForgesFonctionnalite.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ForgesFonctionnalite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ForgesStyle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ForgesStyle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ForgesTaille.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Batiments/entity/impl/ForgesTaille.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/Personnages.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/Personnages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/Armement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/Armement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/Attribut_Physique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/Attribut_Physique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/Competence_Magique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/Competence_Magique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/ArcherArmement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/ArcherArmement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/ArcherAttributPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/ArcherAttributPhysique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/ArcherCompetenceMagique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/ArcherCompetenceMagique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/GuerrierArmement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/GuerrierArmement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/GuerrierAttributPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/GuerrierAttributPhysique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/GuerrierCompetenceMagique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/GuerrierCompetenceMagique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/MageArmement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/MageArmement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/MageAttributPhysique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/MageAttributPhysique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/MageCompetenceMagique.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exercices/design_pattern/tp-systeme_jeu/src/main/java/org/example/Personnages/entity/impl/MageCompetenceMagique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +20,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/demo_Observable/Observer.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -61,24 +41,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/demo_design_pattern&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/demo_design_pattern/src/main/java/org/example/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/demo_design_pattern/src/main/java/org/example/Main.java",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.demo_Observable" />
       <recent name="org.example.demo_abstractFactory" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.demo_Observable" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -91,6 +75,8 @@
       <updated>1701764007106</updated>
       <workItem from="1701764008188" duration="9501000" />
       <workItem from="1701856530546" duration="1859000" />
+      <workItem from="1701937367484" duration="657000" />
+      <workItem from="1701938290212" duration="834000" />
     </task>
     <servers />
   </component>
