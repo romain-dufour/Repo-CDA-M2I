@@ -10,6 +10,9 @@ public class SalaryAdjuster implements EmployeeVisitor{
 
     @Override
     public void visit(Designer designer) {
+        designer.getSalaire();
+        salaire = 4000;
+        designer.setSalaire(salaire);
         System.out.println("Salaire augmenté a " + salaire +" €" );
 
     }

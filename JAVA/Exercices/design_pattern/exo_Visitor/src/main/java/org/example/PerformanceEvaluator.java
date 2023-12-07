@@ -13,7 +13,7 @@ public class PerformanceEvaluator implements EmployeeVisitor{
     }
 
     public PerformanceEvaluator(String discours, String evaluation) {
-        this.discours = discours;
+        this(discours);
         this.evaluation = evaluation;
     }
 
