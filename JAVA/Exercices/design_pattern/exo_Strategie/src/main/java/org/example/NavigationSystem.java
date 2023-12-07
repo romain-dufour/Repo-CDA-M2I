@@ -6,13 +6,26 @@ import lombok.Data;
 @Data
 @Builder
 public class NavigationSystem {
-    private String destination;
+    private NavigationStrategy navigationStrategy;
 
-    public void navigate(NavigationStrategy navigationStrategy){
-        if (navigationStrategy.navigate(destination)){
-            System.out.println("C'est parti les copains");
-        } else {
-            System.out.println("On est en panne");
-        }
+    public NavigationSystem(NavigationStrategy navigationStrategy) {
+        this.navigationStrategy = navigationStrategy;
     }
+
+    public void setNavigationStrategy(NavigationStrategy navigationStrategy) {
+        this.navigationStrategy = navigationStrategy;
+    }
+
+    public void navigate(String destination) {
+        navigationStrategy.navigate(destination);
+    }
+
+//    public void setDestination(String destination) {
+//        this.destination = destination;
+//    }
+//
+//    public void navigate(String destination){
+//
+//        setDestination(destination);
+//    }
 }
