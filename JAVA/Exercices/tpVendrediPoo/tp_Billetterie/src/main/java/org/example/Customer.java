@@ -89,22 +89,22 @@ public class Customer {
     }
 
 
-            public static boolean removeCustomer (String eMail){
-                Iterator<Map.Entry<Integer, Customer>> iterator = customerList.entrySet().iterator();
+    public static boolean removeCustomer (String eMail){
+        Iterator<Map.Entry<Integer, Customer>> iterator = customerList.entrySet().iterator();
 
-                while (iterator.hasNext()) {
-                    Map.Entry<Integer, Customer> entry = iterator.next();
-                    Customer existingCustomer = entry.getValue();
-                    if (existingCustomer.getEMail().equals(eMail)) {
-                        Integer keytoremove = entry.getKey();
-                        iterator.remove();
+        while (iterator.hasNext()) {
+            Map.Entry<Integer, Customer> entry = iterator.next();
+            Customer existingCustomer = entry.getValue();
+            if (existingCustomer.getEMail().equals(eMail)) {
+                Integer keytoremove = entry.getKey();
+                iterator.remove();
 
 // TODO: 01/12/2023 voir pour lever des exceptions
-                        return true;
-                    }
-                }
-                return false;
+                return true;
             }
+        }
+        return false;
+    }
 
 
 

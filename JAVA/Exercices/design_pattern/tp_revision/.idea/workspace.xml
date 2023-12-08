@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d933b862-491c-4c71-8ea8-ff646bd0ebad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/IhmConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/IhmConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../tpVendrediPoo/tp_Billetterie/src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2ZED7xk4pBmf3edlSd9yxnSqAdu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/romain/Desktop/Repo-CDA-M2I/JAVA/Exercices/design_pattern/tp_revision",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d933b862-491c-4c71-8ea8-ff646bd0ebad" name="Changes" comment="" />
+      <created>1701978183098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701978183098</updated>
+      <workItem from="1701978184382" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

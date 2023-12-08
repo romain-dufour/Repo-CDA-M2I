@@ -170,7 +170,7 @@ public class IhmConsole {
         if (Customer.addPlace(placeName, adress, capacity)) {
             System.out.println("Lieu ajouté");
         } else {
-           System.out.println("erreur");
+            System.out.println("erreur");
         }
 
         menu();
@@ -256,7 +256,7 @@ public class IhmConsole {
         LocalTime hour = LocalTime.parse(hourString,formatTime);
         System.out.println("Lieu de l'event : ");
         // TODO: 30/11/2023 mettre un systeme de choix selon les lieux en bdd
-//        Place place = scanner.next();
+        //        Place place = scanner.next();
         Place placeChoice = new Place("newTest","testNewAdress",200);
 
         System.out.println("Prix de l'event : ");

@@ -39,9 +39,9 @@ public class Event {
     }
 
     public boolean isTicketAvailable(Event event, int quantity){
-if ((event.place.getCapacity() - (event.soldTicketQuantity + quantity)) >= 0){
-        return true;
-}
+        if ((event.place.getCapacity() - (event.soldTicketQuantity + quantity)) >= 0){
+            return true;
+        }
         return false;
     }
 
