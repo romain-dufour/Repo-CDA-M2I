@@ -110,3 +110,12 @@ FROM (SELECT * FROM salarie WHERE prenom LIKE 'r%') AS prenom_en_r
 WHERE age> 25;
 
 SELECT service_id, COUNT(service_id) AS nombre_service FROM salarie GROUP BY service_id;
+
+SELECT * FROM salarie;
+
+SELECT * FROM salarie WHERE nom = 'chirac';
+SELECT * FROM salarie WHERE salarie_id = '16'; -- recherche par colonne indexe plus efficace
+
+SELECT service_id, AVG(salaire) FROM salarie GROUP BY service_id HAVING AVG(salaire) > 3000 ;
+
+

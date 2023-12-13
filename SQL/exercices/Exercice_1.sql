@@ -93,6 +93,6 @@ SELECT * FROM personne ORDER BY nom DESC;
 SELECT * FROM personne ORDER BY titre ASC;
 
 -- question 9
-SELECT  * FROM personne WHERE email = 'dupond.test@test.com';
+SELECT * FROM personne WHERE email = 'dupond.test@test.com';
 
 -- SELECT * FROM personne WHERE email LIKE'dupon%';
