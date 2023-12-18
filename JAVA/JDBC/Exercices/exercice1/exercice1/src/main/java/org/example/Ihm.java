@@ -13,13 +13,14 @@ public class Ihm {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void menu() {
+    public static void menu() throws SQLException {
 
         String propositions[] = {
                 "1- Ajouter un etudiant",
                 "2- Afficher la totalité des etudiants",
                 "3- Afficher les etudiants d'une classes",
-                "4- Supprimer un etudiant"
+                "4- Supprimer un etudiant",
+                "5- Chercher par nom ou prenom"
         };
 
         for (String p: propositions){
@@ -31,29 +32,36 @@ public class Ihm {
 
         switch (choice) {
             case 1 -> {
-                addStudient();
+                addStudent();
                 System.out.println("    *************    ");
                 menu();
                 System.out.println("    *************    ");
             }
             case 2 -> {
-                showStudientsList();
+                showStudentsList();
                 System.out.println("    *************    ");
                 menu();
                 System.out.println("    *************    ");
             }
             case 3 -> {
-                showStudientFromClass();
+                showStudentFromClass();
                 System.out.println("    *************    ");
                 menu();
                 System.out.println("    *************    ");
             }
             case 4 -> {
-                deleteStudient();
+                deleteStudent();
                 System.out.println("    *************    ");
                 menu();
                 System.out.println("    *************    ");
             }
+            case 5 -> {
+                searchByName();
+                System.out.println("    *************    ");
+                menu();
+                System.out.println("    *************    ");
+            }
+
             default -> {
                 System.out.println("Choix invalide");
                 System.out.println("    *************    ");
@@ -63,7 +71,8 @@ public class Ihm {
         }
     }
 
-    public static void addStudient() {
+
+    public static void addStudent() {
         System.out.println("Saisissez le nom :");
         String lastName = scanner.nextLine();
         System.out.println("Saisissez le prenom :");
@@ -76,7 +85,7 @@ public class Ihm {
         Connection connection = null;
         try {
             connection = ConnectionUtils.getMySQLConnection();
-            String request = "INSERT INTO studient (first_name,last_name,class_number,diplome_date) VALUES (?,?,?,?)";
+            String request = "INSERT INTO student (first_name,last_name,class_number,diplome_date) VALUES (?,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(request);
             preparedStatement.setString(1, firstName);
             preparedStatement.setString(2, lastName);
@@ -98,26 +107,26 @@ public class Ihm {
         }
     }
 
-    public static void showStudientsList() {
+    public static void showStudentsList() {
         Connection connection = null;
         try {
             connection = ConnectionUtils.getMySQLConnection();
-            String requestDisplay = "SELECT * FROM studient";
+            String requestDisplay = "SELECT * FROM student";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(requestDisplay);
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt(
-                        "id") + ") "
+                System.out.println( "Etudiant n° "+
+                        resultSet.getInt(
+                        "id") + " "
                         + resultSet.getString("first_name") + " "
-                        + resultSet.getString("last_name")
-                        + resultSet.getInt("class_number")
+                        + resultSet.getString("last_name")+ " N° de classe : "
+                        + resultSet.getInt("class_number")+ " et diplome obtenu en "
                         + resultSet.getString("diplome_date")
                 );
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
-            //Fermer la connexion a la bdd
             if (connection != null) {
                 try {
                     connection.close();
@@ -128,23 +137,27 @@ public class Ihm {
         }
     }
 
-    public static void showStudientFromClass() {
+    public static void showStudentFromClass() {
         Connection connection = null;
         try {
             connection = ConnectionUtils.getMySQLConnection();
             System.out.println("Saisissez le numéro de la classe :");
             int number = scanner.nextInt();
-            String requestClassNumber = "SELECT * FROM studient WHERE class_number = " + number;
+            String requestClassNumber = "SELECT * FROM student WHERE class_number = " + number;
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(requestClassNumber);
+            System.out.println("Les etudiants de la classe " + number + " sont :");
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt(
-                        "id") + ") "
+                System.out.println(
+                        "Etudiant n° "+
+                        resultSet.getInt(
+                                "id") + " "
                         + resultSet.getString("first_name") + " "
-                        + resultSet.getString("last_name")
-                        + resultSet.getInt("class_number")
+                        + resultSet.getString("last_name")+ " N° de classe : "
+                        + resultSet.getInt("class_number")+ " et diplome obtenu en "
                         + resultSet.getString("diplome_date")
                 );
+                statement.close();
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -159,14 +172,14 @@ public class Ihm {
         }
     }
 
-    public static void deleteStudient() {
+    public static void deleteStudent() {
         Connection connection = null;
         try {
             connection = ConnectionUtils.getMySQLConnection();
             System.out.println("Saisissez l'id de l'étudiant à supprimer :");
             int id = scanner.nextInt();
 
-            String requestStudentToDelete = "DELETE FROM studient WHERE id = ?" ;
+            String requestStudentToDelete = "DELETE FROM student WHERE id = ?" ;
             PreparedStatement preparedStatement = connection.prepareStatement(requestStudentToDelete);
                 preparedStatement.setInt(1, id);
                 int nbRows = preparedStatement.executeUpdate();
@@ -183,6 +196,26 @@ public class Ihm {
                 }
             }
         }
-    }
+    };
+
+    public static void searchByName() throws SQLException {
+        Connection connection = null;
+        System.out.println("Saississez le prenom ou le nom de la personne que vous cherchez :");
+        String result = scanner.nextLine();
+        String requestSearchedStudent = "SELECT * FROM student WHERE lastname = "+ result;
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery(requestSearchedStudent);
+
+        while (resultSet.next()){
+            System.out.println(
+            "Etudiant n° "+
+                    resultSet.getInt(
+                            "id") + " "
+                    + resultSet.getString("first_name") + " "
+                    + resultSet.getString("last_name")+ " N° de classe : "
+                    + resultSet.getInt("class_number")+ " et diplome obtenu en "
+                    + resultSet.getString("diplome_date"));
+        }
+    };
 }
 
