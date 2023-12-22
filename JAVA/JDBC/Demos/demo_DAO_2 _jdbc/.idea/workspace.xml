@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="161a2f90-b4be-471a-a2c5-00e6f66aedc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Exercices/exercice2/src/main/java/org/example/utils/IHM.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercices/exercice2/src/main/java/org/example/utils/IHM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Exercices/design_pattern/tp_revision/simulateur_Zoo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Exercices/design_pattern/tp_revision/simulateur_Zoo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Exercices/tp_billetterie_jdbc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Exercices/tp_billetterie_jdbc/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +40,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/JDBC/Exercices/tp_billetterie_jdbc",
+    "last_opened_file_path": "/Users/romain/Desktop/Repo-CDA-M2I/JAVA/JDBC/Demos/demo_DAO_2 _jdbc",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +80,7 @@
       <updated>1702975445308</updated>
       <workItem from="1702975446319" duration="9484000" />
       <workItem from="1703145806154" duration="7267000" />
+      <workItem from="1703181227169" duration="11000" />
     </task>
     <servers />
   </component>
