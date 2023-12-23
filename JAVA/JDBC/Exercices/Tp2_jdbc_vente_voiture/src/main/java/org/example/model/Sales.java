@@ -7,16 +7,20 @@ public class Sales {
     private int id;
     private int carId;
     private int personId;
-    private LocalDate date;
+    private Date date;
 
     public Sales() {
     }
 
-    public Sales(int id, int carId, int personId, LocalDate date) {
+    public Sales(int id, int carId, int personId, Date date) {
         this.id = id;
         this.carId = carId;
         this.personId = personId;
         this.date = date;
+    }
+
+    public Date getDate() {
+        return date;
     }
 
     public int getId() {
@@ -43,11 +47,9 @@ public class Sales {
         this.personId = personId;
     }
 
-    public Date getDate() {
-        return date;
-    }
 
-    public void setDate(LocalDate date) {
+
+    public void setDate(Date date) {
         this.date = date;
     }
 

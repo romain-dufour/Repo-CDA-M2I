@@ -58,6 +58,23 @@ public class CarDAO extends BaseDAO<Car> {
         return nbRows == 1;
     }
 
+    @Override
+    public Car get(int id) throws SQLException {
+        Car car = null;
+        request = "SELECT * FROM voiture WHERE id_voiture = ?";
+        statement = _connection.prepareStatement(request);
+        statement.setInt(1,id);
+        resultSet = statement.executeQuery();
+        if(resultSet.next()){
+            car = new Car(resultSet.getInt("id_voiture"),
+                    resultSet.getString("name" ),
+                    resultSet.getInt( "year"),
+                    resultSet.getInt("horse_power"),
+                    resultSet.getDouble("price" ));
+        }
+        return car;
+    }
+
 
     @Override
     public List<Car> get() throws SQLException {

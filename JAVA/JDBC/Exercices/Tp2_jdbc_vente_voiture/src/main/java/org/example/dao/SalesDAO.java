@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import org.example.model.Car;
 import org.example.model.Person;
 import org.example.model.Sales;
 
@@ -40,6 +41,22 @@ public class SalesDAO extends BaseDAO<Sales> {
         return false;
     }
 
+    @Override
+    public Sales get(int id) throws SQLException {
+        Sales sales = null;
+        request = "SELECT * FROM vente WHERE id_vente = ?";
+        statement = _connection.prepareStatement(request);
+        statement.setInt(1,id);
+        resultSet = statement.executeQuery();
+        if(resultSet.next()){
+            sales = new Sales(resultSet.getInt("id_vente"),
+                    resultSet.getInt("id_voiture" ),
+                    resultSet.getInt( "id_person"),
+                    resultSet.getDate("vente_date"));
+        }
+        return sales;
+    }
+
 
     @Override
     public List<Sales> get() throws SQLException {
@@ -51,7 +68,7 @@ public class SalesDAO extends BaseDAO<Sales> {
             Sales sales = new Sales(resultSet.getInt("id_vente"),
                     resultSet.getInt("id_voiture"),
                     resultSet.getInt("id_person"),
-                    resultSet.getDate("vente_date").toLocalDate());
+                    resultSet.getDate("vente_date"));
             result.add(sales);
         }
         return result;
@@ -60,16 +77,19 @@ public class SalesDAO extends BaseDAO<Sales> {
 
     // 11. Afficher la liste des ventes d’un véhicule pour une personne
 
-    public List<Sales> getListSalesForOnePerson() throws SQLException {
+    public List<Sales> getListSalesForOnePerson(int carId, int personId) throws SQLException {
         List<Sales> result = new ArrayList<>();
         request = "SELECT * FROM vente WHERE id_voiture = ? AND id_person = ?;";
         statement = _connection.prepareStatement(request);
+        statement.setInt(1,carId);
+        statement.setInt(1,personId);
+
         resultSet = statement.executeQuery();
         while (resultSet.next()){
             Sales sales = new Sales(resultSet.getInt("id_vente"),
                     resultSet.getInt("id_voiture"),
                     resultSet.getInt("id_person"),
-                    resultSet.getDate("vente_date").toLocalDate());
+                    resultSet.getDate("vente_date"));
             result.add(sales);
         }
         return result;

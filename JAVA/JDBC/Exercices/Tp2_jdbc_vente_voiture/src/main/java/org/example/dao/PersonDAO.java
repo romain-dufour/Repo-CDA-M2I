@@ -59,6 +59,23 @@ public class PersonDAO extends BaseDAO<Person> {
         return nbRows == 1;
     }
 
+    @Override
+    public Person get(int id) throws SQLException {
+        Person person = null;
+        request = "SELECT * FROM person WHERE id_person = ?";
+        statement = _connection.prepareStatement(request);
+        statement.setInt(1,id);
+        resultSet = statement.executeQuery();
+        if(resultSet.next()){
+            person = new Person(resultSet.getInt("id_person"),
+                    resultSet.getString("last_name" ),
+                    resultSet.getString( "first_name"),
+                    resultSet.getInt("age"),
+                    resultSet.getDouble("price" ));
+        }
+        return person;
+    }
+
 
     @Override
     public List<Person> get() throws SQLException {

@@ -4,8 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+// TODO: 23/12/2023 faire transaction 
 public class DatabaseManager {
-    private static final String URI = "jdbc:mysql://localhost:3306/demo_jdbc";
+    private static final String URI = "jdbc:mysql://localhost:3306/bdd_voiture";
     private static final String USER = "root";
     private static final String PASSWORD = "mot.de.Passe1234";
     private static Connection connection;
