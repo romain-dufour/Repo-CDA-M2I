@@ -145,5 +145,5 @@ INSERT INTO vente (id_voiture, id_person, vente_date) VALUES (?, ?, ?);
 SELECT * FROM vente;
 
 -- 11. Afficher la liste des ventes d’un véhicule pour une personne 
-SELECT * FROM vente WHERE id_voiture = ? AND id_person = ?;
+SELECT * FROM vente WHERE id_voiture = 1 AND id_person = 1;
 

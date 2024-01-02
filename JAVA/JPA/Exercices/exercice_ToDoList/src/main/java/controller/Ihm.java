@@ -1,14 +1,18 @@
 package controller;
 
+import impl.TaskDAO;
 import model.Task;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Ihm {
 
     protected List<Task> taskList = new ArrayList<>();
+    protected TaskDAO taskDAO = new TaskDAO();
 
     private Scanner s = new Scanner(System.in);
 
@@ -67,138 +71,71 @@ public class Ihm {
             System.out.println("entrer la description de la tache :");
             String taskDescription = s.next();
 
-            this.listLieu.add(new Lieu(nomLieux,adresse,capacite));
-            System.out.println("le lieux a bien ete ajouter :");
-            System.out.println(listLieu.get(listLieu.size()-1));
-            this.menuLieux();
+            this.taskList.add(new Task(taskName,taskDescription));
+            System.out.println("la tache a bien été ajoutée :");
+            System.out.println(taskList.get(taskList.size()-1));
+
+            Task task = new Task(taskName,taskDescription);
+
+            taskDAO.addTask(task);
+            this.menuGenerale();
         }
         catch (InputMismatchException e){
             System.out.println("entrer une valeur numerique ");
-            this.addLieux();
+            this.addTask();
         }
     }
+
+
 
     public void displayTasks (){
         try{
-            try{
-                System.out.println("--------modifier lieu----------");
-                afficheList(this.listLieu);
-                System.out.println("quelle lieux vouler vous modifier : ");
-                int entry = s.nextInt();
-
-                System.out.println(this.listLieu.get(entry-1));
-                System.out.println("entrer le nouveau nom : ");
-                String nom =s.next();
-                System.out.println("entrer la nouvelle adresse : ");
-                String adresse = s.next();
-                int capacite = this.entryCapacity();
-
-                this.listLieu.set(entry-1,new Lieu(nom,adresse,capacite));
-                System.out.println(this.listLieu.get(entry-1));
-                this.menuLieux();
-            }
-            catch (IndexOutOfBoundsException e){
-                this.menuLieux();
-            }
+            System.out.println("--------Liste des taches----------");
+            taskList = taskDAO.getAllTasks();
+        for (Task t : taskList){
+            System.out.println(t.toString());
+        }
+        this.menuGenerale();
         }
         catch (InputMismatchException e){
             System.out.println("entrer une valeur numerique ");
-            this.modifLieu();
+            this.displayTasks();
         }
     }
+
+
 
     public void markTaskAsFinished (){
         try{
-            System.out.println("--------supr lieu----------");
-            afficheList(this.listLieu);
-            System.out.println("quelle lieux vouler vous supprimer (0 pour retour) : ");
-            int entry = s.nextInt();
+            System.out.println("--------Marquer une tache comme complétée----------");
+            System.out.print("ID de la tache complété : ");
+            Long id = s.nextLong();
+            s.nextLine();
 
-            if(entry == 0){
-                this.menuLieux();
-            }
-            else{
-                this.listLieu.remove(entry-1);
-                System.out.println("le lieux a bien ete supprimer");
-                this.menuLieux();
-            }
+            taskDAO.markTaskAsCompleted(id);
+            System.out.println("Tache complétée !");
+            this.menuGenerale();
         }
         catch( InputMismatchException e){
             System.out.println("entrer une valeur numerique ");
-            this.suprLieu();
+            this.markTaskAsFinished();
         }
     }
 
-    public int deleteTask (){
-        int entry =0;
-        do {
-            System.out.println("entrer la capacité du lieu :");
-            entry = s.nextInt();
-        }
-        while (entry<=0);
-
-        return entry;
-    }
-
-
-
-
-    public void addEvenement (){
-        try {
-            System.out.println("--------ajouter Evenement----------");
-
-            System.out.println("entrer le nom de l'evenement:");
-            String nom = s.next();
-
-            System.out.println("entrer la date de l'evenement (format dd-MM-yyyy):");
-            String date_string = s.next();
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-            Date date = formatter.parse(date_string);
-
-            System.out.println("entrer l'heure de l'evenement :");
-            String heure = s.next();
-
-            System.out.println();
-            this.afficheList(listLieu);
-            System.out.println("selectionner le lieu de l'evenement :");
-            int lieux = s.nextInt();
-
-            System.out.println("entrer le prix du billet");
-            float prix = s.nextFloat();
-
-
-            this.listEvenement.add(new Evenement(nom, date, heure,prix,this.listLieu.get(lieux-1)));
-            System.out.println("l'evenement a bien ete ajouter :");
-            System.out.println(listEvenement.get(listEvenement.size()-1));
-            this.menuEvenement();
-        }
-        catch (InputMismatchException e){
-            System.out.println("entrer une valeur numerique ");
-            this.addEvenement();
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public void suprEvenement (){
+    public void deleteTask (){
         try{
-            System.out.println("--------supr evenement----------");
-            afficheList(this.listEvenement);
-            System.out.println("quelle evenement vouler vous supprimer (0 pour retour) : ");
-            int entry = s.nextInt();
+            System.out.println("--------supr tache----------");
+            System.out.print("ID de la tache à supprimer : ");
+            Long id = s.nextLong();
+            s.nextLine();
 
-            if(entry == 0){
-                this.menuEvenement();
-            }
-            else{
-                this.listEvenement.remove(entry-1);
-                System.out.println("l'evenement a bien ete supprimer");
-                this.menuEvenement();
-            }
+            taskDAO.deleteTask(id);
+            System.out.println("Tache supprimée avec succès !");
+            this.menuGenerale();
         }
         catch( InputMismatchException e){
             System.out.println("entrer une valeur numerique ");
-            this.suprEvenement();
+            this.deleteTask();
         }
     }
 

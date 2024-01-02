@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../JDBC/Demos/demos_base_jdbc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JDBC/Demos/demos_base_jdbc/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JDBC/Exercices/Tp2_jdbc_vente_voiture/bdd_voiture.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JDBC/Exercices/Tp2_jdbc_vente_voiture/bdd_voiture.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Ihm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Ihm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Task.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +34,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2aP84uZauf1KYDsAIgjECT0XaaN" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -46,6 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/romain/Desktop/Repo-CDA-M2I/JAVA/JPA/Exercices/exercice_ToDoList",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1704208665741</updated>
       <workItem from="1704208666727" duration="4411000" />
+      <workItem from="1704214715094" duration="3076000" />
     </task>
     <servers />
   </component>
