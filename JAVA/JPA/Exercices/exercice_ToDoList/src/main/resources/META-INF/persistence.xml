@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="Exercice_ToDoList">
+
+    <description>Exercice TodoList
+      # ToDo Liste JPA :
+
+      ### Objectif : Créer une application Java console utilisant JPA pour gérer une liste de tâches (ToDoList).
+
+      ## Description de l'application :
+
+      L'application permettra à l'utilisateur d'effectuer les opérations suivantes :
+
+
+      - Ajouter une tâche à la liste.
+
+      - Afficher toutes les tâches de la liste.
+
+      - Marquer une tâche comme terminée.
+
+      - Supprimer une tâche de la liste.
+
+      - Quitter l'application.
+
+
+      ## Autres infos :
+
+      - Découpage de l'application en plusieurs couches : controller - dao - impl - model.
+      - IHM dans le main.
+
+    </description>
+
+
+
+
+
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Exercice_ToDoList"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.password" value="test"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+    </properties>
+
+  </persistence-unit>
+</persistence>
