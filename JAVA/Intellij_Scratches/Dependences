@@ -1,0 +1,32 @@
+
+    <dependencies>
+
+    -- dependence jfiglet pour générer des fonts dans la console
+
+    <!-- https://mvnrepository.com/artifact/com.github.lalyos/jfiglet -->
+    <dependency>
+        <groupId>com.github.lalyos</groupId>
+        <artifactId>jfiglet</artifactId>
+        <version>0.0.8</version>
+    </dependency>
+
+ -- dependence lombok
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+-- dependence pour connecteur Java MySQL
+
+    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.33</version>
+    </dependency>
+
+
+    </dependencies>
