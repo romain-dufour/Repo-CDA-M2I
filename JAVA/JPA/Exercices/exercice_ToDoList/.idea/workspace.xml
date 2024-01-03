@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/demo_jpa.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/demo_jpa.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/entity/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/entity/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercice_ToDoList.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Exercice_ToDoList.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/Ihm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Ihm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/impl/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/impl/TaskDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -50,7 +56,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/JPA/Exercices/exercice_ToDoList",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/CDA_LILLE_17_JUILLET/Java/JPA/exercices_jpa/todolist_v1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,7 +94,9 @@
       <updated>1704208665741</updated>
       <workItem from="1704208666727" duration="4411000" />
       <workItem from="1704214715094" duration="3076000" />
-      <workItem from="1704267699752" duration="1688000" />
+      <workItem from="1704267699752" duration="8876000" />
+      <workItem from="1704285886113" duration="36000" />
+      <workItem from="1704293957897" duration="5423000" />
     </task>
     <servers />
   </component>

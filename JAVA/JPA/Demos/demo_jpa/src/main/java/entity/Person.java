@@ -9,6 +9,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // définie la stratégie d'incrémentation - de base en mode auto
     private Long id;
 
+
     private String prenom;
 
     @Column(name = "name") // sert a préciser des informations sur la colonne name

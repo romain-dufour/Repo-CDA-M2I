@@ -5,24 +5,34 @@ import javax.persistence.*;
 @Entity
 @Table(name = "tache")
 public class Task {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "tache_id")
     private Long id;
 
     @Column (name = "titre")
     private String title;
-    private String description;
 
     private boolean completed = false;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "tache_infos_id", referencedColumnName = "id_tache_infos")
+    private TaskInfos taskInfos;
 
     public Task() {
     }
 
-    public Task(String title, String description) {
+    public Task(String title, TaskInfos taskInfos) {
         this.title = title;
-        this.description = description;
+        this.completed = false;
+        this.taskInfos = taskInfos;
     }
+
+    public Task(String title) {
+        this.title = title;
+    }
+
+
 
     public String getTitle() {
         return title;
@@ -40,14 +50,6 @@ public class Task {
         this.completed = completed;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -56,13 +58,22 @@ public class Task {
         return id;
     }
 
+    public TaskInfos getTaskInfos() {
+        return taskInfos;
+    }
+
+    public void setTaskInfos(TaskInfos taskInfos) {
+        this.taskInfos = taskInfos;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
                 ", completed=" + completed +
+                ", taskInfos=" + taskInfos +
                 '}';
     }
 }
+

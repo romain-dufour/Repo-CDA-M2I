@@ -1,9 +1,12 @@
 package controller;
 
 import impl.TaskDAO;
+import model.Priority;
 import model.Task;
+import model.TaskInfos;
 
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EnumType;
 import javax.persistence.Persistence;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -76,7 +79,16 @@ public class Ihm {
             String taskName = s.nextLine();
             System.out.println("entrer la description de la tache :");
             String taskDescription = s.nextLine();
-            Task task = new Task(taskName,taskDescription);
+            System.out.println("entrer la date de fin :");
+            String taskDate = s.nextLine();
+            System.out.println("entrer la priorité (1,2,3):");
+            int ordinal = s.nextInt();
+            Priority priority = Priority.values()[ordinal-1];
+
+            TaskInfos taskInfos = new TaskInfos(taskDescription,taskDate,priority);
+            Task task = new Task(taskName,taskInfos);
+            taskInfos.setTask(task);
+
             this.taskList.add(task);
             System.out.println("la tache a bien été ajoutée :");
             System.out.println(taskList.get(taskList.size()-1));
@@ -108,20 +120,27 @@ public class Ihm {
 
 
     public void markTaskAsFinished (){
-        try{
+        //try{
             System.out.println("--------Marquer une tache comme complétée----------");
             System.out.print("ID de la tache complété : ");
             Long id = s.nextLong();
             s.nextLine();
 
-            taskDAO.markTaskAsCompleted(id);
-            System.out.println("Tache complétée !");
-            this.menuGenerale();
+            boolean success = taskDAO.markTaskAsCompleted(id);
+            if(success){
+                System.out.println("Tache complétée !");
+                this.menuGenerale();
+            } else {
+                System.out.println("La tâche avec l'ID " + id + " n'existe pas en base de données. Veuillez saisir un ID valide.");
+                this.markTaskAsFinished();
+            }
+/*
         }
         catch( InputMismatchException e){
+            s.nextLine();
             System.out.println("entrer une valeur numerique ");
             this.markTaskAsFinished();
-        }
+        }*/
     }
 
     public void deleteTask (){
@@ -136,6 +155,7 @@ public class Ihm {
             this.menuGenerale();
         }
         catch( InputMismatchException e){
+            s.nextLine();
             System.out.println("entrer une valeur numerique ");
             this.deleteTask();
         }
