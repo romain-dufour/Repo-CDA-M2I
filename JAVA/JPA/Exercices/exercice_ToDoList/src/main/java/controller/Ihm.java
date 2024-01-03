@@ -3,6 +3,8 @@ package controller;
 import impl.TaskDAO;
 import model.Task;
 
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -16,6 +18,7 @@ public class Ihm {
 
     private Scanner s = new Scanner(System.in);
 
+    private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("Exercice_ToDoList");
     public Ihm() {
     }
 
@@ -47,6 +50,7 @@ public class Ihm {
                     this.deleteTask();
                     break;
                 case 0 :
+                    emf.close();
                     break;
                 default:
                     System.out.println("entrer une valeur correspondant a un choix");
@@ -66,17 +70,18 @@ public class Ihm {
     public void  addTask (){
         try {
             System.out.println("--------ajouter une tache----------");
-            System.out.println("entrer le nom de la tache :");
-            String taskName = s.next();
-            System.out.println("entrer la description de la tache :");
-            String taskDescription = s.next();
 
-            this.taskList.add(new Task(taskName,taskDescription));
+            s.nextLine();
+            System.out.println("entrer le nom de la tache :");
+            String taskName = s.nextLine();
+            System.out.println("entrer la description de la tache :");
+            String taskDescription = s.nextLine();
+            Task task = new Task(taskName,taskDescription);
+            this.taskList.add(task);
             System.out.println("la tache a bien été ajoutée :");
             System.out.println(taskList.get(taskList.size()-1));
 
-            Task task = new Task(taskName,taskDescription);
-
+          //  Task task = new Task(taskName,taskDescription);
             taskDAO.addTask(task);
             this.menuGenerale();
         }
@@ -92,9 +97,6 @@ public class Ihm {
         try{
             System.out.println("--------Liste des taches----------");
             taskList = taskDAO.getAllTasks();
-        for (Task t : taskList){
-            System.out.println(t.toString());
-        }
         this.menuGenerale();
         }
         catch (InputMismatchException e){

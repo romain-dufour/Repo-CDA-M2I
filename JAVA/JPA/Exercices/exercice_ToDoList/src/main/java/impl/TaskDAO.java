@@ -21,7 +21,7 @@ public class TaskDAO extends BaseDAO {
         em.persist(element);
         em.getTransaction().commit();
         em.close();
-        emf.close();
+
 
         return false;
     }
@@ -39,7 +39,7 @@ public class TaskDAO extends BaseDAO {
         }
         em.getTransaction().commit();
         em.close();
-        emf.close();
+
         return taskList;
     }
 
@@ -53,7 +53,7 @@ public class TaskDAO extends BaseDAO {
 
         em.getTransaction().commit();
         em.close();
-        emf.close();
+
         return false;
     }
 
@@ -65,7 +65,7 @@ public class TaskDAO extends BaseDAO {
         em.remove(task);
         em.getTransaction().commit();
         em.close();
-        emf.close();
+
 
         return false;
     }
