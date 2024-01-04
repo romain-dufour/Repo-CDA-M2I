@@ -7,9 +7,9 @@
     <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/demo_jpa.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/demo_jpa.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercice_ToDoList/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercice_ToDoList/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercice_ToDoList/src/main/java/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exercice_ToDoList/src/main/java/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exercice_ToDoList/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../exercice_ToDoList/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -92,7 +92,8 @@
       <workItem from="1704267699752" duration="8876000" />
       <workItem from="1704285886113" duration="36000" />
       <workItem from="1704293957897" duration="5423000" />
-      <workItem from="1704354457095" duration="6116000" />
+      <workItem from="1704354457095" duration="2516000" />
+      <workItem from="1704371979092" duration="9226000" />
     </task>
     <servers />
   </component>

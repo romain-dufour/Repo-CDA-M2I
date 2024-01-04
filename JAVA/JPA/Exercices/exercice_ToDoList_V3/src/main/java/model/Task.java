@@ -19,13 +19,19 @@ public class Task {
     @JoinColumn(name = "tache_infos_id", referencedColumnName = "id_tache_infos")
     private TaskInfos taskInfos;
 
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id") // optionnel - si non renseigne la bdd prendra le nom dans ce cas user_id
+    private User user;
+
     public Task() {
     }
 
-    public Task(String title, TaskInfos taskInfos) {
+
+    public Task(String title, TaskInfos taskInfos, User user) {
         this.title = title;
         this.completed = false;
         this.taskInfos = taskInfos;
+        this.user = user;
     }
 
     public Task(String title) {

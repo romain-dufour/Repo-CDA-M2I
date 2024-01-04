@@ -47,6 +47,18 @@
 
       Chaque tâche dispose d'une tache infos. Une tâche info est rattachée à une seule tâche.
 
+
+      ## Exercice 3 :
+
+      On souhaite rajouter des utilisateurs à notre programme TodoList.
+      Un utilisateur est défini par un nom.
+      Un utilisateur peut avoir plusieurs taches et une tache ne peut etre attribuer qu'a un seul utilisateur.
+
+      Dans le menu princial de l'application on doit pouvoir :
+      - Ajouter un utilisateur
+      - Afficher toutes les taches d'un utilisateur
+      - Supprimer un utilisateur et toutes ses tâches
+
     </description>
 
     <properties>
