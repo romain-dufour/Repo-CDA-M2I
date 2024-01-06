@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Demos/demo_jpa/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-    </list>
+    <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +93,7 @@
       <workItem from="1704293957897" duration="5423000" />
       <workItem from="1704354457095" duration="2516000" />
       <workItem from="1704371979092" duration="9226000" />
-      <workItem from="1704442203600" duration="10200000" />
+      <workItem from="1704442203600" duration="10488000" />
     </task>
     <servers />
   </component>

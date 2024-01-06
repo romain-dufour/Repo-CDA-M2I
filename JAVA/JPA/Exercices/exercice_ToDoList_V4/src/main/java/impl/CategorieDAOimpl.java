@@ -119,7 +119,7 @@ public class CategorieDAOimpl implements CategorieDAO {
             Task task = entityManager.find(Task.class, taskId);
 
             if (categorie != null && task != null) {
-                git 
+                git
                 categorie.getTaskList().add(task);
                 entityManager.merge(categorie);
                 transaction.commit();

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="default">
+
+        <description>
+            TP JPA
+            En utilisant les éléments JPA, il faudra créer une application en ligne de commande qui vous permettra de gérer les comptes d’une personne.
+            Une agence bancaire dispose de plusieurs comptes en banque. Chacune de ces comptes en banque est rattaché à une seule agence.
+            Chaque client peut disposer de plusieurs comptes en banque. Malgré la particularité de la situation, des comptes en banque peuvent appartenir à plusieurs personnes (membre de la famille par exemple.).
+            Un client se compose des éléments suivants :
+            • Id
+            • Nom
+            • Prenom
+            • Date de naissance
+            • Liste de compte.
+            Un compte se compose des éléments suivants :
+            • Id
+            • Libelle, jamais nul
+            • IBAN, longueur max : 27, jamais nul
+            • Solde : avec une précision de 10 et un nombre après la virgule de 2.
+            • L’agence
+            • La liste des clients.
+            Une agence, elle se compose des éléments suivants : • Id
+            • Une adresse
+            Il faudra créer une base de donnée qu’on appellera : banque_bdd.
+            Dans un premier temps, on se focalisera que sur la partie du menu qui nous servira à créer une banque, créer un client et créer un compte.
+
+        </description>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/banque_bdd"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="mot.de.Passe1234"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+
+    </persistence-unit>
+
+
+</persistence>
