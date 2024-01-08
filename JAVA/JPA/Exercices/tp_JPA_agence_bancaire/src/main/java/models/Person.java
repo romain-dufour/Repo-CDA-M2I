@@ -21,14 +21,19 @@ public class Person {
     @Column(name = "date_naissance")
     private LocalDate birthDay;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.DETACH,CascadeType.MERGE})
     @JoinTable(name = "client_compte",
             joinColumns = @JoinColumn(name = "client_id"),
             inverseJoinColumns = @JoinColumn(name = "compte_id"))
-    //@OneToMany(mappedBy = "person",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     private List<Account> accountList = new ArrayList<>();
 
     public Person() {
+    }
+
+    public Person(String lastName, String firstName, LocalDate birthDay) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.birthDay = birthDay;
     }
 
     public String getLastName() {

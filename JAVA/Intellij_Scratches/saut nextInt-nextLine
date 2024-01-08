@@ -1,0 +1,1 @@
+Pil faut mettre des nextLine "inutiles" à la suite de chaque nextInt, nextDouble etc. pour forcer à passer à la ligne

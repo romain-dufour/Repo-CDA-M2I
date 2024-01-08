@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,9 +15,13 @@ public class Agency {
     private String adress;
 
     @OneToMany(mappedBy = "agency",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
-    private List<Account> accountList;
+    private List<Account> accountList = new ArrayList<>();
 
     public Agency() {
+    }
+
+    public Agency(String adress) {
+        this.adress = adress;
     }
 
     public List<Account> getAccountList() {

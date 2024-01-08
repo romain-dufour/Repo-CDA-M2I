@@ -86,7 +86,7 @@ public class Ihm {
                     this.deleteCategorie(s);
                     break;
                 case 10:
-                    this.DisplayAllTasksFromOneCategorie(s);
+                    this.DisplayAllTasksFromOneCategoie(s);
                     break;
                 case 11:
                     this.AddOneTaskFromOneCategorie(s);

@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="" />
+    <list default="true" id="224aa645-9e8e-4010-b27c-ba9c3776017b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Ihm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Ihm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/banque_bdd.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/banque_bdd.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/controller/Ihm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/controller/Ihm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/impl/AccountDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/impl/AccountDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/impl/AgencyDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/impl/AgencyDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/impl/PersonDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/impl/PersonDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/models/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/models/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/models/Agency.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/models/Agency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/java/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tp_JPA_agence_bancaire/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +57,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/romain/Desktop/Repo-CDA-M2I/JAVA/JPA/Exercices/exercice_ToDoList_V4",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/CDA_LILLE_17_JUILLET/Java/JPA/jpa_demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,6 +106,7 @@
       <workItem from="1704354457095" duration="2516000" />
       <workItem from="1704371979092" duration="9226000" />
       <workItem from="1704442203600" duration="10488000" />
+      <workItem from="1704700553725" duration="6514000" />
     </task>
     <servers />
   </component>

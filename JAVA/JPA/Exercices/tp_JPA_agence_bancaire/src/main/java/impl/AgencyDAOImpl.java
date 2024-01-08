@@ -7,6 +7,8 @@ import models.Agency;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AgencyDAOImpl implements AgencyDAO {
 
@@ -59,4 +61,20 @@ public class AgencyDAOImpl implements AgencyDAO {
             entityManager.close();
         }
     }
+
+    public Agency getAgencyById(int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        List<Agency> agencyList = entityManager.createQuery("SELECT a FROM Agency a", Agency.class).getResultList();
+
+        for (Agency agency : agencyList
+        ) {
+            if (agency.getId() == id) {
+                return agency;
+            }
+        }
+        return null;
+    }
+
+
 }

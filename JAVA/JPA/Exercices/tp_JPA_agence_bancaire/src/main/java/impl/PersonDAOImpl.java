@@ -2,11 +2,13 @@ package impl;
 
 import dao.PersonDAO;
 import models.Account;
+import models.Agency;
 import models.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import java.util.List;
 
 public class PersonDAOImpl implements PersonDAO {
 
@@ -57,5 +59,20 @@ public class PersonDAOImpl implements PersonDAO {
         }finally {
             entityManager.close();
         }
+    }
+
+
+    public Person getPersonById(int id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        List<Person> personList = entityManager.createQuery("SELECT p FROM Person p", Person.class).getResultList();
+
+        for (Person person : personList
+        ) {
+            if (person.getId() == id) {
+                return person;
+            }
+        }
+        return null;
     }
 }

@@ -20,7 +20,7 @@ public class AccountDAOImpl implements AccountDAO {
         EntityTransaction transaction = entityManager.getTransaction();
         try {
             transaction.begin();
-            entityManager.persist(account);
+            entityManager.merge(account);
             transaction.commit();
             return true;
         }catch (Exception e){
