@@ -1,0 +1,3 @@
+CREATE DATABASE hibernate_exercice_2;
+USE hibernate_exercice_2;
+DROP DATABASE hibernate_exercice_2;

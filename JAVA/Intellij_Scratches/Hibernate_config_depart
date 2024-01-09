@@ -1,0 +1,50 @@
+---POM---
+  <dependencies>
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-core</artifactId>
+          <version>5.6.14.Final</version>
+      </dependency>
+
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>8.0.33</version>
+      </dependency>
+
+  </dependencies>
+
+
+
+  --- hibernate.cfg.xml ----
+
+  <?xml version='1.0' encoding='utf-8'?>
+  <!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+  <hibernate-configuration>
+
+      <!-- a SessionFactory instance listed as /jndi/name -->
+      <session-factory>
+      <mapping class="heritage.joined_table.CreditCardPayment"/>
+      <mapping class="heritage.joined_table.Payment"/>
+      <mapping class="heritage.joined_table.PaypalPayment"/>
+          <mapping class="heritage.single_table.CreditCardPayment1"/>
+          <mapping class="heritage.single_table.PaypalPayment1"/>
+          <mapping class="heritage.single_table.Payment1"/>
+      </session-factory>
+
+  </hibernate-configuration>
+
+
+
+  --- hibernate.properties ----
+
+  hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+  hibernate.connection.driver_class = com.mysql.jdbc.Driver
+  hibernate.connection.url = jdbc:mysql://localhost:3306/demo_heritage
+  hibernate.connection.username = root
+  hibernate.connection.password = test
+  hibernate.show_sql = true
+  hibernate.hbm2ddl.auto = update
