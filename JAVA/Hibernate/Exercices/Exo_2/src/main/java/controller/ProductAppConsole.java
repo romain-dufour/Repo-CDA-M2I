@@ -41,10 +41,11 @@ public class ProductAppConsole {
             System.out.println("5. Afficher la liste de produits");
             System.out.println("6. Afficher la liste de produits selon le prix");
             System.out.println("7. Afficher la liste de produits achetés entre deux dates");
-            System.out.println("8. Afficher la valeur du stock des produits d'une marque choisie.");
-            System.out.println("9. Calculer le prix moyen des produits");
-            System.out.println("10. Récupérer la liste des produits d'une marque choisie");
-            System.out.println("11. Supprimer les produits d'une marque choisie de la table produit");
+            System.out.println("8. retourner les numéros et reference des articles dont le stock est inférieur à une valeur lue au clavier");
+            System.out.println("9. Afficher la valeur du stock des produits d'une marque choisie.");
+            System.out.println("10. Calculer le prix moyen des produits");
+            System.out.println("11. Récupérer la liste des produits d'une marque choisie");
+            System.out.println("12. Supprimer les produits d'une marque choisie de la table produit");
             System.out.println("0. Quitter l'application");
             System.out.println("Choix : ");
 
@@ -74,15 +75,18 @@ public class ProductAppConsole {
                     displayProductListBySellDate(scanner);
                     break;
                 case 8:
-                    displayStockValueByMarque(scanner);
+                    displayIdAndRefByStockValue(scanner);
                     break;
                 case 9:
-                    displayAveragePrice(scanner);
+                    displayStockValueByMarque(scanner);
                     break;
                 case 10:
-                    DisplayProductListByMarque(scanner);
+                    displayAveragePrice(scanner);
                     break;
                 case 11:
+                    DisplayProductListByMarque(scanner);
+                    break;
+                case 12:
                     DeleteProductsByMarque(scanner);
                     break;
                 case 0:
@@ -174,6 +178,7 @@ public class ProductAppConsole {
         int nouveauStock = scanner.nextInt();
         scanner.nextLine();
 
+        produitDAO.updateProduct(productId,nouvelleMarque,nouvelleReference,nouvelledueDate,nouveauPrice,nouveauStock);
     }
 
     private static void displayProductList(Scanner scanner) {
@@ -196,13 +201,9 @@ public class ProductAppConsole {
     }
     private static void displayProductListBySellDate(Scanner scanner) {
         System.out.println("Entrer la date A : (dd.MM.yyyy)");
-        String date1 = scanner.nextLine();
-        System.out.println("Entrer la date B : (dd.MM.yyyy)");
-        String date2 = scanner.nextLine();
-
         String dueDateStrA = scanner.nextLine();
         LocalDate dueDateA = LocalDate.parse(dueDateStrA, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-
+        System.out.println("Entrer la date B : (dd.MM.yyyy)");
         String dueDateStrB = scanner.nextLine();
         LocalDate dueDateB = LocalDate.parse(dueDateStrB, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
 
@@ -213,6 +214,17 @@ public class ProductAppConsole {
         }
     }
 
+    private static void displayIdAndRefByStockValue(Scanner scanner){
+        System.out.println("Entrer la valeur du stock :");
+        int stockValue = scanner.nextInt();
+
+        List<Produit> produitList = produitDAO.getProductByStockValue(stockValue);
+        System.out.println("Les produits dont le stock est inférieur à " + stockValue + " sont :");
+        for (Produit p : produitList
+        ) {
+            System.out.println("Produit numéro : " + p.getId() + " avec la reference : " + p.getReference() + ". La valeur du stock est de : " + p.getStock());
+        }
+    }
     private static void displayStockValueByMarque(Scanner scanner) {
         System.out.println("Entrer la marque : ");
         String marque = scanner.nextLine();

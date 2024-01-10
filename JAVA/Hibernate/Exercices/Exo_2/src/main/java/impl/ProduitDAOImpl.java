@@ -54,7 +54,7 @@ public class ProduitDAOImpl extends BaseService implements ProduitDAO {
     public void updateProduct(Long productId, String newMarque, String newReference, LocalDate newDate, Double newPrice, int newStock) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        Produit productUpdate= session.get(Produit.class,1L);
+        Produit productUpdate= session.get(Produit.class,productId);
         productUpdate.setMarque(newMarque);
         productUpdate.setReference(newReference);
         productUpdate.setDateAchat(newDate);
@@ -98,6 +98,15 @@ public class ProduitDAOImpl extends BaseService implements ProduitDAO {
         return produitList;
     }
 
+    public List<Produit> getProductByStockValue(int stockValue){
+        Session session = sessionFactory.openSession();
+
+        Query<Produit> query = session.createQuery("from Produit where stock < :stockValue");
+        query.setParameter("stockValue",stockValue);
+
+        List<Produit>produitList = query.list();
+        return produitList;
+    }
     public double DisplayStockValueByMark(String marque){
         Session session = sessionFactory.openSession();
 
@@ -121,8 +130,8 @@ public class ProduitDAOImpl extends BaseService implements ProduitDAO {
 
     public double averagePrice(){
         Session session = sessionFactory.openSession();
-        double moyenneStock = (double) session.createQuery("select avg(stock) from Produit").uniqueResult();
-        return moyenneStock;
+        double moyennePrix = (double) session.createQuery("select avg(prix) from Produit").uniqueResult();
+        return moyennePrix;
     }
 
     public List<Produit> listProductByMark(String marque){
