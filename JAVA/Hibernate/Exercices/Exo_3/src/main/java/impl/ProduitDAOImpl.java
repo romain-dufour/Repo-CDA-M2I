@@ -1,6 +1,8 @@
 package impl;
 
 import dao.ProduitDAO;
+import model.Commentaire;
+import model.Image;
 import model.Produit;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -29,6 +31,13 @@ public class ProduitDAOImpl extends BaseService implements ProduitDAO {
         session.close();
     }
 
+    public Produit getProductById(Long Id){
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Produit produit = session.get(Produit.class,Id);
+        return produit;
+    }
+
     @Override
     public void add(Produit produit) {
         Session session = sessionFactory.openSession();
@@ -51,15 +60,10 @@ public class ProduitDAOImpl extends BaseService implements ProduitDAO {
     }
 
     @Override
-    public void updateProduct(Long productId, String newMarque, String newReference, LocalDate newDate, Double newPrice, int newStock) {
+    public void updateProduct(Produit produit) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        Produit productUpdate= session.get(Produit.class,productId);
-        productUpdate.setMarque(newMarque);
-        productUpdate.setReference(newReference);
-        productUpdate.setDateAchat(newDate);
-        productUpdate.setPrix(newPrice);
-        productUpdate.setStock(newStock);
+        Produit productUpdate= session.get(Produit.class,produit.getId());
 
         session.update(productUpdate);
 
@@ -164,5 +168,19 @@ public class ProduitDAOImpl extends BaseService implements ProduitDAO {
         session.getTransaction().commit();
         session.close();
 
+    }
+
+
+    public List<Produit> getProductByNote() {
+        Session session = sessionFactory.openSession();
+        Query<Long>subquery = session.createQuery("select distinct p.id from Produit p join p.commentaireList c group by p.id having avg(c.note) > :averageNote", Long.class);
+        subquery.setParameter("averageNote", 4.0);
+
+        Query<Produit> produitQuery  = session.createQuery("from Produit p where p.id in :productIds", Produit.class);
+        produitQuery.setParameter("productIds", subquery.list());
+
+        List<Produit>produitList = produitQuery.list();
+        session.close();
+        return produitList;
     }
 }

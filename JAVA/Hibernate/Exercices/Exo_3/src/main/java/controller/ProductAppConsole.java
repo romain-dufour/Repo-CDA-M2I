@@ -1,8 +1,8 @@
 package controller;
 
 import dao.ProduitDAO;
-import impl.ProduitDAOImpl;
-import model.Produit;
+import impl.*;
+import model.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -10,6 +10,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -18,14 +19,20 @@ public class ProductAppConsole {
     private static SessionFactory sessionFactory;
 
     private static ProduitDAOImpl produitDAO;
-
-
+    private static ImageDAOImpl imageDAO;
+    private static CommentaireDAOImpl commentaireDAO;
+    private static CommandeDAOImpl commandeDAO;
+    private static AdresseDAOImpl adresseDAO;
 
     public static void main() throws Exception {
 
 
 
         produitDAO = new ProduitDAOImpl();
+        imageDAO = new ImageDAOImpl();
+        commentaireDAO = new CommentaireDAOImpl();
+        commandeDAO = new CommandeDAOImpl();
+        adresseDAO = new AdresseDAOImpl();
 
         Scanner scanner = new Scanner(System.in);
 
@@ -45,6 +52,12 @@ public class ProductAppConsole {
             System.out.println("10. Calculer le prix moyen des produits");
             System.out.println("11. Récupérer la liste des produits d'une marque choisie");
             System.out.println("12. Supprimer les produits d'une marque choisie de la table produit");
+            System.out.println("13. ajouter une image à un produit");
+            System.out.println("14. ajouter un commentaire à un produit");
+            System.out.println("15. Afficher les produits avec une note de 4 ou plus");
+            System.out.println("16. Créer une nouvelle commande");
+            System.out.println("17. Afficher la totalité des commandes");
+            System.out.println("18. Afficher les commandes du jour");
             System.out.println("0. Quitter l'application");
             System.out.println("Choix : ");
 
@@ -88,6 +101,25 @@ public class ProductAppConsole {
                 case 12:
                     DeleteProductsByMarque(scanner);
                     break;
+                case 13:
+                    addImage(scanner);
+                    break;
+                case 14:
+                    addComment(scanner);
+                    break;
+                case 15:
+                    displayProductWithNoteOver4();
+                    break;
+                case 16:
+                    createNewOrder(scanner);
+                    break;
+                case 17:
+                    displayAllOrders();
+                    break;
+                case 18:
+                    displayDailyOrders();
+                    break;
+
                 case 0:
                     System.out.println("Bye");
                     sessionFactory.close();
@@ -177,7 +209,25 @@ public class ProductAppConsole {
         int nouveauStock = scanner.nextInt();
         scanner.nextLine();
 
-        produitDAO.updateProduct(productId,nouvelleMarque,nouvelleReference,nouvelledueDate,nouveauPrice,nouveauStock);
+        System.out.println("Entrer l'id d'une nouvelle image du produit: ");
+        Long nouvelleimageId = scanner.nextLong();
+
+        System.out.println("Entrer un nouveau commentaire du produit : ");
+        Long nouveauCommentaireId = scanner.nextLong();
+
+        Produit produit = produitDAO.getProductById(productId);
+        List<Image>imageList = produit.getImageList();
+        Image newImage = imageDAO.getImageById(nouvelleimageId);
+        imageList.add(newImage);
+
+        Commentaire newCommentaire = commentaireDAO.getCommentaireById(nouveauCommentaireId);
+        List<Commentaire>commentaireList = produit.getCommentaireList();
+        commentaireList.add(newCommentaire);
+        Produit newProduit = new Produit(productId,nouvelleMarque,nouvelleReference,nouvelledueDate,nouveauPrice,nouveauStock,commentaireList,imageList);
+
+        produitDAO.updateProduct(newProduit);
+
+
     }
 
     private static void displayProductList(Scanner scanner) {
@@ -254,6 +304,149 @@ public class ProductAppConsole {
 
         produitDAO.deleteByMark(marque);
     }
+
+
+    private static void addImage (Scanner scanner){
+        System.out.println("Entrer l'URL de l'image : ");
+        String Url = scanner.nextLine();
+
+        System.out.println("Entrez l'ID du produit : ");
+        Long productId  = scanner.nextLong();
+        scanner.nextLine();
+
+        Image image = new Image();
+        image.setUrl(Url);
+
+        Produit produit = produitDAO.getProductById(productId);
+        image.setProduit(produit);
+        imageDAO.add(image);
+
+        List<Image>imageList = produit.getImageList();
+        imageList.add(image);
+
+        produitDAO.updateProduct(produit);
+
+    }
+    private static void addComment (Scanner scanner){
+        System.out.println("Entrer le contenu du commentaire : ");
+        String contenu = scanner.nextLine();
+
+        System.out.println("Date de création du commentaire : (dd.MM.yyyy)");
+        String dateComment = scanner.nextLine();
+
+        LocalDate dueDate = LocalDate.parse(dateComment, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+        System.out.println("Entrer la note du produit : ");
+        Double note = scanner.nextDouble();
+
+        System.out.println("Entrez l'ID du produit : ");
+        Long productId  = scanner.nextLong();
+        scanner.nextLine();
+
+
+        Commentaire commentaire = new Commentaire();
+        commentaire.setContenu(contenu);
+        commentaire.setDate(dueDate);
+        commentaire.setNote(note);
+
+        Produit produit = produitDAO.getProductById(productId);
+        commentaire.setProduit(produit);
+
+        commentaireDAO.add(commentaire);
+
+        List<Commentaire>commentaireList = produit.getCommentaireList();
+        commentaireList.add(commentaire);
+
+        produitDAO.updateProduct(produit);
+    }
+
+    private static void displayProductWithNoteOver4 (){
+
+        List<Produit> produitList = produitDAO.getProductByNote();
+        System.out.println("La liste des produits avec une note moyenne au dessus de 4 est :");
+
+        for (Produit p: produitList
+             ) {
+            System.out.println("Produit : " + p);
+        }
+    }
+
+    private static void createNewOrder(Scanner scanner){
+
+        System.out.println("Date de création de la commande : (dd.MM.yyyy)");
+        String dateOrder = scanner.nextLine();
+
+        LocalDate dueDate = LocalDate.parse(dateOrder, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+
+        List<Produit>listeCommande= new ArrayList<>();
+        Double totalCommande = 0.0;
+
+        while (true) {
+            System.out.println("---------Liste des produits ------------");
+            List<Produit> produitList = produitDAO.getProductList();
+
+            for (Produit produit : produitList) {
+                System.out.println("ID: " + produit.getId() + " | Nom: " + produit.getReference() + " | Prix: " + produit.getPrix() + " | Stock: " + produit.getStock());
+            }
+
+            System.out.println("Veuillez saisir l'ID du produit à ajouter à la commande (ou 0 pour terminer) : ");
+
+            Long productId = scanner.nextLong();
+            Produit produit = produitDAO.getProductById(productId);
+            listeCommande.add(produit);
+            if (productId != 0){
+                totalCommande += produit.getPrix();
+            }else {
+                break;
+            }
+        }
+        scanner.nextLine();
+        System.out.println("************ Creation de l'adresse de commande **************");
+        System.out.println("Nom de la rue: ");
+        String rue = scanner.nextLine();
+        System.out.println("Nom de la ville : ");
+        String ville = scanner.nextLine();
+        System.out.println("Code postal : ");
+        int codePostal = scanner.nextInt();
+
+        Commande commande = new Commande();
+        commande.setDateCommande(dueDate);
+        commande.setProduitList(listeCommande);
+        commande.setTotal(totalCommande);
+
+
+        commandeDAO.add(commande);
+
+        Adresse adresse = new Adresse();
+        adresse.setRue(rue);
+        adresse.setVille(ville);
+        adresse.setCodePostal(codePostal);
+        adresse.setCommande(commande);
+        adresseDAO.add(adresse);
+    }
+
+
+    private static void displayAllOrders(){
+        System.out.println("Ci dessous la liste des commandes :");
+        List<Commande> commandeList = commandeDAO.getCommandeList();
+
+        for (Commande c: commandeList
+             ) {
+            System.out.println("ID: " + c.getId() + " | Date de commande : " + c.getDateCommande() + " | Montant de la commande: " + c.getTotal() + " €");
+        }
+
+    }
+
+
+    private static void displayDailyOrders(){
+        System.out.println("Ci dessous la liste des commandes du jour:");
+        List<Commande> commandeList = commandeDAO.getCommandeListByDailyDate();
+        for (Commande c: commandeList
+        ) {
+            System.out.println("ID: " + c.getId() + " | Date de commande : " + c.getDateCommande() + " | Montant de la commande: " + c.getTotal() + " €");
+        }
+    }
+
 }
 
 

@@ -13,7 +13,7 @@ public interface ProduitDAO {
 
     public void deleteProduct(Long productId);
 
-    public void updateProduct(Long productId, String newMarque, String newReference, LocalDate newDate, Double newPrice, int newStock);
+    public void updateProduct(Produit produit);
 
     public List<Produit> getProductList();
 
