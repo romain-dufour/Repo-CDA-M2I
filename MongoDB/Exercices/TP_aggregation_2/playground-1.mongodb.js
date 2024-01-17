@@ -86,7 +86,7 @@ use("tp_agregation_2");
   
 
 
-// // 10. On souhaite avoir le nombre total de restaurants toujours avec agrégation.
+//  10. On souhaite avoir le nombre total de restaurants toujours avec agrégation.
 
 // db.restaurants.aggregate([
 //     { $group: { _id: null, total_restaurants: { $sum: 1 } } }
