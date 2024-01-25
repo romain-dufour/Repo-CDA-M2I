@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d885908e-0fdb-4de9-a173-cec947e7a0cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Hibernate/Exercices/Exo_1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Hibernate/Exercices/Exo_1/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/exercice1/model/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/exercice1/model/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/exercice1/servlet/ProduitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/exercice1/servlet/ProduitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Produit-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Produit-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Produit-list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Produit-list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +60,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_directory_selection": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/JEE/Exercices/exercice1/src/main/java",
-    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/JAVA/JEE/Exercices/exercice1/src/main/java/com/example/exercice1/impl",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/CDA_LILLE_17_JUILLET/Java/JEE/correction_produit_new/correction_produit_new",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -175,9 +179,6 @@
       <option name="catalinaBase" value="C:\Users\Administrateur\.SmartTomcat\exercice1\exercice1" />
       <option name="contextPath" value="/exercice1" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -207,10 +208,22 @@
       <updated>1706004911561</updated>
       <workItem from="1706004912562" duration="1720000" />
       <workItem from="1706006652390" duration="15045000" />
+      <workItem from="1706082423935" duration="5484000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/exercice1/servlet/ProduitServlet.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

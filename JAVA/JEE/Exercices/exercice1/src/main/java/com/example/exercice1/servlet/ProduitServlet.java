@@ -11,9 +11,12 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.SessionFactory;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -34,6 +37,14 @@ public class ProduitServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        if(req.getParameter("action").equals("delete")){
+            try {
+                deleteUser(req, resp);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
         produitDAO = new ProduitDAOImpl();
 
@@ -57,46 +68,12 @@ public class ProduitServlet extends HttpServlet {
 
         String marque = req.getParameter("marque");
         String reference = req.getParameter("reference");
-        String dateAchatString = req.getParameter("dateAchat");
-        String prixString = req.getParameter("prix");
-        String stockString = req.getParameter("stock");
+        LocalDate dateAchat = LocalDate.parse((req.getParameter("dateAchat")));
+        Double prix = Double.parseDouble(req.getParameter("prix"));
+        int stock = Integer.parseInt(req.getParameter("stock"));
 
-        // Parsing date
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // Adjust the format as per your requirement
-        Date dateAchat = null;
 
-        if (dateAchatString != null && !dateAchatString.isEmpty()) {
-            dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // Adjust the format as per your requirement
-            try {
-                dateAchat = dateFormat.parse(dateAchatString);
-            } catch (ParseException e) {
-                e.printStackTrace(); // Handle the exception according to your needs
-            }
-        } else {
-            try {
-                dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                dateAchat = dateFormat.parse("2000-01-01");
-            } catch (ParseException e) {
-                e.printStackTrace(); // Handle the exception according to your needs
-            }
-        }
-
-        // Parsing price
-        Double prix = null;
-        try {
-            prix = Double.parseDouble(prixString);
-        } catch (NumberFormatException e) {
-            e.printStackTrace(); // Handle the exception according to your needs
-        }
-
-        // Parsing stock
-        int stock = 0; // Default value, you can change this as per your requirements
-        try {
-            stock = Integer.parseInt(stockString);
-        } catch (NumberFormatException e) {
-            e.printStackTrace(); // Handle the exception according to your needs
-        }
-        Produit produit = new Produit(marque,reference,dateAchat,prix,stock);
+        Produit produit = new Produit(marque,reference,Date.from(dateAchat.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()),prix,stock);
         produitDAO.add(produit);
 
         req.setAttribute("produits", produitList);
@@ -115,5 +92,15 @@ public class ProduitServlet extends HttpServlet {
 
         req.setAttribute("produits", produitList);
         req.getRequestDispatcher("Produit-list.jsp").forward(req,resp);
+    }
+
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response)
+            throws SQLException, IOException {
+        Long id = Long.parseLong(request.getParameter("id"));
+        Produit produit = produitDAO.getProductById(id);
+        if(produit != null){
+            produitDAO.deleteProduct(id);
+        }
+        response.sendRedirect("list");
     }
 }

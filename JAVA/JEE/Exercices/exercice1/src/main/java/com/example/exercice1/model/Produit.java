@@ -2,7 +2,6 @@ package com.example.exercice1.model;
 
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -16,6 +15,7 @@ public class Produit {
 
     private String reference;
 
+    @Temporal(TemporalType.DATE)
     private Date dateAchat;
 
     private Double prix;

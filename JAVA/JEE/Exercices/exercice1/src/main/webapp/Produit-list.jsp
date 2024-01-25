@@ -34,8 +34,8 @@
             <td>${produit.getDateAchat()}</td>
             <td>${produit.getPrix()}</td>
             <td>${produit.getStock()}</td>
-            <td><a class="btn btn-primary" href="produit?Id=${produit.getId()}">Details</a> </td>
-            <td><a class="btn btn-danger" href="produit?Id=${produit.getId()}">Delete</a> </td>
+            <td><a class="btn btn-primary" href="produit/details?Id=${produit.getId()}">Details</a> </td>
+            <td><a class="btn btn-danger" href="produit/delete?Id=${produit.getId()}&action=delete">Delete</a> </td>
 
 
         </tr>

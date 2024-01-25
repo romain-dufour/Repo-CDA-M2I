@@ -19,7 +19,7 @@
         </div>
         <div class="mb-3">
             <label for="date_achat" class="form-label">Date d'achat</label>
-            <input type="text" class="form-control" id="date_achat" name="date_achat">
+            <input type="date" class="form-control" id="date_achat" name="date_achat">
         </div>
         <div class="mb-3">
             <label for="prix" class="form-label">Prix</label>
