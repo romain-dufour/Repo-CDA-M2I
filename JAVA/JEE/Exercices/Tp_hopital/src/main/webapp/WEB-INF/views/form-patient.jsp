@@ -16,9 +16,7 @@
     <div>
         <form action="insert_patient" method="post" enctype="multipart/form-data">
             <div class="form-row">
-                <c:if test="${produit != null}">
-                    <input type="hidden" name="id" value="<c:out value='${produit.getId()}' />" />
-                </c:if>
+
                 <div class="form-group col-md-6">
                     <label for="inputName">Nom</label>
                     <input type="text" class="form-control" id="inputName" name="lastName">

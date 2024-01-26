@@ -29,9 +29,10 @@ public class Prescription {
     }
 
 
-    public Prescription(String medicType, int duration) {
+    public Prescription(String medicType, int duration, Consultation consultation) {
         this.medicType = medicType;
         this.duration = duration;
+        this.consultation = consultation;
     }
 
     public String getMedicType() {

@@ -13,8 +13,9 @@
         <h2>Liste des patients</h2>
     </center>
     <div class="m-4">
+        <a href="newPatient" class="btn btn-success text-start">Ajouter un Patient </a>
         <c:if test="${user != null }">
-            <a href="new_patient" class="btn btn-success text-start">Ajouter un Patient </a>
+            <a href="newPatient" class="btn btn-success text-start">Ajouter un Patient </a>
         </c:if>
     </div>
 
@@ -49,7 +50,7 @@
                     <td>${patient.getBirthDate()}</td>
 
                     <td>
-                        <a href="details?id=${patient.getId()}" class="btn btn-primary">Detail</a>
+                        <a href="detailsPatient?id=${patient.getId()}" class="btn btn-primary">Details</a>
                     </td>
                 </tr>
             </c:forEach>

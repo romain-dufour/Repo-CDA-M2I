@@ -10,7 +10,7 @@ public interface Repository<T> {
 
     boolean delete(T o);
 
-    T findById(int id);
+    T findById(Long id);
 
     List<T> findAll();
 }

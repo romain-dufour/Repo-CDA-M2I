@@ -31,8 +31,8 @@
             </div>
             <div class="form-row">
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-primary">Ajouter une prescription</button>
-                    <button type="submit" class="btn btn-secondary">Ajouter une fiche de soin</button>
+                    <a href="newPrescription" class="btn btn-secondary text-start">Ajouter une prescription </a>
+                    <a href="newFicheDeSoin" class="btn btn-primary text-start">Ajouter une fiche de soin </a>
                 </div>
             </div>
             <button type="submit" class="btn btn-success">Valider</button>

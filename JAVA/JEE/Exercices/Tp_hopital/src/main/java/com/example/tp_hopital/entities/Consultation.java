@@ -2,6 +2,7 @@ package com.example.tp_hopital.entities;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Consultation {
@@ -24,10 +25,10 @@ public class Consultation {
     private String doctorName;
 
     @OneToMany(mappedBy = "consultation" , cascade = CascadeType.ALL)
-    private Prescription prescription;
+    private List<Prescription> prescriptionList;
 
     @OneToMany(mappedBy = "consultation" , cascade = CascadeType.ALL)
-    private FicheDeSoin ficheDeSoin;
+    private List<FicheDeSoin> ficheDeSoinList;
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
@@ -36,11 +37,18 @@ public class Consultation {
     public Consultation() {
     }
 
-    public Consultation(Date consultDate, String doctorName, Prescription prescription, FicheDeSoin ficheDeSoin) {
+    public Consultation(Date consultDate, String doctorName, Patient patient) {
         this.consultDate = consultDate;
         this.doctorName = doctorName;
-        this.prescription = prescription;
-        this.ficheDeSoin = ficheDeSoin;
+        this.patient = patient;
+    }
+
+    public Consultation(Date consultDate, String doctorName, List<Prescription> prescriptionList, List<FicheDeSoin> ficheDeSoinList, Patient patient) {
+        this.consultDate = consultDate;
+        this.doctorName = doctorName;
+        this.prescriptionList = prescriptionList;
+        this.ficheDeSoinList = ficheDeSoinList;
+        this.patient = patient;
     }
 
     public Patient getPatient() {
@@ -67,19 +75,19 @@ public class Consultation {
         this.doctorName = doctorName;
     }
 
-    public Prescription getPrescription() {
-        return prescription;
+    public List<Prescription> getPrescriptionList() {
+        return prescriptionList;
     }
 
-    public void setPrescription(Prescription prescription) {
-        this.prescription = prescription;
+    public void setPrescriptionList(List<Prescription> prescriptionList) {
+        this.prescriptionList = prescriptionList;
     }
 
-    public FicheDeSoin getFicheDeSoin() {
-        return ficheDeSoin;
+    public List<FicheDeSoin> getFicheDeSoinList() {
+        return ficheDeSoinList;
     }
 
-    public void setFicheDeSoin(FicheDeSoin ficheDeSoin) {
-        this.ficheDeSoin = ficheDeSoin;
+    public void setFicheDeSoinList(List<FicheDeSoin> ficheDeSoinList) {
+        this.ficheDeSoinList = ficheDeSoinList;
     }
 }

@@ -28,7 +28,7 @@ public class ConsultationService extends com.example.correctionproduit.services.
     }
 
     @Override
-    public Consultation findById(int id) {
+    public Consultation findById(Long id) {
         Consultation consultation = null;
         session = sessionFactory.openSession();
         consultation = (Consultation) session.get(Consultation.class, id);

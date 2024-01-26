@@ -30,7 +30,7 @@ public class PrescriptionService extends com.example.correctionproduit.services.
     }
 
     @Override
-    public Prescription findById(int id) {
+    public Prescription findById(Long id) {
         Prescription prescription = null;
         session = sessionFactory.openSession();
         prescription = (Prescription) session.get(Prescription.class, id);

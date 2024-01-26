@@ -30,7 +30,7 @@ public class FicheDeSoinService extends com.example.correctionproduit.services.B
     }
 
     @Override
-    public FicheDeSoin findById(int id) {
+    public FicheDeSoin findById(Long id) {
         FicheDeSoin ficheDeSoin = null;
         session = sessionFactory.openSession();
         ficheDeSoin = (FicheDeSoin) session.get(FicheDeSoin.class, id);

@@ -45,6 +45,12 @@ public class Patient {
         this.photo = photo;
     }
 
+    public Patient(String lastName, String firstName, Date birthDate) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.birthDate = birthDate;
+    }
+
     public List<Consultation> getConsultationList() {
         return consultationList;
     }

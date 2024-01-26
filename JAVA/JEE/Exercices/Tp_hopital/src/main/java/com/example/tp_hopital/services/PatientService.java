@@ -28,7 +28,7 @@ public class PatientService extends com.example.correctionproduit.services.BaseS
     }
 
     @Override
-    public Patient findById(int id) {
+    public Patient findById(Long id) {
         Patient patient = null;
         session = sessionFactory.openSession();
         patient = (Patient) session.get(Patient.class, id);
@@ -50,9 +50,18 @@ public class PatientService extends com.example.correctionproduit.services.BaseS
     public List<Patient> filterByLastName(String lastName) throws Exception {
         List<Patient> patientList = null;
         session = sessionFactory.openSession();
-        Query<Patient> patientQuery = session.createQuery("from Patient where lastName = :lastName");
-        patientQuery.setParameter("lastName", lastName);
-        patientList = patientQuery.list();
+
+        if (lastName == null){
+            Query<Patient> patientQuery = session.createQuery("from Patient");
+            patientList = patientQuery.list();
+            session.close();
+            return patientList;
+        }else {
+            Query<Patient> patientQuery = session.createQuery("from Patient where lastName = :lastName");
+            patientQuery.setParameter("lastName", lastName);
+            patientList = patientQuery.list();
+        }
+
         session.getTransaction().commit();
         session.close();
 

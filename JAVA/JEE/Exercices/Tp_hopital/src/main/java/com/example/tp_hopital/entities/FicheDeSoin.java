@@ -28,9 +28,11 @@ public class FicheDeSoin {
     public FicheDeSoin() {
     }
 
-    public FicheDeSoin(String typeOfCare, int duration) {
+
+    public FicheDeSoin(String typeOfCare, int duration, Consultation consultation) {
         this.typeOfCare = typeOfCare;
         this.duration = duration;
+        this.consultation = consultation;
     }
 
     public String getTypeOfCare() {
