@@ -11,4 +11,6 @@ public class Calculatrice {
         else
             throw new RuntimeException("B must be not equal to 10");
     }
+
+
 }
