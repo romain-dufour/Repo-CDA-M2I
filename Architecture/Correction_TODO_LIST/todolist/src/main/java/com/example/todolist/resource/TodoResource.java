@@ -47,7 +47,7 @@ public class TodoResource {
     @DELETE
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public boolean delete(@PathParam("id") int id) {
+    public boolean delete(@PathParam("id") Long id) {
         return todoService.deleteTodoById(id);
     }
 }

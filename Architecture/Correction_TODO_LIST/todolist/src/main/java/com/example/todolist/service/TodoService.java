@@ -9,6 +9,9 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import org.hibernate.Session;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @ApplicationScoped
 public class TodoService {
 
@@ -32,24 +35,22 @@ public class TodoService {
         }catch (Exception ex) {
             session.getTransaction().rollback();
             throw ex;
+        }finally {
+            session.close();
         }
     }
 
-    public boolean deleteTodoById(int id){
+    public boolean deleteTodoById(Long id){
 
         Session session = HibernateSession.getSessionFactory().openSession();
-        todoRepository.setSession(session);
+        session.beginTransaction();
+        try (session) {
+            todoRepository.setSession(session);
+            Todo todo = todoRepository.findById(id);
+            todoRepository.delete(todo);
+            session.getTransaction().commit();
+            return true;
 
-        try {
-            Todo existingTodo = todoRepository.findById((long) id);
-            if(existingTodo != null){
-                todoRepository.delete(existingTodo);
-                session.getTransaction().commit();
-                return true;
-            }
-            else {
-                return false;
-            }
         }catch (Exception ex){
             session.getTransaction().rollback();
             throw ex;
@@ -58,21 +59,30 @@ public class TodoService {
         }
 
     }
-    public Todo TodoById (Long id){
-        Todo todo = null;
+    public TodoDto findById (Long id){
         Session session = HibernateSession.getSessionFactory().openSession();
-        todoRepository.setSession(session);
-        session.beginTransaction();
-        try{
-            todo = todoRepository.findById(id);
+        try(session){
+            todoRepository.setSession(session);
+            Todo todo = todoRepository.findById(id);
+            return todo.toDto();
 
         } catch (Exception ex){
+            throw ex;
         }
-        return todo;
     }
 
 
-
+    public List<TodoDto> findAll(){
+        Session session = HibernateSession.getSessionFactory().openSession();
+        try(session){
+            todoRepository.setSession(session);
+            return todoRepository.findAll().stream()
+                    .map(todo -> todo.toDto())
+                    .collect(Collectors.toList());
+        } catch (Exception ex){
+            throw ex;
+        }
+    }
 
     public TodoDto updateTodoStatus(int id){
         TodoDto todoDto = null;

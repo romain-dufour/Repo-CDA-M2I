@@ -11,11 +11,11 @@ import java.util.List;
 public class TodoRepository extends Repository<Todo> {
     @Override
     public Todo findById(Long id) {
-        return null;
+        return session.get(Todo.class, id);
     }
 
     @Override
-    List<Todo> findAll() {
-        return null;
+    public List<Todo> findAll() {
+        return session.createQuery("from Todo ", Todo.class).list();
     }
 }
