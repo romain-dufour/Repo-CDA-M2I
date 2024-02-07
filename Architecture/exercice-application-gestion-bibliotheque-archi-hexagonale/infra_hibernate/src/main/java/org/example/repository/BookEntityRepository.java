@@ -14,6 +14,12 @@ public class BookEntityRepository extends BaseEntityRepository<BookEntity> {
         return session.get(BookEntity.class,id);
     }
 
+    public List<BookEntity> findAllByKey(String key) {
+        return (session
+                .createQuery("from BookEntity where title like :q", BookEntity.class)
+                .setParameter("q", key+"%"))
+                .list();
+    }
     @Override
     public List<BookEntity> findAll() {
         return session.createQuery("from BookEntity ", BookEntity.class).list();

@@ -19,10 +19,6 @@ public class BookService {
     }
 
 
-    public Book searchBook (Long id) {
-        Book book = bookRepository.findById(id);
-        return book;
-    }
 
     public boolean deleteBook (Long id) {
         Book book = bookRepository.findById(id);

@@ -5,22 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25a49c48-77d5-4349-a737-71da22c25cae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/adapteur/src/main/java/com/example/adapteur/dto/BookDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapteur/src/main/java/com/example/adapteur/ressource/BookRessource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/entity/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/spi/port/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercice-application-gestion-bibliotheque-archi-hexagonale.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra_hibernate/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/entity/BookEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BaseEntityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookEntityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/util/HibernateSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Correction_TODO_LIST/todolist/src/main/java/com/example/todolist/repository/TodoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Correction_TODO_LIST/todolist/src/main/java/com/example/todolist/repository/TodoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Correction_TODO_LIST/todolist/src/main/java/com/example/todolist/resource/TodoResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Correction_TODO_LIST/todolist/src/main/java/com/example/todolist/resource/TodoResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Correction_TODO_LIST/todolist/src/main/java/com/example/todolist/service/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Correction_TODO_LIST/todolist/src/main/java/com/example/todolist/service/TodoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/BookFeatureTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/java/CucumberTestApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/test/resources/book.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapteur/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adapteur/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapteur/src/main/java/com/example/adapteur/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/example/spi/port/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/spi/port/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookEntityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/CDA_LILLE_17_JUILLET",
+    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/CDA_LILLE_17_JUILLET/TDD/cours_tdd",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +76,26 @@
       <recent name="org.example.repository" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Cucumber Java.Scenario: getAll Books">
+    <configuration name="Scenario: getAll Books" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/domain/src/test/resources/book.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="domain" />
+      <option name="NAME_FILTER" value="^getAll Books$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^getAll Books$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: getAll Books" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.0.10" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.10" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="adapteur:war exploded">
@@ -168,6 +182,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber Java.Scenario: getAll Books" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -179,6 +198,7 @@
       <updated>1707214072857</updated>
       <workItem from="1707214073853" duration="10562000" />
       <workItem from="1707228399992" duration="6192000" />
+      <workItem from="1707296940761" duration="4565000" />
     </task>
     <servers />
   </component>

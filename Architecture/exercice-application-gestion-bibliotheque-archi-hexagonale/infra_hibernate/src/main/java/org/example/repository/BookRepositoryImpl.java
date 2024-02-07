@@ -8,6 +8,7 @@ import org.example.util.HibernateSession;
 import org.hibernate.Session;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BookRepositoryImpl implements BookRepository {
 
@@ -74,7 +75,13 @@ public class BookRepositoryImpl implements BookRepository {
     }
 
     @Override
-    public List<Book> findAll() {
-        return null;
-    }
+    public List<Book> searchBook(String search) {
+        Session session = HibernateSession.getSessionFactory().openSession();
+        bookEntityRepository.setSession(session);
+        try (session) {
+            return bookEntityRepository.findAllByKey(search)
+                    .stream()
+                    .map(bookEntity -> bookEntity.toBook())
+                    .collect(Collectors.toList());
+        }
 }

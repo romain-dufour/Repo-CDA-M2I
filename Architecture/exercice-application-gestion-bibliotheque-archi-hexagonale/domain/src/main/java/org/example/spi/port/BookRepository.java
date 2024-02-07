@@ -10,5 +10,5 @@ public interface BookRepository {
     boolean delete(Book book);
     boolean update (Book book);
     Book findById(Long id);
-    List<Book> findAll();
+    List<Book> searchBook(String search);
 }
