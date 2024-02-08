@@ -1,8 +1,6 @@
-package org.example.port;
+package org.example.domain.port;
 
-import org.example.entity.User;
-
-import java.util.List;
+import org.example.domain.entity.User;
 
 public interface UserRepository {
 

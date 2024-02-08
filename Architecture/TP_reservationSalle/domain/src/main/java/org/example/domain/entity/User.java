@@ -1,6 +1,5 @@
-package org.example.entity;
+package org.example.domain.entity;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class User {

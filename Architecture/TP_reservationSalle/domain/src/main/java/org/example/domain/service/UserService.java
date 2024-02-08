@@ -1,10 +1,7 @@
-package org.example.service;
+package org.example.domain.service;
 
-import org.example.entity.User;
-import org.example.port.UserRepository;
-
-import java.sql.Time;
-import java.time.LocalDate;
+import org.example.domain.entity.User;
+import org.example.domain.port.UserRepository;
 
 public class UserService {
 

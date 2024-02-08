@@ -1,13 +1,7 @@
-package org.example.service;
+package org.example.domain.service;
 
-import org.example.entity.MeetingRoom;
-import org.example.port.MeetingRoomRepository;
-
-import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.List;
+import org.example.domain.entity.MeetingRoom;
+import org.example.domain.port.MeetingRoomRepository;
 
 public class MeetingRoomService {
 
@@ -35,14 +29,14 @@ public class MeetingRoomService {
         meetingRoomRepository.delete(meetingRoom);
     }
 
-    public List<MeetingRoom> searchMeetingRoom (LocalDate localDate, Time hour, int requiredCapacity) {
-        if (requiredCapacity<0 ) {
-            throw new RuntimeException("the capacity required must be gt 0");
-        }
-        LocalDateTime localDateTimeSearched = LocalDateTime.of(localDate, LocalTime.from(hour.toLocalTime()));
-        List<MeetingRoom> list = meetingRoomRepository.searchByLocalDateTime(localDateTimeSearched);
-        return list;
-    }
+//    public List<MeetingRoom> searchMeetingRoom (LocalDate localDate, Time hour, int requiredCapacity) {
+//        if (requiredCapacity<0 ) {
+//            throw new RuntimeException("the capacity required must be gt 0");
+//        }
+//        LocalDateTime localDateTimeSearched = LocalDateTime.of(localDate, LocalTime.from(hour.toLocalTime()));
+//        List<MeetingRoom> list = meetingRoomRepository.searchByLocalDateTime(localDateTimeSearched);
+//        return list;
+//    }
 
 
 }

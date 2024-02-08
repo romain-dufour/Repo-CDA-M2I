@@ -1,7 +1,6 @@
-package org.example.port;
+package org.example.domain.port;
 
-import org.example.entity.MeetingRoom;
-import org.example.entity.User;
+import org.example.domain.entity.MeetingRoom;
 
 import java.time.LocalDateTime;
 import java.util.List;
