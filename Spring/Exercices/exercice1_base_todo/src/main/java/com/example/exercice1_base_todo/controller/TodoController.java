@@ -18,10 +18,10 @@ public class TodoController {
 
     @GetMapping("/todo")
     public String getTodo(Model model){
-        Todo todo= new Todo("test", "description" , false);
+        Todo todo= new Todo("test", "description" , true);
         model.addAttribute("name",todo.getName());
         model.addAttribute("description",todo.getDescription());
-//        model.addAttribute("isDone",todo.isDone());
+        model.addAttribute("isDone",todo.isDone());
         if(todo.isDone()){
             model.addAttribute("status","finis");
         }else {

@@ -14,8 +14,9 @@
 
     <p>Status : <span th:text="${status}"></span></p>
 
+    <p>Status : <span th:if="${isDone == true}">Termine !!!</span> <span th:if="${isDone == false}">A finir !!!</span></p>
 
-    <!--    <p th:if="${isDone == true}">Fini : <span th:if="${isDone == true}">Termine !!!</span></p>-->
+<!--        <p th:if="${isDone == true}">Fini : <span th:if="${isDone == true}">Termine !!!</span> <span th:if="${isDone == false}">A finir !!!</span></p>-->
 <!--    <h3 th:if="${isDone == false}">Fini : </h3><span th:if="${isDone == false}">A finir !!!</span>-->
 
 
