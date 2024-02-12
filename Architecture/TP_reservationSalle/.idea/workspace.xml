@@ -5,30 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="141f68e7-33c8-4bb9-8999-ec0ee1d94d21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/TP-vendredi-appliDepensePerso.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/adapteur/src/main/java/org/example/adapteur/dto/DepenseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/adapteur/src/main/java/org/example/adapteur/ressource/DepenseRessource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/main/java/org/example/entity/Depense.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/main/java/org/example/port/DepenseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/main/java/org/example/service/DepenseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/test/java/ExpenseStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/test/java/RunCucumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/test/ressources/ExpenseFeature.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/domain/src/test/ressources/ListAllExpensesFeature.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/infra/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/infra/src/main/java/org/example/infra/orm/entity/DepenseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/infra/src/main/java/org/example/infra/orm/repository/DepenseEntityRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/infra/src/main/java/org/example/infra/orm/repository/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/infra/src/main/java/org/example/infra/orm/repository/impl/DepenseRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TP-vendredi-appliDepensePerso/infra/src/main/java/org/example/infra/orm/util/HibernateSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,26 +37,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Windows 11/Desktop/CDA_LILLE_17_JUILLET/Architectures/correction_librairies",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/Architecture/TP_reservationSalle/infra-orm/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Windows 11/Desktop/CDA_LILLE_17_JUILLET/Architectures/correction_librairies&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/Architecture/TP_reservationSalle/infra-orm/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrateur\OneDrive - M2I\Bureau\Repo-CDA-M2I\Architecture\TP_reservationSalle\infra-orm\src\main\resources" />
@@ -120,6 +98,7 @@
       <workItem from="1707378545715" duration="10464000" />
       <workItem from="1707401901579" duration="6576000" />
       <workItem from="1707466435622" duration="2259000" />
+      <workItem from="1707724696503" duration="2156000" />
     </task>
     <servers />
   </component>
