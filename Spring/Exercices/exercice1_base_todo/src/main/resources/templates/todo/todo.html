@@ -6,12 +6,18 @@
 </head>
 <body>
 <main>
-    <h1>Ma Todo</h1>
+    <h2>Ma Todo</h2>
     <hr>
-    <h3>Titre :</h3><span th:text="${}"></span>
-    <h3>Description :</h3><span th:text="${description}"></span>
-    <h3>Fini :</h3><span th:if="${todo.done == true}">Termine !!!</span>
-    <span th:if="${!todo.done == true}">A finir !!!</span>
+    <p>Titre : <span th:text="${name}"></span></p>
+
+    <p>Description : <span th:text="${description}"></span></p>
+
+    <p>Status : <span th:text="${status}"></span></p>
+
+
+    <!--    <p th:if="${isDone == true}">Fini : <span th:if="${isDone == true}">Termine !!!</span></p>-->
+<!--    <h3 th:if="${isDone == false}">Fini : </h3><span th:if="${isDone == false}">A finir !!!</span>-->
+
 
 </main>
 

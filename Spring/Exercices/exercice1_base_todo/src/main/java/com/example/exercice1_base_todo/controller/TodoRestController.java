@@ -13,10 +13,18 @@ public class TodoRestController {
 
     @GetMapping(value = "todo")
     public Todo getTodo(){
-        Todo todo= new Todo(1,"test", "decription" , true);
+        Todo todo= new Todo("test", "decription" , false);
 
         return todo;
     }
 
-//    public List<String> getTodos(){return List.of()}
+    @GetMapping(value = "todos")
+    public List<Todo> getTodos(){
+        return List.of(
+                new Todo("test2", "decription" , true),
+                new Todo("test3", "decription" , true),
+                new Todo("test4", "decription" , false)
+
+        );}
+
 }
