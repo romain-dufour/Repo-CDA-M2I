@@ -6,10 +6,7 @@ import com.example.base_spring.service.RabbitService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
@@ -64,16 +61,38 @@ public class DemoController {
     public String submitRabbit(@ModelAttribute("rabbit") Rabbit rabbit){
         System.out.println(rabbit.getName());
         System.out.println(rabbit.getBreed());
-        UUID id = UUID.randomUUID();
-
-        // Set the generated ID to the rabbit object
-        rabbit.setId(id);
-
-        rabbitService.addRabbitsList(rabbit);
+//        UUID id = UUID.randomUUID();
+//        rabbit.setId(id);
+//        rabbitService.addRabbitsList(rabbit);
+        rabbitService.addRabbit(rabbit);
         return "redirect:/";
     }
 
 
+    @GetMapping("/addrabbit")
+    public String submitRabbitVTwo(@RequestParam("name") String name,@RequestParam("breed") String breed){
+        System.out.println(name);
+        System.out.println(breed);
+        rabbitService.addRabbit(new Rabbit(null,name,breed ));
+        return "redirect:/";
+    }
 
+
+    @GetMapping("/look")
+    public String showRabbit(@RequestParam(value = "nameRabbit", required = false) String name,Model model){
+        System.out.println(name);
+        Rabbit rabbit =  rabbitService.getRabbitByName(name);
+//        Rabbit rabbit = new Rabbit(UUID.randomUUID(),"test", "test");
+
+        model.addAttribute("monlapin",rabbit);
+        if (rabbit != null){
+            return "pagec";
+        }else {
+            return "paged";
+        }
+
+
+        // requette url a taper dans ce cas : http://localhost:8080/look?nameRabbit=test
+    }
 
 }

@@ -12,7 +12,9 @@
     <a th:href="@{/}">home</a>
 </header>
 <main>
-<form th:action="@{/add}" th:object="${rabbit}" method="post">
+
+<!--<form th:action="@{/add}" th:object="${rabbit}" method="post">-->
+<form th:action="@{/addrabbit}" th:object="${rabbit}" method="get">
     <div>
         <label for="name" >Nom du lapin : </label>
         <input type="text" id="name" th:field="*{name}">

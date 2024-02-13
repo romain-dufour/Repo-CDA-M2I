@@ -2,6 +2,9 @@ package com.example.base_spring.service;
 
 import com.example.base_spring.model.Rabbit;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.*;
 
@@ -51,4 +54,28 @@ public class RabbitService {
         return getRabbits();
 
     }
+
+    public boolean addRabbit(Rabbit rabbit){
+//        Rabbit rabbitToAdd = Rabbit.builder()
+////                .id(UUID.randomUUID())
+////                .name("bugs bunny")
+////                .breed("angora")
+////                .build();
+
+        if (rabbit.getId() == null){
+            rabbit.setId(UUID.randomUUID());
+            rabbits.put(rabbit.getId(),rabbit);
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+
+    public Rabbit getRabbitByName(String name){
+        return rabbits.values().stream().filter(r -> r.getName().equals(name)).findFirst().orElse(null);
+
+
+    }
+
 }
