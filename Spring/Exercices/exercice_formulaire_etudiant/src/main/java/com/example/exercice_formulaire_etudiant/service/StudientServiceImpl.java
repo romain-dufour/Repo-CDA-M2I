@@ -11,10 +11,14 @@ import java.util.UUID;
 
 @Service
 public class StudientServiceImpl implements StudientService{
-    private final Map<UUID, Studient> studients;
+   private final Map<UUID, Studient> studients;
 
-    public StudientService(){
+    public StudientServiceImpl() {
         studients = new HashMap<>();
+    }
+
+    public void StudientService(){
+        //studients = new HashMap<>();
         Studient studientA = Studient.builder()
                 .id(UUID.randomUUID())
                 .lastName("Dufour")

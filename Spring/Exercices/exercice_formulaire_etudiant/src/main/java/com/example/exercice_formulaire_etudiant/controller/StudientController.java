@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 public class StudientController {
@@ -34,6 +37,7 @@ public class StudientController {
     @GetMapping("/list")
     public String listingStudient(Model model){
         List<Studient> studients = studientService.findAllStudient();
+
         Studient studient = studients.get(0);
         model.addAttribute("idStudient",studient.getId());
 
@@ -41,7 +45,12 @@ public class StudientController {
         return "listingStudients";
     }
 
-
+    @PostMapping("/add")
+    public String submitRabbit(@ModelAttribute("studient") Studient studient){
+        System.out.println(studient.getLastName());
+        studientService.addStudient(studient);
+        return "redirect:/";
+    }
 
 
 

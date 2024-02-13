@@ -2,10 +2,39 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <a th:href="@{/}">home</a>
-</head>
+    <title>Liste etudiants</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
 <body>
+<div container>
+<header>
+    <div>
+        <h1>Liste des étudiants</h1>
+    </div>
+</header>
+<main>
+    <div class="m-4">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">LastName</th>
+                <th scope="col">FirstName</th>
+                <th scope="col">Detail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="s : ${studients}">
+                <th scope="row"></th>
+                <td>s.lastName</td>
+                <td>s.firstName</td>
+                <td><button th:href="@{/detailsStudient/{id}(id=${s.id})}">Détails</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
+</main>
+
+</div>
 </body>
 </html>
