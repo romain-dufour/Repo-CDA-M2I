@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Page B</title>
+    <span th:replace="~{pagea :: bootstrapImports}"></span>
+</head>
+<body>
+<header>
+    <h1>Page B</h1>
+    <nav>
+        <a th:href="@{/}">Home Page</a>
+    </nav>
+</header>
+<div><a th:href="@{/detail/{id}(id=${idRabbit})}">Détail du lapin 1</a></div>
+<div><a th:href="@{/detail/{id}(id=${idRabbit1})}">Détail du lapin 2</a></div>
+<div><a th:href="@{/detail/{id}(id=${idRabbit2})}">Détail du lapin 3</a></div>
+
+
+
+</body>
+</html>

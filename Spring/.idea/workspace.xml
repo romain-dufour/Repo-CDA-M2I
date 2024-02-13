@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78f8e09d-180b-4d3d-872e-2d929e3aaecc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/demo-base/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/DemoBaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/controller/HelloControllerSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/controller/HelloRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/service/GreetingServiceEnglish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/service/GreetingsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/java/com/example/demobase/service/GreetingsServiceFrench.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/resources/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/resources/templates/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/resources/templates/home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/resources/templates/person/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/main/resources/templates/toto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-base/src/test/java/com/example/demobase/DemoBaseApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2cIsaCQ0OeMwbuJLQmsKd374dL4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/Spring&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78f8e09d-180b-4d3d-872e-2d929e3aaecc" name="Changes" comment="" />
+      <created>1707810487383</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707810487383</updated>
+      <workItem from="1707810488433" duration="8000" />
+      <workItem from="1707810555206" duration="287000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
