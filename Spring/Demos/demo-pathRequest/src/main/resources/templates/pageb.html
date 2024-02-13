@@ -12,11 +12,16 @@
         <a th:href="@{/}">Home Page</a>
     </nav>
 </header>
-<div><a th:href="@{/detail/{id}(id=${idRabbit})}">Détail du lapin 1</a></div>
-<div><a th:href="@{/detail/{id}(id=${idRabbit1})}">Détail du lapin 2</a></div>
-<div><a th:href="@{/detail/{id}(id=${idRabbit2})}">Détail du lapin 3</a></div>
+<!--<div><a th:href="@{/detail/{id}(id=${idRabbit})}">Détail du lapin 1</a></div>-->
+<!--<div><a th:href="@{/detail/{id}(id=${idRabbit1})}">Détail du lapin 2</a></div>-->
+<!--<div><a th:href="@{/detail/{id}(id=${idRabbit2})}">Détail du lapin 3</a></div>-->
 
+<ul >
+    <li th:each="r: ${rabbits}"><a th:href="@{/detail/{id}(id=${r.getId()})}">Détail du lapin </a> </li>
+</ul>
 
+<div>
+    </div>
 
 </body>
 </html>

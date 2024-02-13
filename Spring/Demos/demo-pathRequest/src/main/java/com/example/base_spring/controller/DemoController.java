@@ -36,6 +36,9 @@ public class DemoController {
         model.addAttribute("idRabbit", rabbit.getId());
         model.addAttribute("idRabbit1", rabbit1.getId());
         model.addAttribute("idRabbit2", rabbit2.getId());
+
+        model.addAttribute("rabbits",rabbits);
+
         return "pageb";
     }
 
