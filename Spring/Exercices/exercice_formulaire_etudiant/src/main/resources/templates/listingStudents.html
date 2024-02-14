@@ -7,7 +7,8 @@
 <body>
 <div container>
 <header>
-    <div>
+    <span th:replace="~{home :: navbar}"></span>
+    <div class="text-center my-4">
         <h1>Liste des étudiants</h1>
     </div>
 </header>
@@ -22,14 +23,15 @@
                 <th scope="col">Detail</th>
             </tr>
             </thead>
-            <tbody>
-            <tr th:each="s : ${studients}">
+            <tbody th:if="${students != null}">
+            <tr th:each="s : ${students}">
                 <th scope="row"></th>
-                <td>s.lastName</td>
-                <td>s.firstName</td>
-                <td><button th:href="@{/detailsStudient/{id}(id=${s.id})}">Détails</button></td>
+                <td ><span th:text="${s.getLastName()}"></span></td>
+                <td ><span th:text="${s.getFirstName()}"></span></td>
+                <td><a class="btn btn-outline-info" th:href="@{details/{id}(id=${s.id})}">Détails</a></td>
             </tr>
             </tbody>
+                <h2 th:if="${students == null}">Aucun résultat</h2>
         </table>
     </div>
 
