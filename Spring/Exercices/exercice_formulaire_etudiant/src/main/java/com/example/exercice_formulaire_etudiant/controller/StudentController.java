@@ -47,7 +47,7 @@ public class StudentController {
     public String submitRabbit(@ModelAttribute("student") Student student){
         System.out.println(student.getLastName());
         studentService.addStudent(student);
-        return "redirect:/";
+        return "redirect:/list";
     }
 
     @GetMapping("/details/{studentId}")

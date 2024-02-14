@@ -77,5 +77,5 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> getStudentByLastName(String search) {
         return students.values().stream()
                 .filter(student -> student.getLastName().toLowerCase().startsWith(search.toLowerCase()) || student.getFirstName().toLowerCase().startsWith(search.toLowerCase()))
-                .collect(Collectors.toList());    }
+                .toList();    }
 }

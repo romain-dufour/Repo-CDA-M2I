@@ -7,7 +7,6 @@ import java.util.UUID;
 
 public interface StudentService {
 
-
     boolean addStudent(Student student);
     Student searchStudentById(UUID id);
     List<Student> findAllStudent();
