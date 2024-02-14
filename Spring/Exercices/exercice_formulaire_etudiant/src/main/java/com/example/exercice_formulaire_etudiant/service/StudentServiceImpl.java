@@ -54,10 +54,10 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public boolean addStudent(Student studient) {
-        if (studient.getId() == null){
-            studient.setId(UUID.randomUUID());
-            students.put(studient.getId(),studient);
+    public boolean addStudent(Student student) {
+        if (student.getId() == null){
+            student.setId(UUID.randomUUID());
+            students.put(student.getId(),student);
             return true;
         }else {
             return false;
@@ -76,6 +76,6 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<Student> getStudentByLastName(String search) {
         return students.values().stream()
-                .filter(student -> student.getLastName().toLowerCase().startsWith(search.toLowerCase()))
+                .filter(student -> student.getLastName().toLowerCase().startsWith(search.toLowerCase()) || student.getFirstName().toLowerCase().startsWith(search.toLowerCase()))
                 .collect(Collectors.toList());    }
 }

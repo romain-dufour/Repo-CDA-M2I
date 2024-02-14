@@ -23,7 +23,15 @@
                 <th scope="col">Detail</th>
             </tr>
             </thead>
-            <tbody th:if="${students != null}">
+<!--            <tbody th:if="${students != null}">-->
+<!--            <tr th:each="s : ${students}">-->
+<!--                <th scope="row"></th>-->
+<!--                <td ><span th:text="${s.getLastName()}"></span></td>-->
+<!--                <td ><span th:text="${s.getFirstName()}"></span></td>-->
+<!--                <td><a class="btn btn-outline-info" th:href="@{details/{id}(id=${s.id})}">Détails</a></td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+            <tbody th:unless="${students.isEmpty()}">
             <tr th:each="s : ${students}">
                 <th scope="row"></th>
                 <td ><span th:text="${s.getLastName()}"></span></td>
@@ -31,8 +39,13 @@
                 <td><a class="btn btn-outline-info" th:href="@{details/{id}(id=${s.id})}">Détails</a></td>
             </tr>
             </tbody>
-                <h2 th:if="${students == null}">Aucun résultat</h2>
         </table>
+        <div class="text-center" th:unless="${!students.isEmpty()}">
+            <h2>Aucun résultat</h2>
+            <a th:href="@{/}" class="btn btn-success">Menu principal</a>
+
+        </div>
+
     </div>
 
 </main>
