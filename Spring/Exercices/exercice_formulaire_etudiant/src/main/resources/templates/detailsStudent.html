@@ -17,12 +17,24 @@
     </header>
 
     <main>
-
+<div>
         <p>Nom : <span th:text="${myStudent.getLastName()}"></span></p>
         <p>Prenom : <span th:text="${myStudent.getFirstName()}"></span></p>
         <p>Age : <span th:text="${myStudent.getAge()}"></span></p>
         <p>Email : <span th:text="${myStudent.getEmail()}"></span></p>
-        <a th:href="@{/list}">retour</a>
+
+</div>
+
+        <div>
+        <a class="btn btn-secondary" th:href="@{/list}">retour</a>
+        </div>
+<!--        <form th:action="@{/delete}" th:object="${Student}" method="">-->
+<!--            <button type="submit" class="btn btn-danger" >Supprimer</button>-->
+<!--        </form>-->
+
+        <div>
+            <a class="btn btn-danger" th:href="@{'/delete/' + ${myStudent.id}}">Supprimer</a>
+        </div>
     </main>
 </div>
 

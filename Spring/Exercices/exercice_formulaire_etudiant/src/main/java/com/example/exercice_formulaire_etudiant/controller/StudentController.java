@@ -2,7 +2,9 @@ package com.example.exercice_formulaire_etudiant.controller;
 
 import com.example.exercice_formulaire_etudiant.model.Student;
 import com.example.exercice_formulaire_etudiant.service.StudentServiceImpl;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -11,9 +13,9 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
+
 public class StudentController {
     private final StudentServiceImpl studentService;
-
 
     public StudentController(StudentServiceImpl studentService) {
         this.studentService = studentService;
@@ -66,5 +68,11 @@ public class StudentController {
         return "listingStudents";
     }
 
+    @GetMapping("/delete/{studentId}")
+    public String deleteStudent(@PathVariable("studentId") UUID studentId){
+
+        studentService.deleteStudent(studentId);
+        return "redirect:/list";
+    }
 
 }

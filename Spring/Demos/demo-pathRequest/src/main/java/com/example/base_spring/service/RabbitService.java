@@ -49,4 +49,30 @@ public class RabbitService {
 //        return rabbits.get(id);
         return  rabbits.values().stream().filter(r -> r.getId().equals(id)).findFirst().orElse(null);
     }
+
+    public boolean addRabbit(Rabbit rabbit){
+        if (rabbit.getId() == null){
+            rabbit.setId(UUID.randomUUID());
+            rabbits.put(rabbit.getId(),rabbit);
+            return true;
+        }else {
+            return false;
+        }
+
+    }
+
+    public Rabbit getRabbitByName(String name){
+        return rabbits.values().stream().filter(r -> r.getName().equals(name)).findFirst().orElse(null);
+
+    }
+
+
+    public boolean deleteRabbit(UUID id){
+        rabbits.remove(getRabbitById(id));
+        return true;
+    }
+
+    public Rabbit updateRabbit(Rabbit rabbit) {
+       Rabbit rabbit1 =
+    }
 }

@@ -12,4 +12,9 @@ public interface StudentService {
     List<Student> findAllStudent();
 
     List<Student> getStudentByLastName(String lastName);
+
+    boolean deleteStudent(UUID id) ;
+
+    Student updateStudent(Student student);
+
 }

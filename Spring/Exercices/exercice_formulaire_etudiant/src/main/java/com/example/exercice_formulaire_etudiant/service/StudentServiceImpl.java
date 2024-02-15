@@ -11,7 +11,6 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 public class StudentServiceImpl implements StudentService {
 
    private final Map<UUID, Student> students;
@@ -78,4 +77,22 @@ public class StudentServiceImpl implements StudentService {
         return students.values().stream()
                 .filter(student -> student.getLastName().toLowerCase().startsWith(search.toLowerCase()) || student.getFirstName().toLowerCase().startsWith(search.toLowerCase()))
                 .toList();    }
+
+
+    @Override
+    public boolean deleteStudent(UUID id) {
+        if (searchStudentById(id) != null){
+        students.remove(id);
+        return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public Student updateStudent(Student student) {
+        return null;
+    }
+
+
 }
