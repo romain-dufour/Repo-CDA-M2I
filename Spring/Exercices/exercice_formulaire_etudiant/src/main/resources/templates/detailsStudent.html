@@ -35,6 +35,9 @@
         <div>
             <a class="btn btn-danger" th:href="@{'/delete/' + ${myStudent.id}}">Supprimer</a>
         </div>
+        <div>
+            <a class="btn btn-info" th:href="@{/update(studentId=${myStudent.id})}">Modifier</a>
+        </div>
     </main>
 </div>
 

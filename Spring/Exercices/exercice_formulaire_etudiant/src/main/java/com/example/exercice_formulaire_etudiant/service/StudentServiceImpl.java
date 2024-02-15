@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @Service
 public class StudentServiceImpl implements StudentService {
 
-   private final Map<UUID, Student> students;
+    private final Map<UUID, Student> students;
 
     public StudentServiceImpl() {
         students = new HashMap<>();
@@ -53,14 +53,14 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public boolean addStudent(Student student) {
+    public Student addStudent(Student student) {
         if (student.getId() == null){
             student.setId(UUID.randomUUID());
             students.put(student.getId(),student);
-            return true;
+            return student;
         }else {
-            return false;
-        }    }
+        return null;}
+    }
 
     @Override
     public Student searchStudentById(UUID id) {
@@ -82,16 +82,23 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public boolean deleteStudent(UUID id) {
         if (searchStudentById(id) != null){
-        students.remove(id);
-        return true;
+            students.remove(id);
+            return true;
         } else {
             return false;
         }
     }
 
     @Override
-    public Student updateStudent(Student student) {
-        return null;
+    public Student updateStudent(UUID id, Student updateStudent) {
+        Student studentExist = searchStudentById(id);
+        if (studentExist != null){
+            studentExist.setLastName(updateStudent.getLastName());
+            studentExist.setFirstName(updateStudent.getFirstName());
+            studentExist.setAge(updateStudent.getAge());
+            studentExist.setEmail(updateStudent.getEmail());
+        }
+        return studentExist;
     }
 
 

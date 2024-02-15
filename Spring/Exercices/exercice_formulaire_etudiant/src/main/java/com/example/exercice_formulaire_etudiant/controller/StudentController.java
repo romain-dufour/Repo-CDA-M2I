@@ -47,8 +47,15 @@ public class StudentController {
 
     @PostMapping("/add")
     public String submitRabbit(@ModelAttribute("student") Student student){
-        System.out.println(student.getLastName());
+        if (student.getId() != null){
+//          studentService.updateStudent(student);
+        }else {
         studentService.addStudent(student);
+
+        }
+
+
+        System.out.println(student.getLastName());
         return "redirect:/list";
     }
 
@@ -75,4 +82,10 @@ public class StudentController {
         return "redirect:/list";
     }
 
+    @GetMapping("/update")
+    public String formUpdateStudent(@RequestParam("studentId") UUID id, Model model){
+        Student student = studentService.searchStudentById(id);
+        model.addAttribute("myStudent", student);
+        return "form/formInscription";
+    }
 }

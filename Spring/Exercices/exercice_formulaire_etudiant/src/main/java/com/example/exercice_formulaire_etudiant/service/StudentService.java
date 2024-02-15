@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public interface StudentService {
 
-    boolean addStudent(Student student);
+    Student addStudent(Student student);
     Student searchStudentById(UUID id);
     List<Student> findAllStudent();
 
@@ -15,6 +15,6 @@ public interface StudentService {
 
     boolean deleteStudent(UUID id) ;
 
-    Student updateStudent(Student student);
+    Student updateStudent(UUID id,Student student);
 
 }
