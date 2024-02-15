@@ -61,21 +61,17 @@ public class StudentController {
 
     @PostMapping("/student")
     public String addStudent(@Valid @ModelAttribute("student") Student student, BindingResult result){
-
-        if(student.getId() != null){
-            studentService.updateStudent(student.getId(),student);
+        if (result.hasErrors()){
+            return "/form";
         }else {
-            if (result.hasErrors()){
-                return "form";
+            if(student.getId() != null){
+                studentService.updateStudent(student.getId(),student);
             } else {
             studentService.createStudent(student);
                 System.out.println("coucou");
             }
         }
-
         return "redirect:/students";
-
-
     }
 
     @GetMapping("/delete")
