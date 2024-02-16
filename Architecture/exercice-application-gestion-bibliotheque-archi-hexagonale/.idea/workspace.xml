@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25a49c48-77d5-4349-a737-71da22c25cae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/BookFeatureTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/CucumberTestApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/resources/book.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapteur/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adapteur/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapteur/src/main/java/com/example/adapteur/HelloResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/example/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/org/example/spi/port/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/org/example/spi/port/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookEntityRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/infra_hibernate/src/main/java/org/example/repository/BookRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,26 +38,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/CDA_LILLE_17_JUILLET/TDD/cours_tdd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/Architecture/exercice-application-gestion-bibliotheque-archi-hexagonale/adapteur/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32934928",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Windows 11/Desktop/Repo-CDA-M2I/Architecture/exercice-application-gestion-bibliotheque-archi-hexagonale&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Administrateur/OneDrive - M2I/Bureau/Repo-CDA-M2I/Architecture/exercice-application-gestion-bibliotheque-archi-hexagonale/adapteur/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32934928&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrateur\OneDrive - M2I\Bureau\Repo-CDA-M2I\Architecture\exercice-application-gestion-bibliotheque-archi-hexagonale\adapteur\src\main\java\com\example\adapteur" />
@@ -199,6 +192,8 @@
       <workItem from="1707214073853" duration="10562000" />
       <workItem from="1707228399992" duration="6192000" />
       <workItem from="1707296940761" duration="4565000" />
+      <workItem from="1708019857894" duration="868000" />
+      <workItem from="1708070833923" duration="339000" />
     </task>
     <servers />
   </component>
