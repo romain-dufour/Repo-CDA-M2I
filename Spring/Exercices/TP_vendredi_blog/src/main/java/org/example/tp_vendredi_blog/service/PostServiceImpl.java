@@ -36,8 +36,8 @@ public class PostServiceImpl implements IPostService{
     public Post updatePost(Long id, Post updatePost) {
         Post existingPost = getPostById(id);
         if (existingPost != null){
-            existingPost.setName(updatePost.getName());
-            existingPost.setEmail(updatePost.getEmail());
+            existingPost.setTitle(updatePost.getTitle());
+            existingPost.setDescription(updatePost.getDescription());
             existingPost.setContent(updatePost.getContent());
             existingPost.setCommentList(updatePost.getCommentList());
         }

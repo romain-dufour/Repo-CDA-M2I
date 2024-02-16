@@ -17,20 +17,19 @@
         <form th:action="@{/post}" th:object="${post}"  method="post" >
             <input type="hidden" th:field="*{id}">
             <div class="mb-3">
-                <label for="postName" class="form-label">Name : </label>
-                <input th:field="*{name}"  type="text" class="form-control" id="postName" aria-describedby="postHelp">
-                <div id="postHelp" class="form-text">Name of the post creator</div>
+                <label for="title" class="form-label">Title : </label>
+                <input th:field="*{title}"  type="text" class="form-control" id="title" aria-describedby="titleHelp">
+                <div id="titleHelp" class="form-text">title of the post creator</div>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email : </label>
-                <input th:field="*{email}"   type="text" class="form-control" id="email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Email</div>
+                <label for="Description" class="form-label">Description : </label>
+                <input th:field="*{description}"   type="text" class="form-control" id="Description" aria-describedby="DescriptionHelp">
+                <div id="DescriptionHelp" class="form-text">Short description of the post</div>
             </div>
             <div>
                 <div  class="input-group">
                     <span class="input-group-text">Content : </span>
                     <textarea th:field="*{content}"  aria-label="With textarea" class="form-control"  aria-describedby="contentHelp"></textarea>
-
                 </div>
                 <div id="contentHelp" class="form-text">Content of your Post</div>
             </div>

@@ -52,6 +52,12 @@ public class PostController {
         return "redirect:/";
     }
 
+    @GetMapping("/update")
+    public String formUpdatePost(@RequestParam("postId") Long id,Model model){
+        Post post = postService.getPostById(id);
+        model.addAttribute("post",post);
+        return "postForm";
+    }
 
 
 }

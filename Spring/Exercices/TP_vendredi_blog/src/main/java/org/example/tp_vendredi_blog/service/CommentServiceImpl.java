@@ -37,8 +37,8 @@ public class CommentServiceImpl implements ICommentService{
     public Comment updateComment(Long id, Comment updateComment) {
         Comment existingComment = getCommentById(id);
         if(existingComment != null){
-            existingComment.setTitle(updateComment.getTitle());
-            existingComment.setDescription(updateComment.getDescription());
+            existingComment.setName(updateComment.getName());
+            existingComment.setEmail(updateComment.getEmail());
             existingComment.setPost(updateComment.getPost());
             existingComment.setContent(updateComment.getContent());
         }

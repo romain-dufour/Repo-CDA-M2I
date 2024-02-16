@@ -33,13 +33,20 @@
     </th:block>
 </header>
 
-<main class="container">
-    <div class="card" style="width: 18rem;" th:each="p : ${posts}">
-        <img src="/images/undraw_Blog_post_re_fy5x.png" class="card-img-top" alt="image">
-        <div class="card-body">
-            <p class="card-text" th:text="${p.content}"></p>
-            <a href="#" class="btn btn-primary">Details</a>
+
+<main class="container d-flex flex-wrap">
+    <div class="card-group" th:each="posts, iterStat : ${posts}"> <!-- Utilisez le "iterStat" pour connaître l'index de la boucle -->
+        <div class="card mx-2" style="width: 18rem;" th:each="p : ${posts}">
+            <img src="/images/undraw_Blog_post_re_fy5x.png" class="card-img-top" alt="image">
+            <div class="card-body">
+                <p class="card-text" th:text="${p.description}"></p>
+                <a th:href="@{/{id}(id=${p.id})}" class="btn btn-primary">Details</a>
+            </div>
         </div>
+        <!-- Ajouter un retour à la ligne après chaque groupe de 5 cards -->
+        <th:block th:if="${iterStat.index % 5 == 4}">
+            <div class="w-100"></div>
+        </th:block>
     </div>
 </main>
 

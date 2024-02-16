@@ -14,9 +14,9 @@ import java.util.List;
 public class Post {
     private Long id;
 
-    private String name;
+    private String title;
 
-    private String email;
+    private String description;
 
     private String content;
 

@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 public class Comment {
     private Long id;
 
-    private String title;
+    private String name;
 
-    private String description;
+    private String email;
 
     private String content;
 

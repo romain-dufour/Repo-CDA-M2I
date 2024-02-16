@@ -10,6 +10,23 @@
 <span th:replace="~{home :: navbar}"></span>
 <main class="container">
 
+    <div class="text-center">
+        <h1>Details of the Post</h1>
+        <img src="/images/detail.png" alt="Image" class="mx-auto" style="width: 250px ; height: 250px">
+    </div>
+    <hr>
+    <div class="col d-flex justify-content-center">
+        <div th:object="${post}">
+            <p>Name : <span th:text="*{title}"></span></p>
+            <p>Email : <span th:text="*{description}"></span></p>
+            <p>Content : <span th:text="*{content}"></span></p>
+
+        </div>
+    </div>
+    <hr>
+    <a th:href="@{/update(postId=${post.id})}" class="btn btn-info btn-sm mx-2">Update</a>
+    <a th:href="@{/commentForm}" class="btn btn-success btn-sm">Add a comment</a>
+
 
 </main>
 
