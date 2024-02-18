@@ -24,8 +24,29 @@
         </div>
     </div>
     <hr>
-    <a th:href="@{/update(postId=${post.id})}" class="btn btn-info btn-sm mx-2">Update</a>
+    <a th:href="@{/update(postId=${post.id})}" class="btn btn-info btn-sm mx-2">Update the post</a>
     <a th:href="@{/commentForm}" class="btn btn-success btn-sm">Add a comment</a>
+
+    <div class="col d-flex ">
+        <div>
+            <ul class="list-group">
+                <li th:each="c : ${post.commentList}" class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Name: <span th:text="${c.name}"></span></p>
+                            <p>Email: <span th:text="${c.email}"></span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Content: <span th:text="${c.content}"></span></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </div>
+    </div>
 
 
 </main>

@@ -3,6 +3,7 @@ package org.example.tp_vendredi_blog.service;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.example.tp_vendredi_blog.model.Comment;
+import org.example.tp_vendredi_blog.model.Post;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -49,5 +50,10 @@ public class CommentServiceImpl implements ICommentService{
     @Override
     public void deleteComment(Long id) {
         comments.removeIf(comment -> comment.getId().equals(id));
+    }
+
+    public void addComment(Comment comment, Long id){
+        Post existingPost = ;
+        existingPost.getCommentList().add(comment);
     }
 }

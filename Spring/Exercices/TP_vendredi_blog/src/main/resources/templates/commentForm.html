@@ -11,7 +11,7 @@
 <main class="container">
 
     <form th:action="@{/comment}" th:object="${comment}"  method="post" >
-        <input type="hidden" th:field="*{id}">
+        <input type="hidden" th:field="*{setPost(post)}">
         <div class="mb-3">
             <label for="name" class="form-label">Name : </label>
             <input th:field="*{name}"  type="text" class="form-control" id="name" aria-describedby="nameHelp">
@@ -31,7 +31,7 @@
             <div id="contentHelp" class="form-text">Content of your Post</div>
         </div>
 
-        <button type="submit" class="btn btn-primary"><span th:text="${ post.id != null ? 'Modifier' : 'Ajouter'}"></span></button>
+        <button type="submit" class="btn btn-primary">Valider</button>
     </form>
 
 </main>

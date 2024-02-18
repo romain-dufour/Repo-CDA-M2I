@@ -43,4 +43,9 @@ public class PostServiceImpl implements IPostService{
         }
         return existingPost;
     }
+
+    public void addComment(Comment comment, Long id){
+        Post existingPost = getPostById(id);
+        existingPost.getCommentList().add(comment);
+    }
 }
