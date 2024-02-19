@@ -31,7 +31,7 @@ public class CommentController {
     @PostMapping("/comment") // http://localhost:8080/comment
     public String addComment(@ModelAttribute("student")Comment comment, @RequestParam("postId") Long id){
         commentService.createComment(comment);
-        postService.
+//        postService.
         return "redirect:/postDetails";
     }
 

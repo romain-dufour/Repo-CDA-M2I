@@ -52,8 +52,9 @@ public class CommentServiceImpl implements ICommentService{
         comments.removeIf(comment -> comment.getId().equals(id));
     }
 
-    public void addComment(Comment comment, Long id){
-        Post existingPost = ;
-        existingPost.getCommentList().add(comment);
-    }
+//    public void addComment(Comment comment, Long id){
+//        Post existingPost = ;
+//        existingPost.getCommentList().add(comment);
+//    }
+    
 }
