@@ -11,7 +11,7 @@
 <main class="container">
 
     <form th:action="@{/comment}" th:object="${comment}"  method="post" >
-        <input type="hidden" th:field="*{getPost().getId()}">
+        <input type="hidden" th:field="*{post}" th:value="${post.id}">
         <div class="mb-3">
             <label for="name" class="form-label">Name : </label>
             <input th:field="*{name}"  type="text" class="form-control" id="name" aria-describedby="nameHelp">
