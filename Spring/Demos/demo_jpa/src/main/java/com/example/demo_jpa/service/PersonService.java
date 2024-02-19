@@ -9,5 +9,10 @@ public interface PersonService {
 
     Person findById(int id);
 
-    void save(Person person);
+    Person save(Person person);
+
+    Person update(Person person);
+
+    void delete(Person person);
+
 }

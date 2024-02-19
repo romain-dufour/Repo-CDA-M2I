@@ -3,8 +3,7 @@ package com.example.demo_jpa.controller;
 import com.example.demo_jpa.entity.Person;
 import com.example.demo_jpa.service.PersonService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,4 +26,23 @@ public class PersonRestController {
                 .build());
     }
 
+    @GetMapping("/{id}")
+    public Person getPersonById(@PathVariable int id){
+        return personService.findById(id);
+    }
+
+    @PostMapping("/add")
+    public Person addPerson(@RequestBody Person person){
+        return personService.save(person);
+    }
+
+    @DeleteMapping("/remove/{id}")
+    public void deletePerson(@PathVariable int id){
+        personService.delete(personService.findById(id));
+    }
+
+    @PutMapping("/update")
+    public void updatePerson(@RequestBody Person person){
+        personService.update(person);
+    }
 }

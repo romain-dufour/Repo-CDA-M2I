@@ -31,15 +31,11 @@ public class PersonServiceImpl implements PersonService{
         personRepository.save(person);
     }
 
+
     @Override
-    public Person update(int id, Person updatedPerson) {
-        Person existingPerson = personRepository.getReferenceById(id);
-        if(existingPerson != null){
-            existingPerson.setLastName(updatedPerson.getLastName());
-            existingPerson.setFirstName(updatedPerson.getFirstName());
-            existingPerson.setEmail(updatedPerson.getEmail());
-        }
-        return existingPerson;
+    public Person update(Person updatedPerson) {
+        personRepository.save(updatedPerson);
+        return updatedPerson;
     }
 
     @Override

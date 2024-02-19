@@ -25,7 +25,8 @@ public class PersonRestController {
 
     @PutMapping("/updateperson/{id}")
     public Person updatePerson(@PathVariable Integer id,@RequestBody Person person){
-        return personService.update(id,person);
+//        Person person
+        return personService.update(person);
     }
 
     @DeleteMapping("/deletePerson/{id}")
