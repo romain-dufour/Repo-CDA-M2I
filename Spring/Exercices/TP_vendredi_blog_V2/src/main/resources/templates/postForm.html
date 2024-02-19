@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de post</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+    <main class="container">
+
+        <div class="text-center">
+            <h1>Formulaire d'ajout de Post</h1>
+            <img th:src="@{/images/undraw_Blog_post_re_fy5x.png}" alt="Image" class="mx-auto" style="width: 250px ; height: 250px">
+        </div>
+
+        <form th:action="@{/post}" th:object="${post}"  method="post" >
+            <input type="hidden" th:field="*{id}">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title : </label>
+                <input th:field="*{title}"  type="text" class="form-control" id="title" aria-describedby="titleHelp">
+                <div id="titleHelp" class="form-text">title of the post creator</div>
+            </div>
+            <div class="mb-3">
+                <label for="Description" class="form-label">Description : </label>
+                <input th:field="*{description}"   type="text" class="form-control" id="Description" aria-describedby="DescriptionHelp">
+                <div id="DescriptionHelp" class="form-text">Short description of the post</div>
+            </div>
+            <div>
+                <div  class="input-group">
+                    <span class="input-group-text">Content : </span>
+                    <textarea th:field="*{content}"  aria-label="With textarea" class="form-control"  aria-describedby="contentHelp"></textarea>
+                </div>
+                <div id="contentHelp" class="form-text">Content of your Post</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"><span th:text="${ post.id != 0 ? 'Modifier' : 'Ajouter'}"></span></button>
+        </form>
+
+    </main>
+
+
+    <span th:replace="~{home :: footer}"></span>
+</body>
+</html>

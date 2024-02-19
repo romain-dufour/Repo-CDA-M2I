@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonServiceImpl implements PersonService{
@@ -23,7 +24,13 @@ public class PersonServiceImpl implements PersonService{
 
     @Override
     public Person findById(int id) {
-        return personRepository.getReferenceById(id);
+        Optional<Person> result = personRepository.findById(id);
+//        if (result.isPresent()){
+//            return result.get();
+//        }else {
+//        return null;
+//        }
+        return result.orElse(null);
     }
 
     @Override

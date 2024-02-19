@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire de commentaire</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
+
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+<main class="container">
+
+    <form th:action="@{/comment}" th:object="${comment}"  method="post" >
+        <input type="hidden" th:field="*{getPost().getId()}">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name : </label>
+            <input th:field="*{name}"  type="text" class="form-control" id="name" aria-describedby="nameHelp">
+            <div id="nameHelp" class="form-text">Name of the post creator</div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email : </label>
+            <input th:field="*{email}"   type="text" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Email</div>
+        </div>
+        <div>
+            <div  class="input-group">
+                <span class="input-group-text">Content : </span>
+                <textarea th:field="*{content}"  aria-label="With textarea" class="form-control"  aria-describedby="contentHelp"></textarea>
+
+            </div>
+            <div id="contentHelp" class="form-text">Content of your Post</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Valider</button>
+    </form>
+
+</main>
+
+
+<span th:replace="~{home :: footer}"></span>
+</body>
+</html>

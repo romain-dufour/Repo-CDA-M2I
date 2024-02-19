@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <span th:replace="~{home :: bootstrapImports}"></span>
+
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+<main class="container">
+
+    <div class="text-center">
+        <h1>Details of the Post</h1>
+        <img src="/images/detail.png" alt="Image" class="mx-auto" style="width: 250px ; height: 250px">
+    </div>
+    <hr>
+    <div class="col d-flex justify-content-center">
+        <div th:object="${post}">
+            <p>Name : <span th:text="*{title}"></span></p>
+            <p>Email : <span th:text="*{description}"></span></p>
+            <p>Content : <span th:text="*{content}"></span></p>
+
+        </div>
+    </div>
+    <hr>
+    <a th:href="@{/update(postId=${post.id})}" class="btn btn-info btn-sm mx-2">Update the post</a>
+    <a th:href="@{/commentForm}" class="btn btn-success btn-sm">Add a comment</a>
+
+    <div class="col d-flex ">
+        <div>
+            <ul class="list-group">
+                <li th:each="c : ${post.commentList}" class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Name: <span th:text="${c.name}"></span></p>
+                            <p>Email: <span th:text="${c.email}"></span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Content: <span th:text="${c.content}"></span></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+
+
+        </div>
+    </div>
+
+
+</main>
+
+
+<span th:replace="~{home :: footer}"></span>
+</body>
+</html>
