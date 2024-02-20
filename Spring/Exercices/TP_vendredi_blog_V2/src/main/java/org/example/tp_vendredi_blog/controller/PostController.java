@@ -1,6 +1,7 @@
 package org.example.tp_vendredi_blog.controller;
 
 import jakarta.validation.Valid;
+import org.example.tp_vendredi_blog.dto.PostDTO;
 import org.example.tp_vendredi_blog.model.Post;
 import org.example.tp_vendredi_blog.service.IPostService;
 import org.springframework.stereotype.Controller;
@@ -54,8 +55,8 @@ public class PostController {
 
     @GetMapping("/update")
     public String formUpdatePost(@RequestParam("postId") int id,Model model){
-        Post post = postService.getPostById(id);
-        model.addAttribute("post",post);
+        PostDTO postDTO = postService.getPostById(id);
+        model.addAttribute("post",postDTO);
         return "postForm";
     }
 

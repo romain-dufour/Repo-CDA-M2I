@@ -1,5 +1,6 @@
 package org.example.tp_vendredi_blog.service;
 
+import org.example.tp_vendredi_blog.dto.PostDTO;
 import org.example.tp_vendredi_blog.model.Comment;
 import org.example.tp_vendredi_blog.model.Post;
 
@@ -8,13 +9,13 @@ import java.util.List;
 public interface IPostService {
 
 
-    Post createPost(Post post);
+    PostDTO createPost(PostDTO postDTO);
 
-    Post getPostById(int id);
+    PostDTO getPostById(int id);
 
-    List<Post> getAllPost();
+    List<PostDTO> getAllPost();
 
-    Post updatePost(Post updatePost);
+    PostDTO updatePostDTO(PostDTO updatePostDTO);
 
 
 }

@@ -3,6 +3,8 @@ package org.example.tp_vendredi_blog.service;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.example.tp_vendredi_blog.dao.PostRepository;
+import org.example.tp_vendredi_blog.dto.CommentDTO;
+import org.example.tp_vendredi_blog.dto.PostDTO;
 import org.example.tp_vendredi_blog.model.Comment;
 import org.example.tp_vendredi_blog.model.Post;
 import org.springframework.stereotype.Service;
@@ -18,27 +20,27 @@ public class PostServiceImpl implements IPostService{
     public PostServiceImpl (PostRepository postRepository){this.postRepository = postRepository;}
 
     @Override
-    public Post createPost(Post post) {
-        return postRepository.save(post);
+    public PostDTO createPost(PostDTO postDTO) {
+        return postRepository.save(postDTO);
     }
 
     @Override
-    public Post getPostById(int id) {
-        Optional<Post> result = postRepository.findById(id);
+    public PostDTO getPostById(int id) {
+        Optional<PostDTO> result = postRepository.findById(id);
         return result.orElse(null);    }
 
     @Override
-    public List<Post> getAllPost() {
+    public List<PostDTO> getAllPost() {
         return postRepository.findAll();
     }
 
     @Override
-    public Post updatePost(Post updatePost) {
-        return postRepository.save(updatePost);
+    public PostDTO updatePostDTO(PostDTO updatePostDTO) {
+        return postRepository.save(updatePostDTO);
     }
 
-    public void addComment(Comment comment, int id){
-        Post existingPost = getPostById(id);
-        existingPost.getCommentList().add(comment);
+    public void addComment(CommentDTO commentDTO, int id){
+        PostDTO existingPostDTO = getPostById(id);
+        existingPostDTO.getCommentList().add(commentDTO);
     }
 }

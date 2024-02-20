@@ -1,18 +1,19 @@
 package org.example.tp_vendredi_blog.service;
 
+import org.example.tp_vendredi_blog.dto.CommentDTO;
 import org.example.tp_vendredi_blog.model.Comment;
 
 import java.util.List;
 
 public interface ICommentService {
 
-    Comment createComment(Comment comment);
+    Comment createComment(CommentDTO commentDTO);
 
     Comment getCommentById(int id);
 
     List<Comment> getAllComment();
 
-    Comment updateComment(Comment updateComment);
+    Comment updateComment(CommentDTO updateCommentDTO);
 
-    void deleteComment(Comment comment);
+    void deleteComment(CommentDTO commentDTO);
 }

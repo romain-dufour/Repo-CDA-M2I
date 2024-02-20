@@ -3,6 +3,9 @@ package org.example.tp_vendredi_blog.service;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.example.tp_vendredi_blog.dao.CommentRepository;
+import org.example.tp_vendredi_blog.dto.CommentDTO;
+import org.example.tp_vendredi_blog.mapper.CommentMapper;
+import org.example.tp_vendredi_blog.mapper.PostMapper;
 import org.example.tp_vendredi_blog.model.Comment;
 import org.example.tp_vendredi_blog.model.Post;
 import org.springframework.stereotype.Service;
@@ -15,38 +18,44 @@ import java.util.Optional;
 public class CommentServiceImpl implements ICommentService{
 
     private CommentRepository commentRepository;
+    private CommentMapper commentMapper;
 
-    public CommentServiceImpl(CommentRepository commentRepository){this.commentRepository = commentRepository;}
+    public CommentServiceImpl(CommentRepository commentRepository,CommentMapper commentMapper){
+        this.commentRepository = commentRepository;
+        this.commentMapper = commentMapper;
+    }
     @Override
-    public Comment createComment(Comment comment) {
-    return commentRepository.save(comment);
+    public CommentDTO createComment(CommentDTO commentDTO) {
+
+        return commentMapper.commentToCommentDTO(commentRepository.save(commentMapper.commentDtoToComment(commentDTO)));
+//        return commentRepository.save(commentDTO);
     }
 
     @Override
-    public Comment getCommentById(int id) {
-        Optional<Comment> result = commentRepository.findById(id);
+    public CommentDTO getCommentById(int id) {
+        Optional<CommentDTO> result = commentRepository.findById(id);
         return result.orElse(null);
     }
 
     @Override
-    public List<Comment> getAllComment() {
+    public List<CommentDTO> getAllComment() {
         return commentRepository.findAll();
     }
 
     @Override
-    public Comment updateComment(Comment updateComment) {
+    public CommentDTO updateComment(CommentDTO updateComment) {
         return commentRepository.save(updateComment);
     }
 
     @Override
-    public void deleteComment(Comment comment) {
+    public void deleteComment(CommentDTO commentDTO) {
 //        Comment result = commentRepository.findByIdIs(id);
-        commentRepository.delete(comment);
+        commentRepository.delete(commentDTO);
     }
 
 //    public void addComment(Comment comment, Long id){
 //        Post existingPost = ;
 //        existingPost.getCommentList().add(comment);
 //    }
-    
+
 }

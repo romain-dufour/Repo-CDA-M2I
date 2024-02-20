@@ -1,5 +1,6 @@
 package org.example.tp_vendredi_blog.controller;
 
+import org.example.tp_vendredi_blog.dto.CommentDTO;
 import org.example.tp_vendredi_blog.model.Comment;
 import org.example.tp_vendredi_blog.service.ICommentService;
 import org.example.tp_vendredi_blog.service.IPostService;
@@ -22,15 +23,17 @@ public class CommentController {
 
     @GetMapping("/commentForm") // http://localhost:8080/commentForm
     public String formAddComment(Model model,@RequestParam("postId") int postId){
-        Comment comment = Comment.builder().post(postService.getPostById(postId)).build();
-        model.addAttribute("comment", comment);
+        CommentDTO commentDTO = CommentDTO.builder().post(postService.getPostById(postId)).build();
+        model.addAttribute("comment", commentDTO);
         System.out.println(postService.getPostById(postId));
         return "commentForm";
     }
     @PostMapping("/comment") // http://localhost:8080/comment
-    public String addComment(@ModelAttribute("comment")Comment comment){
-        commentService.createComment(comment);
-        return "redirect:/postDetails";
+    public String addComment(@ModelAttribute("comment") CommentDTO commentDTO, Model model){
+        commentService.createComment(commentDTO);
+        model.addAttribute("id", commentDTO.getPost().getId());
+        int test =commentDTO.getPost().getId();
+        return "redirect:/" + test;
     }
 
     @GetMapping("/delete") // http://localhost:8080/delete
