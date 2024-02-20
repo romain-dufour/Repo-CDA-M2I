@@ -1,6 +1,7 @@
 package org.example.tp_vendredi_blog.controller;
 
 import org.example.tp_vendredi_blog.dto.CommentDTO;
+import org.example.tp_vendredi_blog.mapper.CommentMapper;
 import org.example.tp_vendredi_blog.model.Comment;
 import org.example.tp_vendredi_blog.service.ICommentService;
 import org.example.tp_vendredi_blog.service.IPostService;
@@ -23,16 +24,17 @@ public class CommentController {
 
     @GetMapping("/commentForm") // http://localhost:8080/commentForm
     public String formAddComment(Model model,@RequestParam("postId") int postId){
-        CommentDTO commentDTO = CommentDTO.builder().post(postService.getPostById(postId)).build();
-        model.addAttribute("comment", commentDTO);
+//        CommentDTO commentDTO = CommentDTO.builder().postDTO(postService.getPostById(postId)).build();
+//        model.addAttribute("commentDTO", commentDTO);
         System.out.println(postService.getPostById(postId));
         return "commentForm";
     }
     @PostMapping("/comment") // http://localhost:8080/comment
-    public String addComment(@ModelAttribute("comment") CommentDTO commentDTO, Model model){
+    public String addComment(@ModelAttribute("commentDTO") CommentDTO commentDTO, Model model){
         commentService.createComment(commentDTO);
-        model.addAttribute("id", commentDTO.getPost().getId());
-        int test =commentDTO.getPost().getId();
+//        model.addAttribute("id", commentDTO.getPostDTO().getId());
+//        int test =commentDTO.getPostDTO().getId();
+        int test =1;
         return "redirect:/" + test;
     }
 

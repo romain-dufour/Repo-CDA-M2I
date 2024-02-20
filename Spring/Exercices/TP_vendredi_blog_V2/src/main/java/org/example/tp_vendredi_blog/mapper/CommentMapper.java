@@ -4,16 +4,20 @@ import org.example.tp_vendredi_blog.dto.CommentDTO;
 import org.example.tp_vendredi_blog.model.Comment;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-
-@Mapper(componentModel = "spring")
-
-public interface CommentMapper {
+import org.springframework.stereotype.Component;
 
 
-    @Mapping(source = "name", target = "commentateur")
-    CommentDTO commentToCommentDTO(Comment comment);
+@Component
+public class CommentMapper {
 
-    @Mapping(source = "commentateur", target = "name")
-    Comment commentDtoToComment(CommentDTO commentDTO);
+
+    public CommentDTO commentToCommentDTO(Comment comment){
+        return new CommentDTO(comment.getId(),comment.getName(),comment.getEmail(), comment.getContent(), comment.getPost());
+    }
+
+
+    public Comment commentDtoToComment(CommentDTO commentDTO){
+        return new Comment(commentDTO.getId(),commentDTO.getName(),commentDTO.getEmail(), commentDTO.getContent(), commentDTO.getPost());
+    };
 
 }

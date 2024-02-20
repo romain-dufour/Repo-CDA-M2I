@@ -29,7 +29,7 @@ public class PostController {
 
     @GetMapping("/postForm") // http://localhost:8080/postForm
     public String formAddPost(Model model){
-        model.addAttribute("post",new Post());
+        model.addAttribute("postDTO",new PostDTO());
 
         return "postForm";
     }
@@ -42,13 +42,13 @@ public class PostController {
 
 
     @PostMapping("/post")
-    public String addPost(@ModelAttribute("post") Post post){
+    public String addPost(@ModelAttribute("postDTO") PostDTO postDTO){
 //si l'id du post n'est pas null on renvoie vers une méthode update
 //le formulaire doit proposer une modification -> a prendre en compte dans sa realisation
-        if(post.getId() != 0){
-            postService.updatePost(post);
+        if(postDTO.getId() != 0){
+            postService.updatePostDTO(postDTO);
         } else {
-            postService.createPost(post);
+            postService.createPost(postDTO);
         }
         return "redirect:/";
     }

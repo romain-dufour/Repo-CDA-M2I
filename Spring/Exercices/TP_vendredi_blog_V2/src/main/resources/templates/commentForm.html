@@ -10,7 +10,7 @@
 <span th:replace="~{home :: navbar}"></span>
 <main class="container">
 
-    <form th:action="@{/comment}" th:object="${comment}"  method="post" >
+    <form th:action="@{/comment}" th:object="${commentDTO}"  method="post" >
         <input type="hidden" th:field="*{post.id}">
         <div class="mb-3">
             <label for="name" class="form-label">Name : </label>

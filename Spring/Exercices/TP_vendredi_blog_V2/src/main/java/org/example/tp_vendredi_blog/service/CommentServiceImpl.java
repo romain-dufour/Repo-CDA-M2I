@@ -26,31 +26,35 @@ public class CommentServiceImpl implements ICommentService{
     }
     @Override
     public CommentDTO createComment(CommentDTO commentDTO) {
-
         return commentMapper.commentToCommentDTO(commentRepository.save(commentMapper.commentDtoToComment(commentDTO)));
-//        return commentRepository.save(commentDTO);
     }
 
     @Override
     public CommentDTO getCommentById(int id) {
-        Optional<CommentDTO> result = commentRepository.findById(id);
-        return result.orElse(null);
-    }
+        Optional<Comment> comment = commentRepository.findById(id);
+
+//        Optional<CommentDTO> result = commentRepository.findById(id);
+//        return result.orElse(null);
+        return null;
+}
 
     @Override
     public List<CommentDTO> getAllComment() {
-        return commentRepository.findAll();
+        return commentRepository.findAll()
+                .stream()
+                .map(comment -> commentMapper.commentToCommentDTO(comment))
+                .toList();
     }
 
     @Override
     public CommentDTO updateComment(CommentDTO updateComment) {
-        return commentRepository.save(updateComment);
+        return commentMapper.commentToCommentDTO(commentRepository.save(commentMapper.commentDtoToComment(updateComment)));
     }
 
     @Override
     public void deleteComment(CommentDTO commentDTO) {
 //        Comment result = commentRepository.findByIdIs(id);
-        commentRepository.delete(commentDTO);
+        commentRepository.delete(commentMapper.commentDtoToComment(commentDTO));
     }
 
 //    public void addComment(Comment comment, Long id){

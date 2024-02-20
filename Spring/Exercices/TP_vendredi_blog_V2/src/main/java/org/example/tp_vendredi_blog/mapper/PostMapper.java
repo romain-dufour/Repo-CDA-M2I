@@ -2,21 +2,20 @@ package org.example.tp_vendredi_blog.mapper;
 
 import org.example.tp_vendredi_blog.dto.PostDTO;
 import org.example.tp_vendredi_blog.model.Post;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
+import org.springframework.stereotype.Component;
 
-@Mapper(componentModel = "spring")
-public interface PostMapper {
-
-
-    @Mapping(source = "content", target = "contenu")
-    @Mapping(source = "description", target = "sujet")
-    PostDTO postToPostDTO(Post post);
+@Component
+public class PostMapper {
 
 
-    @Mapping(source = "contenu", target = "content")
-    @Mapping(source = "sujet", target = "description")
-    Post postDtoToPost(PostDTO postDTO);
+    public PostDTO postToPostDTO(Post post){
+        return new PostDTO(post.getId(), post.getTitle(), post.getDescription(), post.getContent(), post.getCommentList());
+    };
+
+
+    public Post postDtoToPost(PostDTO postDTO){
+        return new Post(postDTO.getId(), postDTO.getTitle(), postDTO.getDescription(), postDTO.getContent(), postDTO.getCommentList());
+    };
 
 
 }

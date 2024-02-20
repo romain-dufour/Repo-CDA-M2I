@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <span th:replace="~{home :: bootstrapImports}"></span>
+</head>
+<body>
+<span th:replace="~{home :: navbar}"></span>
+<main class="container">
+    <div class="text-center">
+        <h1>Formulaire d'authentification</h1>
+        <img src="/images/login.png" alt="Image" class="mx-auto" style="width: 250px; height: 250px">
+    </div>
+    <hr>
+    <form th:action="@{/login}" method="post" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="user">UserName :</label>
+            <input type="text" name="user" id="user" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="login">Login :</label>
+            <input type="text" name="login" id="login" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password :</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Valider</button>
+        </div>
+    </form>
+</main>
+
+<span th:replace="~{home :: footer}"></span>
+
+</body>
+</html>
