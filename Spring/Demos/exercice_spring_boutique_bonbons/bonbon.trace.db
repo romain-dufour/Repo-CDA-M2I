@@ -1,0 +1,56 @@
+2024-02-21 12:30:49.900333+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'' (CANDY: ""NOTE"" INTEGER NOT NULL)"
+Data conversion error converting "'' (CANDY: ""NOTE"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY"("NOTE","PRICE","STOCK_QUANTITY","ID","DESCRIPTION","MAGIC_EFFECT","NAME")VALUES(?,?,?,?,?,?,?) [22018-224]
+2024-02-21 12:30:49.901335+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'' (CANDY: ""NOTE"" INTEGER NOT NULL)"
+Data conversion error converting "'' (CANDY: ""NOTE"" INTEGER NOT NULL)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY"("NOTE","PRICE","STOCK_QUANTITY","ID","DESCRIPTION","MAGIC_EFFECT","NAME")VALUES(?,?,?,?,?,?,?) [22018-224]
+2024-02-21 13:41:59.836405+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:41:59.838452+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:24.105658+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:24.105658+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:37.234509+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:37.235506+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:45.520887+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:45.520887+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:54.944891+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:42:54.944891+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:43:50.977376+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
+2024-02-21 13:43:50.977376+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLDataException: Erreur lors de la conversion de données "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"
+Data conversion error converting "'NOUVELLE' (CANDY_ORDER: ""STATUS"" TINYINT)"; SQL statement:
+INSERT INTO "PUBLIC"."CANDY_ORDER"("STATUS","ID","ORDER_ID")VALUES(?,?,?) [22018-224]
