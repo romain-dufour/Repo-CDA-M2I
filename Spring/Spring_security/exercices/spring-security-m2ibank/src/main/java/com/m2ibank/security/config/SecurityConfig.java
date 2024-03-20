@@ -34,9 +34,10 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests((authorize) -> authorize
+                        //mieux vaut mettre le permit.all en premier pour eviter tout problème
                         .requestMatchers("/notices","/contact","/api/auth/**").permitAll()
-                        .requestMatchers("/myAccount","/myLoans","/myBalance","/myCards").hasAnyRole("USER")
-                        .requestMatchers("/myBalance").hasRole("ADMIN")
+                        .requestMatchers("/myAccount","/myLoans","/myCards").hasRole("USER")
+                        .requestMatchers("/myBalance").hasAnyRole("USER","ADMIN")
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(exceptions -> exceptions.authenticationEntryPoint(jwtAuthenticationEntryPoint))
