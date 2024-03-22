@@ -27,7 +27,7 @@ public class UserController {
                 .name(newUserDto.getName())
                 .email(newUserDto.getEmail())
                 .passwords(newUserDto.getPassword())
-                .roles(Role.builder().roleType("USER").build()) // Par défaut, attribuez le rôle USER à un nouvel utilisateur
+                .roles(Role.builder().roleType(newUserDto.getRole()).build()) // Par défaut, attribuez le rôle USER à un nouvel utilisateur
                 .isEnabled(true) // Par défaut, activez le nouvel utilisateur
                 .build();        System.out.println(newUser);
         if(userService.createUser(newUser)){

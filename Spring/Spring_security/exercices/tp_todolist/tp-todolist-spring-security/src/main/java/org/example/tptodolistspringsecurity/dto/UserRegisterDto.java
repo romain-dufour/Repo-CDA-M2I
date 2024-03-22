@@ -11,7 +11,7 @@ public class UserRegisterDto {
     private List<Todo> todoList;
     private String email;
     private String password;
-    private int RoleId;
+    private String role;
 
     public String getName() {
         return name;
@@ -29,12 +29,12 @@ public class UserRegisterDto {
         this.todoList = todoList;
     }
 
-    public int getRoleId() {
-        return RoleId;
+    public String getRole() {
+        return role;
     }
 
-    public void setRoleId(int roleId) {
-        RoleId = roleId;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public String getEmail() {

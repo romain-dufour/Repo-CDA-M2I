@@ -38,7 +38,8 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String passwords;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "role_id")
     private Role roles;
 
     private boolean isEnabled=true;

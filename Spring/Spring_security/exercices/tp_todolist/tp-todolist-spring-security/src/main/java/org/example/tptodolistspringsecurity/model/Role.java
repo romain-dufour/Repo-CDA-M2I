@@ -1,13 +1,18 @@
 package org.example.tptodolistspringsecurity.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity
 @Table(name = "role")
 @Data
 @Builder
+@AllArgsConstructor
 public class Role {
 
 
@@ -19,9 +24,8 @@ public class Role {
 
 
 
-    @OneToOne
-    @JoinColumn(name="user_id", referencedColumnName = "id_user")
-    private User user;
+    @OneToMany(mappedBy = "roles", cascade = CascadeType.ALL , fetch = FetchType.LAZY) // Par defaut en LAZY
+    private List<User> userList;
 
 
     public Role(String roleType) {
