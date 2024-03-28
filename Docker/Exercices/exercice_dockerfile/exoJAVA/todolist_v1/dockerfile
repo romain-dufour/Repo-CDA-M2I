@@ -1,0 +1,24 @@
+# Build de l'application avec maven
+FROM maven AS builder
+
+WORKDIR /app
+
+#Copie du pom.xml et telechargement des dependances 
+COPY pom.xml .
+RUN mvn dependency:go-offline
+
+# copie les fichiers sources et execution 
+COPY src ./src
+RUN mvn package -DskipTests
+
+FROM openjdk 
+
+WORKDIR /app
+
+# copie de l'artifact JAR depuis l'étape précédente (artifactid-version)
+COPY --from=builder /app/target/todolist_v1-1.0-SNAPSHOT.jar .
+
+EXPOSE 8081
+
+# Execution de l'application
+ENTRYPOINT [ "java","-jar","todolist_v1-1.0-SNAPSHOT.jar" ]

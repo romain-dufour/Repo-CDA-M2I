@@ -1,0 +1,30 @@
+# Image de base
+FROM nginx
+
+# informations utiles
+LABEL version="0.1" maintainer="romain"
+
+MAINTAINER romain
+
+# Définir un répertoire de travail
+WORKDIR /usr/share/nginx/html/
+
+# Copier le répertoire courant vers le workdir
+COPY . .
+
+# Lancement d'une commande
+# RUN 
+
+# exposer un port
+EXPOSE 80 
+
+# Définir la commande par défaut
+CMD [ "nginx","-g","daemon off;" ]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
+
+
+#pour construire l'image (avec option no cache)
+#docker build --no-cache -t exo1 .
+
+# pour tester mon image
+# docker run --name exo1test -p 5555:80 -d
