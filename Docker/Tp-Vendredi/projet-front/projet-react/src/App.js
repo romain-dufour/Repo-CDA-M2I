@@ -10,7 +10,7 @@ function App() {
     <Router>
       < Header/>
       <Routes>
-        <Route path="/todos" element={
+        <Route path="/" element={
             <TodoList />
         } />
 

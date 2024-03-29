@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { todoService } from '../services/todoService';
-import UpdateProductModal from './UpdateTodoModal';
 import UpdateTodoModal from './UpdateTodoModal';
 
 

@@ -10,7 +10,7 @@ const CreateTodo = () => {
     const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { name, task } = e.target;
+        const { name } = e.target;
         setTodo(prevState => ({
             ...prevState,
             [name]: e.value
@@ -22,8 +22,8 @@ const CreateTodo = () => {
         try {
             await todoService.createTodo(todo);
             console.log('Todo created successfully');
-            setTodo({ name: '', task: '' });
-            navigate('/todos'); 
+            setTodo({ name: ''});
+            navigate('/'); 
         } catch (error) {
             console.error('Error creating todo:', error);
             
