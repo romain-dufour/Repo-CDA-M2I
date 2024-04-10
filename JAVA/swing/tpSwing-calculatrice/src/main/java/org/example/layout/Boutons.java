@@ -1,0 +1,32 @@
+package org.example.layout;
+
+import lombok.Data;
+
+import javax.swing.*;
+import java.awt.*;
+
+@Data
+public class Boutons {
+
+    private JPanel jPanel;
+
+    public Boutons(){
+
+
+        jPanel = new JPanel(new GridLayout(3,3));
+
+        for (int i = 1; i <=9 ; i++) {
+            JButton jButton = new JButton("b" +i);
+
+
+            jButton.addActionListener(e -> {
+                        System.out.println(((JButton)(e.getSource())).getText());
+                    }
+            );
+            jPanel.add(jButton);
+    }
+
+
+
+
+}}

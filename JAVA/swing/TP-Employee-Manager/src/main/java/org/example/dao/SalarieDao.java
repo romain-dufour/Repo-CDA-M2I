@@ -59,8 +59,8 @@ public class SalarieDao {
                 salarie.setId(result.getInt("id"));
                 salarie.setName(result.getString("name"));
                 salarie.setFirstName(result.getString("firstname"));
-                salarie.setRole(result.getString("role"));
-                salarie.setDepartement(result.getInt("departement"));
+             //   salarie.setRole(result.getString("role"));
+              //  salarie.setDepartement(result.getInt("departement"));
                 System.out.println(salarie);
             }
             con.close();

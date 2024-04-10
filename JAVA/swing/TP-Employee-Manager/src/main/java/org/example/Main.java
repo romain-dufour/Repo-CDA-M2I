@@ -1,6 +1,9 @@
 package org.example;
 
 import lombok.Data;
+import org.example.controller.SalarieController;
+import org.example.dao.SalarieDao;
+import org.example.view.SalarieUI;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -10,35 +13,33 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Main{
+public class Main {
 
     private JFrame frame;
     private JTable table;
     private JPanel mainPanel;
     private JPanel buttonPanel;
-
     private JPanel tablePanel;
-
     private JPanel contentPane;
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Main());
     }
+
     public Main() {
         Main();
     }
 
     private void Main() {
         frame = new JFrame("Gestion des salariés");
-        frame.setBounds(800,100,800,800);
+        frame.setBounds(800, 100, 800, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         mainPanel = new JPanel(new BorderLayout());
-        buttonPanel = createButtonPanel();
+
         tablePanel = createTablePanel();
+        buttonPanel = jBoutonPanel();
 
-
-        separator = new JSeparator(JSeparator.HORIZONTAL);
 
         mainPanel.add(tablePanel, BorderLayout.NORTH);
         mainPanel.add(buttonPanel, BorderLayout.SOUTH);
@@ -48,65 +49,53 @@ public class Main{
         frame.setVisible(true);
 
     }
+
     private JPanel createTablePanel() {
-        JPanel tablePanel = new JPanel(new BorderLayout()); // Crée un panneau avec un layout BorderLayout
+        JPanel tablePanel = new JPanel(new BorderLayout());
 
-        String[] columnNames = {"Nom", "Email", "Genre"}; // Noms des colonnes du tableau
-        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0); // Crée un modèle de tableau par défaut avec les noms de colonnes
-        table = new JTable(tableModel); // Crée une JTable avec le modèle de tableau
-        JScrollPane scrollPane = new JScrollPane(table); // Ajoute une barre de défilement à la JTable
+        String[] columnNames = {"ID","Nom", "Prenom", "Role"};
+        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        table = new JTable(tableModel);
+        JScrollPane scrollPane = new JScrollPane(table);
 
-        JButton detailsButton = new JButton("Détails"); // Crée un bouton "Détails"
-        detailsButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                int selectedRow = table.getSelectedRow(); // Récupère la ligne sélectionnée dans le tableau
-                if (selectedRow >= 0) { // Si une ligne est sélectionnée
-                    showDetailsDialog(selectedRow); // Affiche une boîte de dialogue avec les détails de la ligne
-                } else {
-                    // Affiche un avertissement si aucune ligne n'est sélectionnée
-                    JOptionPane.showMessageDialog(tablePanel, "Sélectionnez une ligne pour voir les détails.", "Avertissement", JOptionPane.WARNING_MESSAGE);
-                }
-            }
-        });
+        tablePanel.add(scrollPane, BorderLayout.NORTH);
 
-        tablePanel.add(scrollPane, BorderLayout.CENTER); // Ajoute la JTable avec barre de défilement au centre
-        tablePanel.add(detailsButton, BorderLayout.SOUTH); // Ajoute le bouton "Détails" en bas
+        TitledBorder tableBorder = BorderFactory.createTitledBorder("Tableau des données");
+        tablePanel.setBorder(tableBorder);
 
-        TitledBorder tableBorder = BorderFactory.createTitledBorder("Tableau des données"); // Crée une bordure avec un titre
-        tablePanel.setBorder(tableBorder); // Ajoute la bordure au panneau
-
-        return tablePanel; // Retourne le panneau de tableau configuré
+        return tablePanel;
     }
 
 
+    private JPanel jBoutonPanel() {
+        SalarieController salarieController = new SalarieController();
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 20));
+        buttonPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 
-
-    private void createButtonPanel(){
-
-        JPanel jBoutonPanel = new JPanel(new FlowLayout( FlowLayout.CENTER, 10, 20));
-        jBoutonPanel.setBorder(new EmptyBorder(5,5,5,5));
-        frame.setContentPane(jBoutonPanel);
-//        jBoutonPanel.setLayout(null);
-
-
-        JButton btnInsert = new JButton("Ajouter");
-//        btnInsert.addActionListener(e -> addAction);
-        jBoutonPanel.add(btnInsert);
+        JButton btnadd = new JButton("Ajouter");
+        btnadd.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SalarieUI dialog = new SalarieUI();
+                dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+                dialog.setLocationRelativeTo(null);
+                dialog.setVisible(true);
+                   }
+        });
+        buttonPanel.add(btnadd);
 
         JButton btnUpdate = new JButton("Modifier");
-        jBoutonPanel.add(btnUpdate);
+        buttonPanel.add(btnUpdate);
 
 
         JButton btnDelete = new JButton("Supprimer");
-        jBoutonPanel.add(btnDelete);
+        buttonPanel.add(btnDelete);
 
 
         JButton btnDpt = new JButton("Departement");
-        jBoutonPanel.add(btnDpt);
+        buttonPanel.add(btnDpt);
 
-
-
-
+        return buttonPanel;
     }
 
 
