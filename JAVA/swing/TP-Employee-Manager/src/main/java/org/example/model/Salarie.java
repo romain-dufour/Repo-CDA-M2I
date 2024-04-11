@@ -8,6 +8,6 @@ public class Salarie {
     private String name;
     private String firstName;
     private Role role;
-    private Departement departement;
+    private int departementId;
 
 }

@@ -3,6 +3,7 @@ package org.example;
 import lombok.Data;
 import org.example.controller.SalarieController;
 import org.example.dao.SalarieDao;
+import org.example.model.Salarie;
 import org.example.view.SalarieUI;
 
 import javax.swing.*;
@@ -12,6 +13,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class Main {
 
@@ -22,15 +24,20 @@ public class Main {
     private JPanel tablePanel;
     private JPanel contentPane;
 
+    private DefaultTableModel tableModel;
+    private SalarieDao salarieDao;
+//    private DefaultTableModel tableModel;
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new Main());
     }
 
     public Main() {
-        Main();
+        initialize();
+        salarieDao = new SalarieDao(); // Initialisation du DAO
+        populateTable(); // Remplissage initial du tableau avec les données de la base de données
     }
 
-    private void Main() {
+    private void initialize() {
         frame = new JFrame("Gestion des salariés");
         frame.setBounds(800, 100, 800, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -54,7 +61,7 @@ public class Main {
         JPanel tablePanel = new JPanel(new BorderLayout());
 
         String[] columnNames = {"ID","Nom", "Prenom", "Role"};
-        DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
+        tableModel = new DefaultTableModel(columnNames, 0);
         table = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(table);
 
@@ -99,7 +106,13 @@ public class Main {
     }
 
 
-
+    private void populateTable() {
+        List<Salarie> salaries = salarieDao.loadData(); // Récupération de tous les salariés depuis la base de données
+        for (Salarie salarie : salaries) {
+            Object[] rowData = {salarie.getId(), salarie.getName(), salarie.getFirstName(), salarie.getRole(),salarie.getDepartementId()};
+            tableModel.addRow(rowData); // Ajout des données au modèle de tableau
+        }
+    }
 
 
 

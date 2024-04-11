@@ -4,10 +4,11 @@ import org.example.model.Salarie;
 import org.example.utils.ConnectionDB;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 public class SalarieDao {
     Connection con;
@@ -16,11 +17,11 @@ public class SalarieDao {
     public int addSalarie(Salarie salarie) {
         con = ConnectionDB.getConnection();
         try {
-            ps = con.prepareStatement("INSERT INTO `salarie`(`name`,`firstname`,`role`,`departement`)values(?,?,?,?)");
+            ps = con.prepareStatement("INSERT INTO `salarie`(`name`,`firstname`,`role`,`departement_id`)values(?,?,?,?)");
             ps.setString(1, salarie.getName());
             ps.setString(2, salarie.getFirstName());
             ps.setString(3, String.valueOf(salarie.getRole()));
-            ps.setString(4, String.valueOf(salarie.getDepartement()));
+            ps.setInt(4, salarie.getDepartementId());
             return ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -72,7 +73,7 @@ public class SalarieDao {
         }
     }
 
-    public int updateContact(Salarie salarie)
+    public int updateSalarie(Salarie salarie)
     {
         con=ConnectionDB.getConnection();
         try {
@@ -80,7 +81,7 @@ public class SalarieDao {
             ps.setString(1, salarie.getName());
             ps.setString(2,salarie.getFirstName());
             ps.setInt(3, salarie.getRole().ordinal());
-            ps.setInt(4, salarie.getDepartement().getId());
+            ps.setInt(4, salarie.getDepartementId());
             ps.setInt(5, salarie.getId());
             int n=ps.executeUpdate();
             con.close();
@@ -91,5 +92,62 @@ public class SalarieDao {
             return 0;
         }
     }
+//
+//
+//    public List<Salarie> getAllSalaries() {
+//        List<Salarie> salaries = new ArrayList<>();
+//        String query = "SELECT * FROM salarie";
+//
+//        try (PreparedStatement statement = con.prepareStatement(query);
+//             ResultSet resultSet = statement.executeQuery()) {
+//            while (resultSet.next()) {
+//                int id = resultSet.getInt("id");
+//                String nom = resultSet.getString("nom");
+//                String prenom = resultSet.getString("prenom");
+//                String role = resultSet.getString("role");
+//
+//                // Création d'un objet Salarie avec les données récupérées
+//                Salarie salarie = new Salarie();
+//                salaries.add(salarie);
+//            }
+//        } catch (SQLException e) {
+//            e.printStackTrace(); // Gérer l'erreur de connexion à la base de données
+//        }
+//
+//        return salaries;
+//    }
 
+
+
+    public void loadData(DefaultTableModel tableModel) {
+
+        try (Connection conn = ps.getConnection();
+             Statement stmt = conn.createStatement()) {
+
+            ResultSet rs = stmt.executeQuery("select * from Contact");
+            ResultSetMetaData metaData = rs.getMetaData();
+
+            // Names of columns
+            Vector<String> columnNames = new Vector<String>();
+            int columnCount = metaData.getColumnCount();
+            for (int i = 1; i <= columnCount; i++) {
+                columnNames.add(metaData.getColumnName(i));
+            }
+
+            // Data of the table
+            Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+            while (rs.next()) {
+                Vector<Object> vector = new Vector<Object>();
+                for (int i = 1; i <= columnCount; i++) {
+                    vector.add(rs.getObject(i));
+                }
+                data.add(vector);
+            }
+
+            tableModel.setDataVector(data, columnNames);
+        } catch (Exception e) {
+
+        }
+
+    }
 }
