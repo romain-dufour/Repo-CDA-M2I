@@ -36,7 +36,17 @@ public class Employee implements Serializable {
     }
 
 
-
+    public Employee(String name, Gender gender, int age, String bloodGroup, int contactNumber, Qualification qualification, LocalDate startDate, String imageUrl, String adress) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+        this.bloodGroup = bloodGroup;
+        this.contactNumber = contactNumber;
+        this.qualification = qualification;
+        this.startDate = startDate;
+        this.imageUrl = imageUrl;
+        this.adress = adress;
+    }
 
     @Override
     public String toString() {
